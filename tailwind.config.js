@@ -6,6 +6,9 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
     },
+    fontFamily: {
+      sans: ['Montserrat', 'sans-serif'],
+    },
   },
   variants: {},
 
