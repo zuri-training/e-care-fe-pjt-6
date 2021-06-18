@@ -2,6 +2,11 @@
 
 E-care is centered towards achieving SDGs goal number three (good health and well being). This would be achieved through the two key features of the app namely; Health record management which provide solution to hospital record mismanagement which has in turn led to loss of several lives and rural-connect focuses on extending good health care to rural dwellers by connecting the rural community health care providers with their senior counterparts at urban health centers closest to them, so as to receive guidance in handling emergencies and other critical conditions.
 
+## **Design**
+
+[Link to design in figma](https://www.figma.com/file/52HpgVkr6FIKMGgWPg5Y5X/Style-guide-for-E-Care?node-id=0%3A1) <br>
+_contains project styleguide_
+
 ## **Contribution Guide**
 
 1. Fork the repository
@@ -14,10 +19,12 @@ E-care is centered towards achieving SDGs goal number three (good health and wel
 8. To make sure there are no conflicts: `git pull upstream main`
 9. Push changes to your new branch: `git push origin your-current-branch-name`
 10. Create a pull request to the main branch
+    <br>
 
 ### Note:
 
 Functional Components are prefered. Always Lint and Format your code before pushing
+<br>
 
 # This project is bootstraped with
 
