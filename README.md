@@ -22,35 +22,3 @@ _contains project styleguide_
 9. Push changes to your new branch: `git push origin your-current-branch-name`
 10. Create a pull request to the main branch
     <br>
-
-### Note:
-
-Functional Components are prefered. Always Lint and Format your code before pushing
-<br>
-
-# This project is bootstraped with
-
-[React](https://reactjs.org), powered by [Snowpack](https://www.snowpack.dev)
-with [Tailwindcss](https://tailwindcss.com).
-
-## Available Scripts
-
-### npm start
-
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.js` config file.
-
-### npm test
-
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
