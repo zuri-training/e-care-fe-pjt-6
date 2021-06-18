@@ -18,13 +18,40 @@
     "@snowpack/app-scripts-react": "^1.12.6",
     "@snowpack/plugin-build-script": "^2.1.0",
     "@snowpack/plugin-dotenv": "^2.1.0",
+    "@snowpack/plugin-webpack": "^2.3.1",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.3",
+    "husky": "^6.0.0",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-style-renke": "^6.0.0",
     "jest": "^26.6.3",
+    "lint-staged": "^11.0.0",
     "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.0.0",
     "snowpack": "^2.18.1",
     "tailwindcss": "^1.9.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "import-sort-cli --write",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "*.hbs": [
+      "prettier --write"
+    ]
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "style": "renke"
+    }
   }
 }
