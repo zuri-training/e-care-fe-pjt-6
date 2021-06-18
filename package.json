@@ -31,5 +31,27 @@
     "prettier": "^2.0.0",
     "snowpack": "^2.18.1",
     "tailwindcss": "^1.9.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "import-sort-cli --write",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "*.hbs": [
+      "prettier --write"
+    ]
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "style": "renke"
+    }
   }
 }
