@@ -6,19 +6,14 @@ module.exports = {
   },
   plugins: [
     '@snowpack/plugin-dotenv',
+    ['@snowpack/plugin-webpack', {}],
     [
       '@snowpack/plugin-build-script',
       { cmd: 'postcss', input: ['.css'], output: ['.css'] },
     ],
   ],
   routes: [],
-  optimize: {
-    splitting: true,
-    treeshake: true,
-    bundle: true,
-    minify: true,
-    target: 'es2018',
-  },
+  optimize: {},
   packageOptions: {},
   devOptions: {},
   buildOptions: {},
