@@ -6,20 +6,23 @@ it should contain global styles and DOM overides
 /* Variables */
 :root {
   --color-brand-blue: #0067a0;
-  --color-brand-yellow: #fed810, 100%;
-  --color-dark: #1a1919, 100%;
-  --color-neutral-gray: #716f6f, 100%;
-  --color-neutral-light-gray: #afacac, 100%;
+  --color-brand-yellow: #fed810;
+  --color-dark: #1a1919;
+  --color-light: #ffffff;
+  --color-neutral-gray: #716f6f;
+  --color-neutral-light-gray: #afacac;
 }
 /* Google Font  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 html {
+  font-size: 16px;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -32,13 +35,111 @@ html {
 body {
   width: 100%;
   height: auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   vertical-align: baseline;
   line-height: 1.6;
+  color: var(--color-neutral-gray);
+  background-color: var(--color-light);
+}
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main,
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
 }
 
 img {
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-brand-blue);
 }
 
 button {
@@ -46,4 +147,90 @@ button {
   outline: none;
   background-color: transparent;
   color: inherit;
+}
+
+/*  UTILITY CLASSES HERE */
+.btn {
+  --btn-width: 130px;
+  --btn-height: 38px;
+  display: block;
+  width: var(--btn-width);
+  height: var(--btn-height);
+  min-width: var(--btn-width);
+  min-height: var(--btn-height);
+  line-height: var(--btn-height);
+  text-align: center;
+  border-radius: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.15rem;
+  /* TODO Should not have letter spacing */
+  letter-spacing: 0.03em;
+}
+
+.btn-medium {
+  padding: 0.35rem 1rem;
+}
+
+.btn-primary {
+  color: var(--color-brand-blue);
+  border: 1px solid var(--color-brand-yellow);
+  background-color: var(--color-light);
+}
+
+.btn-secondary {
+  color: var(--color-light);
+  background-color: var(--color-brand-blue);
+}
+
+/* LANDING PAGE STYLES */
+.header {
+  width: 100%;
+  min-height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2.5rem;
+  background-color: #fbfbfb;
+  box-shadow: 0px 0px 4px 0px #00000026;
+}
+
+.nav {
+  flex: 2 0 auto;
+  padding-left: 15%;
+}
+
+.nav__item-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* gap: 3.19rem; (browser support is bad)*/
+}
+
+.nav__item {
+  margin-right: 3.19rem;
+}
+
+.nav__link {
+  color: var(--color-dark);
+  font-weight: 500;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  /* TODO Should not have letter spacing */
+  letter-spacing: 0.03em;
+}
+
+.header__btn-wrapper {
+  width: 100%;
+  flex: 1 0 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  background-color: #c4c4c4;
 }
