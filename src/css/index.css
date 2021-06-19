@@ -256,7 +256,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   letter-spacing: 0.03em;
-  padding: 2.625rem 3.625rem 0 3.625rem;
+  padding: 2.625rem 3.625rem 3.625rem 3.625rem;
   justify-content: space-between;
 }
 .footer__subscription {
@@ -286,8 +286,10 @@ button {
 
 .footer__menu {
   flex: 1 0 16%;
+  height: 160px;
   color: var(--color-light);
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .footer__menu-header {
