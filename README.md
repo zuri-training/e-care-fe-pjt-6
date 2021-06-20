@@ -23,7 +23,7 @@ _contains project styleguide_
 10. Create a pull request to the main branch
     <br>
 
-### Structure
+### Structure and Guidelines
 
 - all web pages should be in the pages folder.
 - each page should have its own css file with its on unique css content.
