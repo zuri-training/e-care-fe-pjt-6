@@ -381,20 +381,6 @@ button {
   text-align: center;
 }
 
-@media screen and (max-width: 1080px) {
-  .footer__subscription {
-    min-height: 64px;
-  }
-  .footer__input {
-    min-height: 45px;
-    font-size: 0.625rem;
-  }
-  .footer__input-btn {
-    font-size: 0.9rem;
-    padding: 1rem 2.25rem;
-  }
-}
-
 .footer__menu {
   flex: 1 0 16%;
   min-height: 160px;
@@ -433,6 +419,17 @@ button {
 }
 
 @media screen and (max-width: 1080px) {
+  .footer__subscription {
+    min-height: 64px;
+  }
+  .footer__input {
+    min-height: 45px;
+    font-size: 0.625rem;
+  }
+  .footer__input-btn {
+    font-size: 0.9rem;
+    padding: 1rem 2.25rem;
+  }
   .footer__menu,
   .footer__social {
     flex: 1 0 33.33%;
@@ -453,7 +450,38 @@ button {
   .footer__menu {
     flex: 1 0 50%;
   }
+  .footer__menu-header,
+  .footer__menu-link {
+    font-weight: 400;
+  }
+  .footer__menu-header {
+    font-size: 1rem;
+    /* margin: 1rem 0; */
+  }
+  .footer__menu-link {
+    font-size: 0.9rem;
+  }
+  .footer__menu-header::before {
+    bottom: -1rem;
+  }
+
   .footer__social {
     flex: 1 0 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .footer__subscription {
+    flex-wrap: wrap;
+    margin-bottom: 1.625rem;
+  }
+  .footer__input-btn {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    flex-direction: column;
   }
 }
