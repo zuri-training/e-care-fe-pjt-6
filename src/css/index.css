@@ -302,18 +302,21 @@ button {
 
 .side-nav__content {
   padding-top: 1.75rem;
-  padding-left: 2rem;
 }
 .side-nav__link {
-  width: max-content;
+  width: 100%;
   display: block;
   font-weight: 500;
   color: var(--color-dark);
   font-size: 1.125rem;
-  margin-bottom: 1.625rem;
-  padding: 0 0.25rem;
+  padding: 0.625rem 0.25rem 0.625rem 2.25rem;
 }
-
+.side-nav__link:active,
+.side-nav__link:hover,
+.side-nav__link:focus,
+.side-nav__link:focus-within {
+  background-color: #c4c4c44b;
+}
 .menu-btn {
   flex: 0 0 1.125rem;
   width: 1.125rem;
