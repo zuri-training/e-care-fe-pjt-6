@@ -196,7 +196,8 @@ button {
   background-color: var(--color-brand-blue);
 }
 
-/* LANDING PAGE STYLES */
+/* COMPONENT STYLES */
+/* HEADER */
 .header {
   width: 100%;
   min-height: 77px;
@@ -248,6 +249,7 @@ button {
   background-color: #c4c4c4;
 }
 
+/* FOOTER */
 .footer {
   width: 100%;
   height: auto;
