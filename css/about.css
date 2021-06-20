@@ -1,77 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
-:root {
-  --color-bgoval: rgba(0, 103, 160, 0.59);
-  --color-brand-yellow: #fed810;
-  --color-lightblue: #0067a0;
-  --color-text: #000000;
-  --color-bgicon: rgba(0, 103, 160, 0.08);
-  --color-white: #fbfbfb;
-  --color-bgheader: rgba(0, 36, 56, 0.65);
-  --color-bgefficiency: rgba(0, 103, 160, 0.03);
-}
-
-/* reset */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background: var(--color-white);
-}
-h4 {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-h2 {
-  margin-top: 1.75rem;
-  text-align: center;
-  color: var(--color-lightblue);
-  font-size: 24px;
-}
-
-.main {
+/* About Page Styles */
+.about__main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-p {
-  color: #000000;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 2rem;
-}
-
-br {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  br {
-    display: flex;
-  }
-
-  h4 {
-    font-weight: 600;
-    font-size: 24px;
-  }
-
-  p {
-    color: #000000;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.5rem;
-  }
-}
-
-/* header style */
-
-.header {
+.about__header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,26 +16,26 @@ br {
   width: 100%;
 }
 
-.header__wrapper {
+.about__header--wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: var(--color-bgheader);
+  background-color: rgba(0, 36, 56, 0.65);
 }
 
-.header__wrapper h1 {
-  color: var(--color-white);
+.about__header--wrapper h1 {
+  color: var(--color-bg-grey);
 }
-.header__wrapper span {
+.about__header--wrapper span {
   color: var(--color-brand-yellow);
 }
 
 /* MEDIA SIZE  */
 
 @media screen and (min-width: 768px) {
-  .header {
+  .about__header {
     height: 90%;
     width: 100%;
   }
@@ -128,7 +63,7 @@ br {
 .details__wrapper p {
   text-align: center;
   padding: 2.25rem;
-  color: var(--color-text);
+  color: var(-);
 }
 
 .details__img {
@@ -188,7 +123,7 @@ br {
   .details__wrapper h2 {
     margin-top: 1.75rem;
     text-align: justify;
-    color: var(--color-lightblue);
+    color: var(--color-brand-blue);
   }
 
   .details__wrapper p {
@@ -224,7 +159,7 @@ br {
 .section-efficiencies {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bgefficiency);
+  background-color: rgba(0, 103, 160, 0.03);
   order: 1;
   margin-bottom: 2rem;
 }
@@ -240,12 +175,12 @@ br {
 
 .efficiency i {
   display: flex;
-  background-color: var(--color-bgicon);
+  background-color: rgba(0, 103, 160, 0.08);
   width: 20%;
   height: 40px;
   align-items: center;
   justify-content: center;
-  color: var(--color-lightblue);
+  color: var(--color-brand-blue);
   border-radius: 20px;
   padding: 2rem;
 }
@@ -265,7 +200,7 @@ br {
 .efficiency h4 {
   text-align: center;
   padding: 0.5rem;
-  color: var(--color-lightblue);
+  color: var(--color-brand-blue);
 }
 
 .section-efficiencies span {
@@ -276,7 +211,7 @@ br {
   .section-efficiencies {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-white);
+    background-color: var(--color-bg-grey);
     order: 1;
     margin-bottom: 0;
     width: 100%;
@@ -339,7 +274,7 @@ br {
   margin: 2rem;
   width: 300px;
   height: 200px;
-  background: var(--color-bgoval);
+  background: var(--color-bg-blue);
   border-radius: 50%/100px;
 }
 
@@ -391,7 +326,7 @@ br {
     margin: 2rem;
     width: 434px;
     height: 440px;
-    background: var(--color-bgoval);
+    background: var(--color-bg-blue);
     border-right: 70px solid transparent;
     border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
     transform: rotate(2.25deg);
