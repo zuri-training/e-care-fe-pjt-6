@@ -293,11 +293,11 @@ button {
   overflow-x: hidden;
   position: absolute;
   z-index: 99;
+  transition: width 1s ease;
 }
 
-@media screen and (max-width: 970px) {
-  .side-nav {
-  }
+.side-nav.active {
+  width: 100%;
 }
 
 .side-nav__content {
