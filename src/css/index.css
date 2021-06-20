@@ -334,6 +334,16 @@ button {
   fill: var(--color-dark);
 }
 
+.menu-btn__icon.close {
+  display: none;
+}
+.menu-btn.active .menu-btn__icon.open {
+  display: none;
+}
+.menu-btn.active .menu-btn__icon.close {
+  display: block;
+}
+
 /* FOOTER */
 .footer {
   width: 100%;
