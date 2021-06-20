@@ -22,3 +22,10 @@ _contains project styleguide_
 9. Push changes to your new branch: `git push origin your-current-branch-name`
 10. Create a pull request to the main branch
     <br>
+
+### Structure and Guidelines
+
+- all web pages should be in the pages folder.
+- each page should have its own css file with its on unique css content.
+- Global/General styles, overides and Component styles should be in the `index.css` file.
+- using the BEM Naming convention is encouraged.
