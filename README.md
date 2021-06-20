@@ -32,3 +32,4 @@ _contains project styleguide_
 - Files should be in their respective folders and must have a proper name.
 - When writing css styles pls take note and ensure class names do not clash across files.
   You can use the name of the page being worked on to prefix class names
+- The Sites Header and Footer have already been created. fetch it from a file that contains them
