@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" />
     <title>E-care</title>
-    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
     <header class="header">
@@ -30,7 +30,33 @@
         <a href="#" class="btn btn-primary">Login</a>
         <a href="#" class="btn btn-secondary">Sign Up</a>
       </div>
+      <div class="menu-btn menuBtn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0"
+          y="0"
+          enable-background="new 0 0 64 64"
+          version="1.1"
+          viewBox="0 0 64 64"
+          xml:space="preserve"
+        >
+          <path
+            class="menu-btn__icon"
+            d="M61.3 29.3H2.7C1.1 29.3 0 30.4 0 32c0 1.6 1.1 2.7 2.7 2.7h58.7c1.6 0 2.7-1.1 2.7-2.7C64 30.4 62.9 29.3 61.3 29.3zM61.3 48H2.7C1.1 48 0 49.1 0 50.7c0 1.6 1.1 2.7 2.7 2.7h58.7c1.6 0 2.7-1.1 2.7-2.7C64 49.1 62.9 48 61.3 48zM2.7 16h58.7c1.6 0 2.7-1.1 2.7-2.7s-1.1-2.7-2.7-2.7H2.7c-1.6 0-2.7 1.1-2.7 2.7S1.1 16 2.7 16z"
+          />
+        </svg>
+      </div>
     </header>
+    <nav class="side-nav" id="sideNav">
+      <div class="side-nav__content">
+        <a href="#" class="side-nav__link">Home</a
+        ><a href="#" class="side-nav__link">Directory</a
+        ><a href="#" class="side-nav__link">Doctors</a
+        ><a href="#" class="side-nav__link">Hospitals</a
+        ><a href="#" class="side-nav__link">Sign Up</a
+        ><a href="#" class="side-nav__link">Login</a>
+      </div>
+    </nav>
     <footer class="footer">
       <form class="footer__subscription">
         <input
@@ -38,7 +64,7 @@
           class="footer__input"
           placeholder="Enter your email"
         />
-        <input type="submit" class="footer__input-btn" value="Sign Me Up" />
+        <input type="submit" class="footer__input-btn" value="Sign Up" />
       </form>
       <div class="footer__menu">
         <h5 class="footer__menu-header">Patients</h5>
