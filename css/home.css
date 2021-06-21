@@ -3,31 +3,47 @@ p {
   line-height: 1.25rem;
   max-width: 30.625rem;
   color: var(--color-dark);
+  letter-spacing: 0.03em;
 }
-.homepage__main {
+.hero {
 }
-.homepage__main .wrapper {
+.cta {
+}
+
+.hero .wrapper,
+.cta .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 700px;
 }
-.homepage__main-content {
-}
-.homepage__heading {
-  margin-top: 147px;
-}
-.homepage__lead {
-  margin-top: 1.25rem;
-  margin-bottom: 56px;
-  letter-spacing: 0.03em;
+.hero__content {
 }
 
-.homepage__main-content .btn {
+.hero__heading {
+  margin-top: 147px;
+}
+.cta__heading {
+  margin-bottom: 2.875rem;
+}
+.hero__lead {
+  margin-top: 1.25rem;
+  margin-bottom: 56px;
+}
+
+.cta__lead {
+  margin-bottom: 1.25rem;
+}
+
+.hero__content .btn,
+.cta__content .btn {
   width: fit-content;
   box-sizing: content-box;
   border-radius: 1.25rem;
   padding: 1rem 1.875rem;
 }
+.cta__content .btn {
+  margin-top: 2.875rem;
+}
 
-.homepage__main-figure {
+.hero__figure {
 }
