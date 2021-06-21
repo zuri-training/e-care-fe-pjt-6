@@ -347,6 +347,7 @@ button {
   padding-top: 1.75rem;
 }
 .side-nav__link {
+  min-width: 150px;
   width: 100%;
   display: block;
   font-weight: 500;
