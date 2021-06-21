@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../aboutUsImage/about-page-img01.jpg") center top no-repeat;
+  background: url("../assets/Image/about-page-img01.jpg") center top no-repeat;
   background-size: cover;
   height: 50vh;
   width: 100%;
@@ -92,7 +92,7 @@
   width: 300px;
   height: 200px;
   top: -1rem;
-  background: url("../aboutUsImage/about-page-img02") center top;
+  background: url("../assets/Image/about-page-img02.jpg") center top;
   background-size: cover;
 }
 
@@ -148,7 +148,7 @@
     width: 596.63px;
     height: 463.31px;
     left: 2rem;
-    background: url("../aboutUsImage/about-page-img02") center top;
+    background: url("../assets/Image/about-page-img02.jpg") center top;
     background-size: cover;
     border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
   }
@@ -284,7 +284,7 @@
   width: 300px;
   height: 200px;
   top: -1rem;
-  background: url("../aboutUsImage/about-page-img03.jpg") center top;
+  background: url("../assets/Image/about-page-img03.jpg") center top;
   background-size: cover;
 }
 
@@ -338,7 +338,7 @@
     width: 434px;
     height: 440px;
     left: 1rem;
-    background: url("../aboutUsImage/about-page-img03.jpg") top;
+    background: url("../assets/Image/about-page-img03.jpg") top;
     background-size: cover;
     border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
   }
