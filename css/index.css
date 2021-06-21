@@ -239,24 +239,27 @@ button {
   background-color: var(--color-brand-blue);
 }
 
-/* COMPONENT STYLES */
-.header,
-.footer,
-.side-nav {
-  max-width: 1440px;
+.wrapper {
+  width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
 }
+
+/* COMPONENT STYLES */
+
 /* HEADER */
 .header {
   width: 100%;
   min-height: 77px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0.75rem 2.5rem;
   background-color: #fbfbfb;
   box-shadow: 0px 0px 4px 0px #00000026;
   position: relative;
+}
+.header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav {
@@ -308,6 +311,9 @@ button {
 }
 
 @media screen and (max-width: 970px) {
+  .header {
+    padding: 0.75rem 1.25rem;
+  }
   .nav,
   .header__btn-wrapper {
     display: none;
@@ -387,10 +393,13 @@ button {
   height: auto;
   min-height: 484px;
   background-color: var(--color-brand-blue);
-  display: flex;
-  flex-wrap: wrap;
   letter-spacing: 0.03em;
   padding: 2.625rem 3.625rem 3.625rem 3.625rem;
+}
+
+.footer .wrapper {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
