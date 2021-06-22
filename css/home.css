@@ -1,8 +1,9 @@
 /* HERO AND CTA SECTION */
 /* .hero {
-}
-.cta {
 } */
+.cta {
+  margin-bottom: 5.5rem;
+}
 
 .hero .wrapper,
 .cta .wrapper {
@@ -10,6 +11,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 700px;
 }
+
 /* .hero__content {
 } */
 
@@ -19,6 +21,7 @@
 .cta__heading {
   margin-bottom: 2.875rem;
 }
+
 .hero__lead,
 .cta__lead {
   font-weight: 400;
@@ -26,6 +29,7 @@
   max-width: 30.625rem;
   color: var(--color-dark);
 }
+
 .hero__lead {
   margin-top: 1.25rem;
   margin-bottom: 56px;
@@ -46,10 +50,12 @@
   margin-top: 2.875rem;
 }
 
-.cta__figure {
-}
-.hero__figure {
-}
+/* .hero__figure {
+} */
+
+/* .cta__figure {
+
+} */
 
 /* SERVICES SECTION STYLES */
 .services {
@@ -79,6 +85,7 @@
   font-weight: 500;
   font-size: 2rem;
 }
+
 .services__body {
   height: auto;
   min-height: 320px;
@@ -91,12 +98,13 @@
 
 /* FEATURE STYLES */
 .feature {
-  width: 20%;
+  flex: 0 0 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  /* margin-bottom: ; */
 }
 
 .feature__figure {
@@ -117,4 +125,82 @@
 .feature__content {
   width: 18ch;
   font-weight: 400;
+  line-height: 19.5px;
+}
+
+@media (max-width: 1024px) {
+  .hero__heading,
+  .cta__heading {
+    font-size: 1.85rem;
+    line-height: 39.88px;
+  }
+
+  .services__body {
+    padding: 2rem 0.875rem 0.875rem 0.875rem;
+  }
+
+  .feature {
+    flex: 0 0 50%;
+    margin: 3.875rem 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .hero .wrapper,
+  .cta .wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(465px, auto) 230px;
+  }
+
+  .cta__content {
+    grid-row: 1;
+  }
+  .cta__figure {
+    grid-row: 2;
+  }
+
+  .services__header .heading-6 {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  .services__heading {
+    font-size: 1.2rem;
+  }
+  .feature__title {
+    font-size: 1rem;
+  }
+  .feature__content {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero__heading {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 24.38px;
+  }
+  .cta__heading {
+    font-size: 1.125rem;
+    line-height: 21.94px;
+  }
+  .hero__lead,
+  .cta__lead {
+    font-size: 0.625rem;
+    line-height: 12.9px;
+  }
+  .feature__content {
+    font-size: 0.625rem;
+    line-height: 12.19px;
+  }
+  .feature__figure {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 1rem;
+  }
+  .services__heading {
+    font-weight: 400;
+    font-size: 1rem;
+  }
 }
