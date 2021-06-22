@@ -42,7 +42,6 @@
 .hero__content .btn,
 .cta__content .btn {
   width: fit-content;
-  box-sizing: content-box;
   border-radius: 1.25rem;
   padding: 1rem 1.875rem;
 }
@@ -174,6 +173,29 @@
   }
 }
 
+@media (max-width: 820px) {
+  .hero__content .btn,
+  .cta__content .btn {
+    border-radius: 2rem;
+    padding: 0.625rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero__content .btn,
+  .cta__content .btn {
+    padding: 0.625rem 1.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__heading,
+  .cta__heading {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 360px) {
   .hero__heading {
     font-weight: 600;
@@ -188,6 +210,12 @@
   .cta__lead {
     font-size: 0.625rem;
     line-height: 12.9px;
+  }
+  .hero__content .btn {
+    padding: 0.425rem 0.875rem;
+  }
+  .cta__content .btn {
+    padding: 0.425rem 2rem;
   }
   .feature__content {
     font-size: 0.625rem;

@@ -495,7 +495,7 @@ button {
   }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 820px) {
   .footer__menu {
     flex: 1 0 50%;
   }
