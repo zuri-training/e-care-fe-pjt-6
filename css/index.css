@@ -398,7 +398,7 @@ button {
 }
 @media screen and (max-width: 590px) {
   .footer {
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 2rem 0 3rem 0;
   }
 }
 .footer__subscription {
