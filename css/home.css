@@ -5,6 +5,8 @@ p {
   color: var(--color-dark);
   letter-spacing: 0.03em;
 }
+
+/* HERO AND CTA SECTION */
 .hero {
 }
 .cta {
@@ -45,5 +47,27 @@ p {
   margin-top: 2.875rem;
 }
 
+.cta__figure {
+}
 .hero__figure {
+}
+
+/* SERVICES SECTION STYLES */
+.services {
+}
+.services .wrapper {
+}
+.services__header {
+}
+.services__body {
+}
+
+/* FEATURE STYLES */
+.feature {
+}
+.feature__figure {
+}
+.feature__title {
+}
+.feature__content {
 }
