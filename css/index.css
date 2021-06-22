@@ -226,6 +226,7 @@ button {
   background-color: #fbfbfb;
   box-shadow: 0px 0px 4px 0px #00000026;
   position: relative;
+  z-index: 99;
 }
 
 .header--transparent {
@@ -235,8 +236,8 @@ button {
 
 .header--absolute {
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
 }
 .header .wrapper {
   display: flex;
