@@ -322,7 +322,9 @@ button {
   z-index: 99;
   transition: width 1s ease;
 }
-
+.side-nav--absolute {
+  top: 77px;
+}
 .side-nav.active {
   width: 100%;
 }
