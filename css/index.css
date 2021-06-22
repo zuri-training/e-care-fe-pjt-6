@@ -358,6 +358,9 @@ button {
   }
 }
 
+.header--transparent .menu-btn__icon {
+  fill: var(--color-light);
+}
 .menu-btn__icon {
   fill: var(--color-dark);
 }
@@ -379,7 +382,7 @@ button {
   min-height: 484px;
   background-color: var(--color-brand-blue);
   letter-spacing: 0.03em;
-  padding: 2.625rem 3.625rem 3.625rem 3.625rem;
+  padding: 2.625rem 0 3.625rem 0;
 }
 
 .footer .wrapper {
