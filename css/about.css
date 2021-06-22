@@ -1,4 +1,46 @@
 /* About Page Styles */
+<<<<<<< HEAD
+=======
+p {
+  color: #000000;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+h2 {
+  margin-top: 1.75rem;
+  text-align: center;
+  color: var(--color-lightblue);
+  font-size: 24px;
+}
+
+br {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  br {
+    display: flex;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  p {
+    color: #000000;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5rem;
+  }
+}
+>>>>>>> cef30c92e70c7c5466e7d0582ac6e64bf5754fb1
 
 .about__main {
   display: flex;

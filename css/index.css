@@ -144,44 +144,11 @@ a {
   color: var(--color-brand-blue);
 }
 
-p {
-  color: #000000;
+h1 {
+  color: var(--color-dark);
+  font-size: 2.25rem;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 2rem;
-}
-
-h4 {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-h2 {
-  margin-top: 1.75rem;
-  text-align: center;
-  color: var(--color-lightblue);
-  font-size: 24px;
-}
-
-br {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  br {
-    display: flex;
-  }
-
-  h4 {
-    font-weight: 600;
-    font-size: 24px;
-  }
-
-  p {
-    color: #000000;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.5rem;
-  }
+  line-height: 43.88px;
 }
 
 input {
@@ -210,8 +177,6 @@ button {
   --btn-width: 130px;
   --btn-height: 38px;
   display: block;
-  width: var(--btn-width);
-  height: var(--btn-height);
   min-width: var(--btn-width);
   min-height: var(--btn-height);
   line-height: var(--btn-height);
@@ -222,10 +187,6 @@ button {
   font-size: 1.15rem;
   /* TODO Should not have letter spacing */
   letter-spacing: 0.03em;
-}
-
-.btn-medium {
-  padding: 0.35rem 1rem;
 }
 
 .btn-primary {
@@ -239,24 +200,37 @@ button {
   background-color: var(--color-brand-blue);
 }
 
-/* COMPONENT STYLES */
-.header,
-.footer,
-.side-nav {
-  max-width: 1440px;
+.wrapper {
+  width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
+  padding: 0.75rem 2.5rem;
 }
+
+@media screen and (max-width: 970px) {
+  .wrapper {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+.txt-blue {
+  color: var(--color-brand-blue);
+}
+
+/* COMPONENT STYLES */
+
 /* HEADER */
 .header {
   width: 100%;
   min-height: 77px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 2.5rem;
   background-color: #fbfbfb;
   box-shadow: 0px 0px 4px 0px #00000026;
   position: relative;
+}
+.header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav {
@@ -341,6 +315,7 @@ button {
   padding-top: 1.75rem;
 }
 .side-nav__link {
+  min-width: 150px;
   width: 100%;
   display: block;
   font-weight: 500;
@@ -387,10 +362,13 @@ button {
   height: auto;
   min-height: 484px;
   background-color: var(--color-brand-blue);
-  display: flex;
-  flex-wrap: wrap;
   letter-spacing: 0.03em;
   padding: 2.625rem 3.625rem 3.625rem 3.625rem;
+}
+
+.footer .wrapper {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -474,7 +452,7 @@ button {
   }
   .footer__input {
     min-height: 45px;
-    font-size: 0.625rem;
+    font-size: 0.825rem;
   }
   .footer__input-btn {
     font-size: 0.9rem;
@@ -532,5 +510,8 @@ button {
 @media screen and (max-width: 375px) {
   .footer {
     flex-direction: column;
+  }
+  .footer__input {
+    flex: 1 1 100%;
   }
 }
