@@ -151,14 +151,6 @@ h1 {
   line-height: 43.88px;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--color-dark);
-}
-
 input {
   border: none;
   outline: none;
