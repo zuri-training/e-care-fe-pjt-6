@@ -151,6 +151,16 @@
     grid-template-rows: minmax(465px, auto) 230px;
   }
 
+  .hero__heading {
+    margin-top: 90px;
+  }
+
+  .hero__heading,
+  .cta__heading {
+    font-size: 1.65rem;
+    line-height: 2rem;
+  }
+
   .cta__content {
     grid-row: 1;
   }
@@ -190,10 +200,6 @@
 }
 
 @media (max-width: 420px) {
-  .hero__heading,
-  .cta__heading {
-    font-size: 1.2rem;
-  }
 }
 
 @media (max-width: 360px) {
