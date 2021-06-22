@@ -226,6 +226,18 @@ button {
   background-color: #fbfbfb;
   box-shadow: 0px 0px 4px 0px #00000026;
   position: relative;
+  z-index: 99;
+}
+
+.header--transparent {
+  background-color: #0000003d;
+  box-shadow: none;
+}
+
+.header--absolute {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
 }
 .header .wrapper {
   display: flex;
@@ -257,6 +269,10 @@ button {
 
 .nav__item {
   margin-right: 3.19rem;
+}
+
+.header--transparent .nav__link {
+  color: var(--color-light);
 }
 
 .nav__link {
@@ -306,7 +322,9 @@ button {
   z-index: 99;
   transition: width 1s ease;
 }
-
+.side-nav--absolute {
+  top: 77px;
+}
 .side-nav.active {
   width: 100%;
 }
@@ -342,6 +360,9 @@ button {
   }
 }
 
+.header--transparent .menu-btn__icon {
+  fill: var(--color-light);
+}
 .menu-btn__icon {
   fill: var(--color-dark);
 }
@@ -363,7 +384,7 @@ button {
   min-height: 484px;
   background-color: var(--color-brand-blue);
   letter-spacing: 0.03em;
-  padding: 2.625rem 3.625rem 3.625rem 3.625rem;
+  padding: 2.625rem 0 3.625rem 0;
 }
 
 .footer .wrapper {
@@ -379,7 +400,7 @@ button {
 }
 @media screen and (max-width: 590px) {
   .footer {
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 2rem 0 3rem 0;
   }
 }
 .footer__subscription {
@@ -474,7 +495,7 @@ button {
   }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 820px) {
   .footer__menu {
     flex: 1 0 50%;
   }

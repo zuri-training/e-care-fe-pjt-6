@@ -42,7 +42,6 @@
 .hero__content .btn,
 .cta__content .btn {
   width: fit-content;
-  box-sizing: content-box;
   border-radius: 1.25rem;
   padding: 1rem 1.875rem;
 }
@@ -140,7 +139,7 @@
   }
 
   .feature {
-    flex: 0 0 50%;
+    flex: 0 1 50%;
     margin: 3.875rem 0;
   }
 }
@@ -150,6 +149,16 @@
   .cta .wrapper {
     grid-template-columns: 100%;
     grid-template-rows: minmax(465px, auto) 230px;
+  }
+
+  .hero__heading {
+    margin-top: 90px;
+  }
+
+  .hero__heading,
+  .cta__heading {
+    font-size: 1.65rem;
+    line-height: 2rem;
   }
 
   .cta__content {
@@ -166,12 +175,34 @@
   .services__heading {
     font-size: 1.2rem;
   }
+  .feature {
+    margin: 2rem 0;
+  }
   .feature__title {
     font-size: 1rem;
   }
   .feature__content {
     font-size: 0.9rem;
   }
+}
+
+@media (max-width: 820px) {
+  .hero__content .btn,
+  .cta__content .btn {
+    border-radius: 2rem;
+    padding: 0.625rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero__content .btn,
+  .cta__content .btn {
+    padding: 0.625rem 1.2rem;
+  }
+}
+
+@media (max-width: 420px) {
 }
 
 @media (max-width: 360px) {
@@ -188,6 +219,12 @@
   .cta__lead {
     font-size: 0.625rem;
     line-height: 12.9px;
+  }
+  .hero__content .btn {
+    padding: 0.425rem 0.875rem;
+  }
+  .cta__content .btn {
+    padding: 0.25rem 3.275rem;
   }
   .feature__content {
     font-size: 0.625rem;
