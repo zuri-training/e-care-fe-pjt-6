@@ -38,7 +38,11 @@
 .cta__lead {
   margin-bottom: 1.25rem;
 }
-
+.hero__content,
+.cta__content {
+  display: flex;
+  flex-direction: column;
+}
 .hero__content .btn,
 .cta__content .btn {
   width: fit-content;
@@ -49,12 +53,19 @@
   margin-top: 2.875rem;
 }
 
-/* .hero__figure {
-} */
+.hero__figure,
+.cta__figure {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hero__figure {
+  background-position: top 25% left 50%;
+  background-image: url("../assets/Image/landing-page-01-desktop.png");
+}
 
-/* .cta__figure {
-
-} */
+.cta__figure {
+  background-image: url("../assets/Image/landing-page-02-desktop.png");
+}
 
 /* SERVICES SECTION STYLES */
 .services {
@@ -132,6 +143,7 @@
   .cta__heading {
     font-size: 1.85rem;
     line-height: 39.88px;
+    max-width: 30ch;
   }
 
   .services__body {
@@ -149,6 +161,7 @@
   .cta .wrapper {
     grid-template-columns: 100%;
     grid-template-rows: minmax(465px, auto) 230px;
+    padding: 0.75rem 0;
   }
 
   .hero__heading {
@@ -161,6 +174,18 @@
     line-height: 2rem;
   }
 
+  .hero__figure {
+    background-size: contain;
+    background-image: url("../assets/Image/landing-page-01-mobile.png");
+  }
+
+  .cta__figure {
+    background-image: url("../assets/Image/landing-page-02-mobile.png");
+  }
+  .hero__content,
+  .cta__content {
+    padding: 0 1rem;
+  }
   .cta__content {
     grid-row: 1;
   }
@@ -220,6 +245,12 @@
     font-size: 0.625rem;
     line-height: 12.9px;
   }
+
+  .hero__content .btn,
+  .cta__content .btn {
+    align-self: center;
+  }
+
   .hero__content .btn {
     padding: 0.425rem 0.875rem;
   }
