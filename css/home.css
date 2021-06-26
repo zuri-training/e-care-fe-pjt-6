@@ -129,7 +129,12 @@
   height: 89px;
   border-radius: 1.25rem;
   background-color: rgba(0, 103, 160, 0.08);
-  padding: 1.875rem;
+  padding: 2rem;
+}
+
+.feature__figure svg {
+  width: 24px;
+  height: auto;
 }
 
 .feature__title {
