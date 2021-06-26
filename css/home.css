@@ -146,6 +146,10 @@
     max-width: 30ch;
   }
 
+  .cta__lead {
+    margin-bottom: 0.875rem;
+  }
+
   .services__body {
     padding: 2rem 0.875rem 0.875rem 0.875rem;
   }
@@ -186,8 +190,15 @@
   .cta__content {
     padding: 0 1rem;
   }
+  .hero__lead {
+    margin-bottom: 1.25rem;
+  }
+  .hero__figure {
+    margin-top: 2rem;
+  }
   .cta__content {
     grid-row: 1;
+    padding-bottom: 2.5rem;
   }
   .cta__figure {
     grid-row: 2;
