@@ -209,7 +209,7 @@ button {
 
 @media screen and (max-width: 970px) {
   .wrapper {
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1rem;
   }
 }
 
@@ -465,6 +465,8 @@ button {
 .footer__social {
   flex: 1 0 40%;
   order: 7;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 @media screen and (max-width: 1080px) {
