@@ -43,6 +43,10 @@
   display: flex;
   flex-direction: column;
 }
+
+.cta__content {
+  padding-left: 0.875rem;
+}
 .hero__content .btn,
 .cta__content .btn {
   width: fit-content;
@@ -64,7 +68,10 @@
 }
 
 .cta__figure {
-  background-image: url("../assets/Image/landing-page-02-desktop.png");
+  padding: 4rem 4rem 4rem 0;
+}
+.cta__figure-img {
+  width: 100%;
 }
 
 /* SERVICES SECTION STYLES */
@@ -183,7 +190,13 @@
     background-image: url("../assets/Image/landing-page-01-mobile.png");
   }
 
+  .cta__figure-img {
+    display: none;
+  }
+
   .cta__figure {
+    padding: 0;
+    background-position: center;
     background-image: url("../assets/Image/landing-page-02-mobile.png");
   }
   .hero__content,
