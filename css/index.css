@@ -465,6 +465,8 @@ button {
 .footer__social {
   flex: 1 0 40%;
   order: 7;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 @media screen and (max-width: 1080px) {
