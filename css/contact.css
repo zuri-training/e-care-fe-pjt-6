@@ -199,15 +199,17 @@ p {
 }
 @media screen and (max-width: 768px) {
   
+  
+  .contacts-body{
+    display: flex;
+    flex-direction: column;
+    padding: 200px;
+  }
+
   .heading{
-    font-size: 25px;
-    text-align: center;
-  }
-  .container h1{
-    text-align: center;
-    
-  }
-  .contacts{
-    display: block;
+    font-size: 70%;
+    padding-right: 10px;
+    background-position: center;
   }
 }
+
