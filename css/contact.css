@@ -48,12 +48,9 @@ a{
 
 .container {
   width: 800px;
-  height: 500px;
+  height: 800px;
   background: #fff;
   margin: 50px auto;
-  /* box-sizing: border-box; */
-  margin-bottom: 20px;
-  
   
 }
 .container, h1, p {
