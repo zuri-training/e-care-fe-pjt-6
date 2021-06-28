@@ -172,6 +172,7 @@ button {
   outline: none;
   background-color: transparent;
   color: inherit;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*  UTILITY CLASSES HERE */
@@ -311,7 +312,6 @@ button {
   height: 50px;
   border-radius: 50px;
   aspect-ratio: 1/1;
-  background-color: #c4c4c4;
 }
 /* SIDENAV */
 .side-nav {
