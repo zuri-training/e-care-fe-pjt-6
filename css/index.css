@@ -172,6 +172,7 @@ button {
   outline: none;
   background-color: transparent;
   color: inherit;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*  UTILITY CLASSES HERE */
