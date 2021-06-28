@@ -1,6 +1,5 @@
 /* About Page Styles */
-<<<<<<< HEAD
-=======
+/* <<<<<<< HEAD =======  */
 p {
   color: #000000;
   font-weight: 500;
@@ -40,8 +39,7 @@ br {
     line-height: 1.5rem;
   }
 }
->>>>>>> cef30c92e70c7c5466e7d0582ac6e64bf5754fb1
-
+/* >>>>>>>cef30c92e70c7c5466e7d0582ac6e64bf5754fb1  */
 .about__main {
   display: flex;
   flex-direction: column;
@@ -79,7 +77,7 @@ br {
 
 @media screen and (min-width: 768px) {
   .about__header {
-    height: 90%;
+    height: 100vh;
     width: 100%;
   }
 }
