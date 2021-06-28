@@ -129,6 +129,9 @@
   height: 89px;
   border-radius: 1.25rem;
   background-color: rgba(0, 103, 160, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
@@ -231,6 +234,9 @@
   }
   .feature {
     margin: 2rem 0;
+  }
+  .feature__figure svg {
+    width: 20px;
   }
   .feature__title {
     font-size: 1rem;
