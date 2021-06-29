@@ -14,8 +14,6 @@ it should contain global styles and DOM overides
   --color-bg-blue: rgba(0, 103, 160, 0.59);
   --color-text: #000000;
   --color-bg-grey: #fbfbfb;
-  --color-input: #9f9f9f;
-  --color-signUp: rgba(254, 216, 16, 0.3);
 }
 /* Google Font  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
