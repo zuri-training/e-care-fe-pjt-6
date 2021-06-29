@@ -1,10 +1,8 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.main {
+  margin-bottom: 4rem;
 }
 
-.wrapper {
+.signup__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -63,7 +61,7 @@
 .city,
 .dob,
 .phone,
-.btn {
+.signup__btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +135,7 @@
   padding: 1rem;
 }
 
-.btn {
+.signup__btn {
   margin-bottom: 1rem;
   margin-left: 1rem;
   width: 400px;
@@ -179,7 +177,7 @@
     height: 60px;
   }
 
-  .btn {
+  .signup__btn {
     width: 500px;
     height: 60px;
   }
@@ -204,7 +202,7 @@
     width: 125px;
   }
 
-  .btn {
+  .signup__btn {
     width: 400px;
   }
 
@@ -242,7 +240,7 @@
     width: 300px;
   }
 
-  .btn {
+  .signup__btn {
     width: 300px;
   }
 }
@@ -275,7 +273,7 @@
     width: 250px;
   }
 
-  .btn {
+  .signup__btn {
     width: 250px;
   }
 
