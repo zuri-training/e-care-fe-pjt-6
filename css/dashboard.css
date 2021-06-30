@@ -431,7 +431,7 @@ img {
   }
 
   .para {
-    padding-left: 2rem;
+    padding-left: 0rem;
     margin-top: 1rem;
   }
 
@@ -541,6 +541,7 @@ img {
   }
 
   .para {
+    text-align: justify;
     padding-left: 0;
     margin-top: 1rem;
   }
@@ -570,7 +571,10 @@ img {
 
 @media screen and (max-width: 475px) {
   .details__header__wrapper__right {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
   }
 
   .details__header__wrapper__left {
@@ -579,10 +583,12 @@ img {
 
   .details__header__wrapper__right h5 {
     margin-bottom: 1rem;
+    display: none;
   }
 
   .details__header__wrapper__right img {
     margin-bottom: 1rem;
+    width: 25%;
   }
 
   .settings {
@@ -590,19 +596,40 @@ img {
     margin-left: 0;
   }
 
+  .img__profile {
+    display: none;
+  }
+
   .details__detail h4 {
-    font-size: 14px;
-    text-align: justify;
+    font-size: 12px;
+    text-align: center;
   }
 
   .overview {
     flex-wrap: wrap;
-    width: 60%;
+    width: 70%;
+  }
+
+  .email__name h4 {
+    text-align: justify;
   }
 
   .email p {
     text-align: justify;
-    font-size: 7px;
+    font-size: 10px;
+  }
+
+  .address p,
+  .address h5,
+  .city p,
+  .city h5,
+  .state p,
+  .state h5,
+  .next__of__kin p,
+  .next__of__kin h5,
+  .section h5 {
+    text-align: justify;
+    font-size: 14px;
   }
 
   .btn {
