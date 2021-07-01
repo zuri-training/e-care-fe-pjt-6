@@ -43,6 +43,7 @@
   border-radius: 10px;
   background-color: var(--color-brand-blue);
   color: var(--color-light);
+  cursor: pointer;
 }
 
 @media (max-width: 425px) {
