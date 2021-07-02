@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-attachment: fixed;
 }
 .contact-main::after {
   content: "";
