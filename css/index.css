@@ -217,6 +217,9 @@ button {
 .txt-blue {
   color: var(--color-brand-blue);
 }
+.txt-yellow {
+  color: var(--color-brand-yellow);
+}
 
 /* COMPONENT STYLES */
 
@@ -537,4 +540,20 @@ button {
   .footer__input {
     flex: 1 1 100%;
   }
+}
+
+/*
+rule set that cleverly hides the content from the viewer
+but allows for screen readers to still have access
+to the content for accesibility purposes
+*/
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

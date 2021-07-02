@@ -5,24 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/about.css" />
-    <title>E-Care About US</title>
+    <link rel="stylesheet" href="../css/contact.css" />
+    <title>E-Care Contact</title>
   </head>
   <body>
     <div class="site-navigation">
@@ -98,84 +86,112 @@
         </div>
       </nav>
     </div>
-    <section class="about__header">
-      <div class="about__header--wrapper">
-        <h1>About <span>E-care</span></h1>
+    <main class="contact-main">
+      <div class="contact-main__content">
+        <h1 class="contact-main__heading">
+          Contact <span class="txt-yellow">E-care</span>
+        </h1>
+      </div>
+    </main>
+    <section class="options">
+      <div class="wrapper">
+        <div class="options__content">
+          <div class="option">
+            <div class="option__figure">
+              <img src="../assets/Image/headphones.svg" alt="help desk" />
+            </div>
+            <div class="option__title">Help Desk</div>
+            <p class="option__body">
+              Update and save medical records in our cloud
+            </p>
+          </div>
+          <div class="option">
+            <div class="option__figure">
+              <img src="../assets/Image/request-quote.svg" alt="review" />
+            </div>
+            <div class="option__title">Reviews</div>
+            <p class="option__body">
+              Update and save medical records in our cloud
+            </p>
+          </div>
+          <div class="option">
+            <div class="option__figure">
+              <img src="../assets/Image/coin.svg" alt="donate" />
+            </div>
+            <div class="option__title">Donate</div>
+            <p class="option__body">
+              Update and save medical records in our cloud
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contactForm" class="contact-form">
+      <div class="wrapper">
+        <div class="contact-form__header">
+          <h2 class="contact-form__heading">Get In Touch.</h2>
+          <h3 class="contact-form__sub">Let’s start a conversation</h3>
+        </div>
+        <form action="#" class="form">
+          <div class="form-row">
+            <label for="firstName" class="a11y-hidden">Your First Name</label>
+            <input
+              name="first name"
+              id="firstName"
+              type="text"
+              class="form-control"
+              placeholder="first name"
+            />
+
+            <label for="lastName" class="a11y-hidden">Your Last Name</label>
+            <input
+              name="last name"
+              id="lastName"
+              type="text"
+              class="form-control"
+              placeholder="last name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="a11y-hidden">Your Email Address</label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              class="form-control"
+              placeholder="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject" class="a11y-hidden"
+              >Subject of your message</label
+            >
+            <input
+              name="subject"
+              id="subject"
+              type="text"
+              class="form-control"
+              placeholder="subject"
+            />
+          </div>
+          <div class="form-group">
+            <label for="messageBody" class="a11y-hidden"
+              >Body of your message</label
+            >
+            <textarea
+              name="message body"
+              id="messageBody"
+              class="form-textarea"
+              cols="30"
+              rows="10"
+              placeholder="body"
+            ></textarea>
+          </div>
+          <input class="form-submit" type="submit" value="Send Message" />
+        </form>
       </div>
     </section>
 
-    <main class="about__main">
-      <section class="section-detail">
-        <div class="details">
-          <div class="details__wrapper">
-            <h2>Who are we?</h2>
-            <p>
-              A team of medical professionals who want to ensure that everyone
-              around the country gets access to good medical care.
-            </p>
-          </div>
-          <div class="details__img">
-            <div class="details__empty"></div>
-          </div>
-        </div>
-      </section>
-      <section class="section-efficiencies">
-        <h2>
-          <span class="section-efficiencies__spanOne">5 Features to</span>
-          <span class="section-efficiencies__spanTwo">How we</span> Ensure
-          Efficiency
-        </h2>
-        <div class="efficiency">
-          <div class="efficiency__label">
-            <i class="fa fa-users"></i>
-            <h4>Doctors</h4>
-            <p>
-              Find thousand of <br />specialist doctors <br />
-              around the country
-            </p>
-          </div>
-          <div class="efficiency__label">
-            <i class="fa fa-clinic-medical"></i>
-            <h4>Hospital</h4>
-            <p>
-              Find thousand of <br />specialist doctors <br />
-              around the country
-            </p>
-          </div>
-          <div class="efficiency__label">
-            <i class="fa fa-user-friends"></i>
-            <h4>Patients</h4>
-            <p>
-              Find thousand of <br />specialist doctors <br />
-              around the country
-            </p>
-          </div>
-          <div class="efficiency__label">
-            <i class="fa fa-cloud-upload"></i>
-            <h4>Records</h4>
-            <p>
-              Update and save <br />
-              medical records <br />
-              in our cloud
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="section-mission">
-        <div class="missions">
-          <div class="missions__wrapper">
-            <div class="missions__empty"></div>
-          </div>
-          <div class="missions__mission">
-            <h2>Our Mission</h2>
-            <p>
-              A team of medical professionals who want to ensure that everyone
-              around the country gets access to good medical care.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
     <footer class="footer">
       <div class="wrapper">
         <form class="footer__subscription">
@@ -188,31 +204,37 @@
         </form>
         <div class="footer__menu">
           <h5 class="footer__menu-header">Patients</h5>
-          <a href="./login.html" class="footer__menu-link">Log In</a>
+          <a href="#" class="footer__menu-link">Log In</a>
           <a href="#" class="footer__menu-link">Medical Records</a>
           <a href="#" class="footer__menu-link">Prescription</a>
           <a href="#" class="footer__menu-link">Quality Report</a>
         </div>
         <div class="footer__menu">
           <h5 class="footer__menu-header">Doctors</h5>
-          <a href="./login.html" class="footer__menu-link">Log In</a>
+          <a href="#" class="footer__menu-link">Log In</a>
           <a href="#" class="footer__menu-link">Promote your practice</a>
           <a href="#" class="footer__menu-link">Patients</a>
           <a href="#" class="footer__menu-link">Update Profile</a>
-          <a href="./contact.html" class="footer__menu-link">Help Center</a>
+          <a href="../pages/contact.html" class="footer__menu-link"
+            >Help Center</a
+          >
         </div>
         <div class="footer__menu">
           <h5 class="footer__menu-header">Hospitals</h5>
-          <a href="./login.html" class="footer__menu-link">Log In</a>
+          <a href="#" class="footer__menu-link">Log In</a>
           <a href="#" class="footer__menu-link">Health System</a>
           <a href="#" class="footer__menu-link">Doctors</a>
           <a href="#" class="footer__menu-link">Patients</a>
-          <a href="./contact.html" class="footer__menu-link">Help Centre</a>
+          <a href="../pages/contact.html" class="footer__menu-link"
+            >Help Centre</a
+          >
         </div>
         <div class="footer__menu">
           <h5 class="footer__menu-header">E-Care</h5>
           <a href="./pages/about.html" class="footer__menu-link">About Us</a>
-          <a href="./contact.html" class="footer__menu-link">Contact Us</a>
+          <a href="../pages/contact.html" class="footer__menu-link"
+            >Contact Us</a
+          >
           <a href="#" class="footer__menu-link">Blog</a>
           <a href="#" class="footer__menu-link">FAQS</a>
         </div>
