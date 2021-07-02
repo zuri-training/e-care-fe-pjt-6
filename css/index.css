@@ -217,6 +217,9 @@ button {
 .txt-blue {
   color: var(--color-brand-blue);
 }
+.txt-yellow {
+  color: var(--color-brand-yellow);
+}
 
 /* COMPONENT STYLES */
 
