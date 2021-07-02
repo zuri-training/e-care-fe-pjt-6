@@ -132,7 +132,65 @@
           <h2 class="contact-form__heading">Get In Touch.</h2>
           <h3 class="contact-form__sub">Let’s start a conversation</h3>
         </div>
-        <form action="#" class="form"></form>
+        <form action="#" class="form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" class="a11y-hidden">Your First Name</label>
+              <input
+                name="first name"
+                id="firstName"
+                type="text"
+                class="form-control"
+                placeholder="first name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName" class="a11y-hidden">Your Last Name</label>
+              <input
+                name="last name"
+                id="lastName"
+                type="text"
+                class="form-control"
+                placeholder="last name"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="a11y-hidden">Your Email Address</label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              class="form-control"
+              placeholder="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject" class="a11y-hidden"
+              >Subject of your message</label
+            >
+            <input
+              name="subject"
+              id="subject"
+              type="text"
+              class="form-control"
+              placeholder="subject"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject" class="a11y-hidden"
+              >Body of your message</label
+            >
+            <textarea
+              name=""
+              id="form-textarea"
+              cols="30"
+              rows="10"
+              placeholder="body"
+            ></textarea>
+          </div>
+          <input class="form-submit" type="submit" value="Send Message" />
+        </form>
       </div>
     </section>
 
