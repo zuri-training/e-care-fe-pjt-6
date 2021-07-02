@@ -126,7 +126,7 @@
         </div>
       </div>
     </section>
-    <section class="contact-form">
+    <section id="contactForm" class="contact-form">
       <div class="wrapper">
         <div class="contact-form__header">
           <h2 class="contact-form__heading">Get In Touch.</h2>
@@ -134,26 +134,23 @@
         </div>
         <form action="#" class="form">
           <div class="form-row">
-            <div class="form-group">
-              <label for="firstName" class="a11y-hidden">Your First Name</label>
-              <input
-                name="first name"
-                id="firstName"
-                type="text"
-                class="form-control"
-                placeholder="first name"
-              />
-            </div>
-            <div class="form-group">
-              <label for="lastName" class="a11y-hidden">Your Last Name</label>
-              <input
-                name="last name"
-                id="lastName"
-                type="text"
-                class="form-control"
-                placeholder="last name"
-              />
-            </div>
+            <label for="firstName" class="a11y-hidden">Your First Name</label>
+            <input
+              name="first name"
+              id="firstName"
+              type="text"
+              class="form-control"
+              placeholder="first name"
+            />
+
+            <label for="lastName" class="a11y-hidden">Your Last Name</label>
+            <input
+              name="last name"
+              id="lastName"
+              type="text"
+              class="form-control"
+              placeholder="last name"
+            />
           </div>
           <div class="form-group">
             <label for="email" class="a11y-hidden">Your Email Address</label>
@@ -178,12 +175,13 @@
             />
           </div>
           <div class="form-group">
-            <label for="subject" class="a11y-hidden"
+            <label for="messageBody" class="a11y-hidden"
               >Body of your message</label
             >
             <textarea
-              name=""
-              id="form-textarea"
+              name="message body"
+              id="messageBody"
+              class="form-textarea"
               cols="30"
               rows="10"
               placeholder="body"
