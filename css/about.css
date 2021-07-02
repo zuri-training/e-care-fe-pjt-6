@@ -53,6 +53,7 @@ br {
   justify-content: center;
   background: url("../assets/Image/about-page-img01.jpg") center top no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 50vh;
   width: 100%;
 }
