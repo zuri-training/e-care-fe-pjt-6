@@ -13,6 +13,7 @@
   --color-input: #9f9f9f;
   --color-signUp: rgba(254, 216, 16, 0.3);
   --color-dasboardText: #242424;
+  --color-dashboard-links: #f9f9f9;
 }
 
 * {
@@ -28,7 +29,13 @@ body {
   vertical-align: baseline;
   line-height: 1.6;
   color: var(--color-neutral-gray);
-  background-color: #e5e5e5;
+  background-color: var(--color-bg-grey);
+}
+
+p {
+  color: var(--color-dasboardText);
+  font-size: 16px;
+  font-weight: normal;
 }
 
 a {
@@ -39,12 +46,18 @@ a {
 }
 
 h4 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   color: var(--color-light);
   margin-left: 3rem;
   margin-bottom: 2rem;
   margin-top: 3rem;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-dasboardText);
 }
 
 .main {
@@ -70,8 +83,15 @@ h4 {
   margin-left: 3rem;
   width: 100%;
 }
+
 .profile__links h6 {
   margin-bottom: 1.5rem;
+}
+
+.profile__links a {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-dashboard-links);
 }
 
 .profile__links__dash {
@@ -79,13 +99,15 @@ h4 {
   height: 40px;
   background-color: var(--color-light);
   padding-left: 3rem;
-  padding-top: 0.7rem;
+  padding-top: 0.4rem;
   margin-bottom: 1.5rem;
   border-radius: 30px;
 }
 
 .profile__links__dash a {
   color: var(--color-brand-blue);
+  font-weight: 500;
+  font-size: 18px;
 }
 
 /* the right side start here, details styling */
@@ -96,7 +118,8 @@ h4 {
 
 .details__header {
   width: 100%;
-  border-bottom: 4px solid var(--color-neutral-light-gray);
+  background-color: var(--color-bg-grey);
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.05);
 }
 
 .details__header__wrapper {
@@ -119,17 +142,21 @@ img {
   color: var(--color-brand-blue);
   padding-left: 1.5rem;
 }
+.details__header__wrapper__left a {
+  font-weight: 500;
+  font-size: 18px;
+}
 
 .details__header__wrapper__right {
   display: flex;
   margin-right: 4rem;
 }
 
-.details__header__wrapper__right h5,
+.details__header__wrapper__right h6,
 img {
   padding-left: 1.5rem;
 }
-.details__header__wrapper__right h5 {
+.details__header__wrapper__right h6 {
   margin-top: 1rem;
   padding-right: 1.5rem;
 }
@@ -209,8 +236,8 @@ img {
 }
 
 .btn {
-  width: 120px;
-  height: 30px;
+  width: 165px;
+  height: 46px;
   border: none;
   margin-top: 1rem;
   border-radius: 30px;
@@ -231,17 +258,10 @@ img {
 }
 
 .info h5 {
-  color: var(--color-neutral-light-gray);
+  color: var(--color-input);
+  font-weight: 500;
+  font-size: 18px;
 }
-.info p {
-  color: var(--color-dasboardText);
-}
-
-/* .city,
-.state,
-.next__of__kin {
-  margin-left: 5rem;
-} */
 
 .section {
   display: flex;
@@ -249,7 +269,9 @@ img {
   padding: 2rem;
 }
 .section h5 {
-  color: var(--color-neutral-light-gray);
+  color: var(--color-input);
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .section h5:first-child {
@@ -269,6 +291,17 @@ img {
   padding-right: 1rem;
 }
 
+.cards h5 {
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  font-size: 24px;
+  background-color: var(--color-bg-grey);
+  color: var(--color-brand-blue);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
 /* data cards styling */
 
 .data {
@@ -280,15 +313,6 @@ img {
   border-radius: 20px;
   height: 250px;
   border: 1px solid #c4c4c4;
-}
-
-.data h5 {
-  text-align: center;
-  width: 100%;
-  background-color: var(--color-bg-grey);
-  color: var(--color-brand-blue);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 .blood__groups {
@@ -324,15 +348,6 @@ img {
   border: 1px solid #c4c4c4;
 }
 
-.report h5 {
-  text-align: center;
-  width: 100%;
-  background-color: var(--color-bg-grey);
-  color: var(--color-brand-blue);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
 .report__types {
   display: flex;
   width: 100%;
@@ -361,15 +376,6 @@ img {
   margin-bottom: 2rem;
 }
 
-.doctors h5 {
-  text-align: center;
-  width: 100%;
-  background-color: var(--color-bg-grey);
-  color: var(--color-brand-blue);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
 .doctors__name {
   display: flex;
   justify-content: flex-start;
@@ -393,15 +399,6 @@ img {
   border-radius: 20px;
   border: 1px solid #c4c4c4;
   margin-bottom: 2rem;
-}
-
-.hospitals h5 {
-  text-align: center;
-  width: 100%;
-  background-color: var(--color-bg-grey);
-  color: var(--color-brand-blue);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 .img__name {
@@ -454,7 +451,7 @@ img {
   }
 }
 
-@media screen and (max-width: 791px) {
+@media screen and (max-width: 860px) {
   h4 {
     margin-left: 0;
   }
@@ -506,11 +503,11 @@ img {
     margin-bottom: 2rem;
   }
 
-  .details__header__wrapper__right h5,
+  .details__header__wrapper__right h6,
   img {
     padding-left: 0.5rem;
   }
-  .details__header__wrapper__right h5 {
+  .details__header__wrapper__right h6 {
     margin-top: 1rem;
     padding-right: 0.5rem;
   }
@@ -581,7 +578,7 @@ img {
     margin-left: 0;
   }
 
-  .details__header__wrapper__right h5 {
+  .details__header__wrapper__right h6 {
     margin-bottom: 1rem;
     display: none;
   }
@@ -635,5 +632,29 @@ img {
   .btn {
     width: 80px;
     height: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  p {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .profile__links a {
+    font-size: 14px;
+  }
+
+  .profile__links__dash a {
+    font-size: 14px;
   }
 }
