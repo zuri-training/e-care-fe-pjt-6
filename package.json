@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "E-care is centered towards achieving SDGs goal number three (good health and well being). This would be achieved through the two key features of the app namely; Health record management which provide solution to hospital record mismanagement which has in turn led to loss of several lives and rural-connect focuses on extending good health care to rural dwellers by connecting the rural community health care providers with their senior counterparts at urban health centers closest to them, so as to receive guidance in handling emergencies and other critical conditions.",
   "main": "index.js",
+  "source": [
+    "./src/js/index.js",
+    "./src/*.html"
+  ],
   "scripts": {
     "clean": "rd /s /q .cache dist",
-    "dev": "parcel ./src/pages/*.html",
-    "build": "parcel build ./src/index.html"
+    "dev": "parcel ./src/*.html",
+    "build": "parcel build ./src/*.html"
   },
   "repository": {
     "type": "git",
