@@ -1,7 +1,0 @@
-const menuBtn = document.getElementById("menuBtn");
-const sideNav = document.getElementById("sideNav");
-
-menuBtn.addEventListener("click", (e) => {
-  menuBtn.classList.toggle("active");
-  sideNav.classList.toggle("active");
-});

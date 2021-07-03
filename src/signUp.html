@@ -8,9 +8,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/createAccount.css" />
-    <title>SignUp</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/signUp.css" />
+    <title>E-Care - Complete SignUp</title>
   </head>
   <body>
     <div class="site-navigation">
@@ -18,7 +18,7 @@
         <div class="wrapper">
           <div class="logo">
             <img
-              src="../assets/Image/logo-colored-transparent-2x.png"
+              src="./assets/Image/logo-colored-transparent-2x.png"
               alt="ecare logo"
             />
           </div>
@@ -26,7 +26,7 @@
             <ul class="nav__item-wrapper">
               <!-- TODO Add corresponding link to pages -->
               <li class="nav__item">
-                <a href="../index.html" class="nav__link">Home</a>
+                <a href="./index.html" class="nav__link">Home</a>
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link">Directory</a>
@@ -40,9 +40,7 @@
             </ul>
           </nav>
           <div class="header__btn-wrapper">
-            <a href="../pages/createAccount.html" class="btn btn-secondary"
-              >Sign Up</a
-            >
+            <a href="./login.html" class="btn btn-secondary">Login</a>
           </div>
           <div id="menuBtn" class="menu-btn">
             <svg
@@ -78,32 +76,70 @@
       </header>
       <nav class="side-nav side-nav--absolute" id="sideNav">
         <div class="side-nav__content">
-          <a href="../index.html" class="side-nav__link">Home</a
+          <a href="./index.html" class="side-nav__link">Home</a
           ><a href="#" class="side-nav__link">Directory</a
           ><a href="#" class="side-nav__link">Doctors</a
           ><a href="#" class="side-nav__link">Hospitals</a
-          ><a href="../pages/createAccount.html" class="side-nav__link"
-            >Sign Up</a
-          ><a href="../pages/login.html" class="side-nav__link">Login</a>
+          ><a href="./createAccount.html" class="side-nav__link">Sign Up</a
+          ><a href="./login.html" class="side-nav__link">Login</a>
         </div>
       </nav>
     </div>
-    <main>
-      <div class="acct__wrapper">
-        <div class="heading">
-          <h2>Create your account</h2>
-          <div class="check">
-            <input type="radio" name="" id="" />
-            <h4>Patient</h4>
-          </div>
+    <main class="main">
+      <div class="signup__wrapper">
+        <div class="icon">
+          <img src="./assets/Image/signUp--img--02.svg" alt="" class="image3" />
         </div>
+        <h2 class="finish">Finish creating your account</h2>
 
-        <form action="" class="form">
-          <h4>Enter your email to get things started:</h4>
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="password" />
-          <input type="password" placeholder="confirm password" />
-          <button>Send Link</button>
+        <form action="" class="form3">
+          <div class="name">
+            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="Last name" />
+          </div>
+
+          <div class="address">
+            <input type="text" placeholder="Address" />
+          </div>
+
+          <div class="city">
+            <input type="text" placeholder="city" />
+            <input type="text" placeholder="state" />
+            <input type="text" placeholder="zip code" />
+          </div>
+
+          <div class="dob">
+            <input type="text" placeholder="Date of birth" />
+          </div>
+
+          <div class="phone">
+            <input
+              type="tel"
+              name="Phone Number"
+              id=""
+              placeholder="Phone number"
+            />
+          </div>
+
+          <div class="gender">
+            <div class="female">
+              <input type="radio" name="" id="" /><span> Female</span>
+            </div>
+            <div class="male">
+              <input type="radio" name="" id="" /><span> Male</span>
+            </div>
+          </div>
+
+          <div class="health">
+            <label for="">Health Insurance Information</label>
+            <div class="sub">
+              <input type="text" name="" id="" placeholder="carrier" />
+              <input type="text" name="" id="" placeholder="plan name" />
+              <input type="text" name="" id="" placeholder="Subsciber ID" />
+            </div>
+          </div>
+
+          <button class="signup__btn">Sign Up</button>
         </form>
       </div>
     </main>
@@ -119,60 +155,58 @@
         </form>
         <div class="footer__menu">
           <h5 class="footer__menu-header">Patients</h5>
-          <a href="../pages/login.html" class="footer__menu-link">Log In</a>
+          <a href="./login.html" class="footer__menu-link">Log In</a>
           <a href="#" class="footer__menu-link">Medical Records</a>
           <a href="#" class="footer__menu-link">Prescription</a>
           <a href="#" class="footer__menu-link">Quality Report</a>
         </div>
         <div class="footer__menu">
           <h5 class="footer__menu-header">Doctors</h5>
-          <a href="../pages/login.html" class="footer__menu-link">Log In</a>
+          <a href="./login.html" class="footer__menu-link">Log In</a>
           <a href="#" class="footer__menu-link">Promote your practice</a>
           <a href="#" class="footer__menu-link">Patients</a>
           <a href="#" class="footer__menu-link">Update Profile</a>
-          <a href="#" class="footer__menu-link">Help Center</a>
+          <a href="./contact.html" class="footer__menu-link">Help Center</a>
         </div>
         <div class="footer__menu">
           <h5 class="footer__menu-header">Hospitals</h5>
-          <a href="../pages/login.html" class="footer__menu-link">Log In</a>
+          <a href="./login.html" class="footer__menu-link">Log In</a>
           <a href="#" class="footer__menu-link">Health System</a>
           <a href="#" class="footer__menu-link">Doctors</a>
           <a href="#" class="footer__menu-link">Patients</a>
-          <a href="#" class="footer__menu-link">Help Centre</a>
+          <a href="./contact.html" class="footer__menu-link">Help Centre</a>
         </div>
         <div class="footer__menu">
           <h5 class="footer__menu-header">E-Care</h5>
-          <a href="../pages/about.html" class="footer__menu-link">About Us</a>
-          <a href="../pages/contact.html" class="footer__menu-link"
-            >Contact Us</a
-          >
+          <a href="./about.html" class="footer__menu-link">About Us</a>
+          <a href="./contact.html" class="footer__menu-link">Contact Us</a>
           <a href="#" class="footer__menu-link">Blog</a>
           <a href="#" class="footer__menu-link">FAQS</a>
         </div>
         <div class="footer__social">
           <div class="social-icon">
             <a href=""
-              ><img src="../assets/icons/fe_youtube.png" alt="youtube"
+              ><img src="./assets/icons/fe_youtube.png" alt="youtube"
             /></a>
           </div>
           <div class="social-icon">
             <a href=""
-              ><img src="../assets/icons/bx_bxl-facebook.png" alt="facebook"
+              ><img src="./assets/icons/bx_bxl-facebook.png" alt="facebook"
             /></a>
           </div>
           <div class="social-icon">
             <a href=""
-              ><img src="../assets/icons/eva_twitter-fill.png" alt="twitter"
+              ><img src="./assets/icons/eva_twitter-fill.png" alt="twitter"
             /></a>
           </div>
           <div class="social-icon">
             <a href=""
-              ><img src="../assets/icons/bx_bxl-instagram.png" alt="instagram"
+              ><img src="./assets/icons/bx_bxl-instagram.png" alt="instagram"
             /></a>
           </div>
         </div>
       </div>
     </footer>
-    <script src="../js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
