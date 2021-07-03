@@ -19,7 +19,5 @@
     "url": "https://github.com/eniolajayi/e-care-fe-pjt-6/issues"
   },
   "homepage": "https://github.com/eniolajayi/e-care-fe-pjt-6#readme",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.5"
-  }
+  "devDependencies": {}
 }
