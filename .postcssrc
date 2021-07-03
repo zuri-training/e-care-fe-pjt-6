@@ -1,6 +1,6 @@
 {
     "plugins": {
-        "autuprefixer" : {
+        "autoprefixer" : {
             "grid":true
         }
     }
