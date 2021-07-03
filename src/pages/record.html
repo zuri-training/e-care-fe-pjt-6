@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/record.css" />
+    <title>dashboard</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- The right side of the dashbord with all the links and the logo -->
+
+      <div class="profile">
+        <div class="logo">
+          <img src="../assets/Image/dashboard-page-img-10.svg" alt="logo" />
+        </div>
+
+        <h4>PROFILE</h4>
+
+        <div class="profile__links">
+          <h6><a href="#">Record</a></h6>
+        </div>
+
+        <h6 class="profile__links__dash"><a href="#">Dashboard</a></h6>
+
+        <div class="profile__links">
+          <h6><a href="#">Doctors</a></h6>
+          <h6><a href="#">Hospital</a></h6>
+          <h6><a href="#">Directory</a></h6>
+        </div>
+
+        <h4>HELP</h4>
+
+        <div class="profile__links">
+          <h6><a href="../pages/contact.html">Contact</a></h6>
+          <h6><a href="#">About</a></h6>
+          <h6><a href="#">Report</a></h6>
+        </div>
+      </div>
+
+      <!-- The left side div which contaim the user details -->
+
+      <div class="details">
+        <!-- The header with the name of the logged in user and notification with settings -->
+
+        <div class="details__header">
+          <div class="details__header__wrapper">
+            <div class="details__header__wrapper__left">
+              <h6>Your profile</h6>
+              <img
+                src="../assets/Image/dashboard-page-img-08.svg"
+                alt="arrow"
+              />
+              <h6><a href="#">Dashboard</a></h6>
+            </div>
+            <div class="details__header__wrapper__right">
+              <img
+                src="../assets/Image/dashboard-page-img-01.svg"
+                alt="picture"
+                class="img__profile"
+              />
+              <h5>Dimipre v.</h5>
+              <img
+                src="../assets/Image/dashboard-page-img-09.svg"
+                alt="notification"
+                class="notification"
+              />
+              <img
+                src="../assets/Image/dashboard-page-img-06.svg"
+                alt="setting"
+                class="settings"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- The actual detail of the user after the header -->
+
+        <div class="details__detail">
+          <!-- everything about the user -->
+
+          <div class="details__detail__wrapper">
+            <div class="overview__details">
+              <img
+                src="../assets/Image/dashboard-page-img-01.svg"
+                alt="profile picture"
+              />
+
+              <!-- user email name age etc -->
+              <div class="email__name__edit">
+                <div class="email__name">
+                  <h4>DIMIPRE V. OKON</h4>
+                  <div class="email">
+                    <p>Dimiprevokon@gmail.com</p>
+                    <p class="para">917-569-5390</p>
+                    <p class="para">05/07/1986</p>
+                  </div>
+                </div>
+                <button class="btn">Edit</button>
+              </div>
+            </div>
+
+            <!-- the chart section styling start here -->
+
+            <div class="chart">
+              <div class="cards cards__00">
+                <div class="image">
+                  <img
+                    src="../assets/Image/record-dashboard-img02.svg"
+                    alt="bar chart"
+                  />
+                </div>
+                <div class="consultation__percentage">
+                  <h6>Consultation</h6>
+                  <span>8%</span>
+                </div>
+                <div class="days">
+                  <h4>10</h4>
+                  <span>Today</span>
+                </div>
+              </div>
+              <div class="cards cards__01">
+                <div class="steps">
+                  <h6>Steps</h6>
+                  <div class="month">
+                    <h6>June</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img05.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="num">
+                  <h4>2,654</h4>
+                </div>
+                <div class="shape">
+                  <svg
+                    width="212"
+                    height="76"
+                    viewBox="0 0 212 76"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 42.9081C13.9514 38.9956 13.1546 62.2374 28.8907 65.6283C44.6267 69.0191 49.0089 45.2832 56.1797 38.5016C63.3505 31.7199 66.5376 0.816695 78.489 2.90336C90.4404 4.99003 96.4161 25.898 106.376 28.5064C116.335 31.1147 118.327 48.4133 127.689 61.1941C137.051 73.975 145.616 75.54 157.368 72.9316C169.12 70.3233 172.307 43.9514 177.885 42.9081C183.462 41.8647 188.442 54.4406 193.222 57.3098C198.003 60.179 199.397 72.9316 209.556 72.9316"
+                      stroke="#EAEAEA"
+                      stroke-opacity="0.4"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    class="two"
+                    width="212"
+                    height="105"
+                    viewBox="0 0 212 105"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.21436 102.476C11.3536 99.0198 18.8689 77.9451 29.7737 74.4027C35.5858 72.5147 40.242 76.1893 45.4369 81.8991C50.6319 87.6088 49.615 90.0744 61.2984 94.4762C70.94 98.1087 73.462 58.9448 82.9097 60.4495C92.3575 61.9542 96.7272 14.8671 106.702 18.7978C116.677 22.7284 118.67 12.5659 128.046 31.826C137.422 51.0862 146.085 6.19206 157.855 2.26142C169.626 -1.66922 172.691 40.0499 178.277 38.4777C183.863 36.9054 188.892 66.6331 193.68 70.9568C198.468 75.2805 199.826 59.5739 210 59.5739"
+                      stroke="#FED810"
+                      stroke-opacity="0.87"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <!-- <img src="../assets/Image/Shape (1).svg" alt="" />
+                  <img src="../assets/Image/Shape.svg" alt="" /> -->
+                </div>
+                <div class="weeks">
+                  <h6>W1</h6>
+                  <h6>W2</h6>
+                  <h6>W3</h6>
+                  <h6>W4</h6>
+                  <h6>W5</h6>
+                </div>
+              </div>
+              <div class="cards cards__02">
+                <img
+                  src="../assets/Image/record-dashboard-img01.svg"
+                  alt="bars"
+                />
+                <div class="cancel">
+                  <h6>Cancelled</h6>
+                  <span>4%</span>
+                </div>
+                <div class="day2">
+                  <h4>03</h4>
+                  <h5>Today</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- medical information -->
+            <div class="medical__info">
+              <div class="inner__info">
+                <div class="blood__group">
+                  <h6 class="dark">Blood Group</h6>
+                  <h6 class="light">AB</h6>
+                </div>
+                <div class="rhd">
+                  <h6 class="dark">RHD</h6>
+                  <h6 class="light">+(positive)</h6>
+                </div>
+                <div class="genotype">
+                  <h6 class="dark">GENOTYPE</h6>
+                  <h6 class="light">AA</h6>
+                </div>
+              </div>
+              <div class="physical__info">
+                <div class="height">
+                  <h6 class="dark">Height(cm)</h6>
+                  <h6 class="light">186</h6>
+                </div>
+                <div class="weight">
+                  <h6 class="dark">Weight</h6>
+                  <h6 class="light">65kg</h6>
+                </div>
+                <div class="age">
+                  <h6 class="dark">Age</h6>
+                  <h6 class="light">35</h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- documentation here -->
+
+            <div class="documentation">
+              <div class="files">
+                <div class="top">
+                  <h6>file/documents</h6>
+                  <img
+                    src="../assets/Image/record-dashboard-img04.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="report">
+                  <img src="../assets/Image/dashboard-page-img-05.svg" alt="" />
+                  <h6>Blood report</h6>
+                </div>
+                <div class="report">
+                  <img src="../assets/Image/dashboard-page-img-05.svg" alt="" />
+                  <h6>Diabetes report</h6>
+                </div>
+                <div class="report">
+                  <img src="../assets/Image/dashboard-page-img-05.svg" alt="" />
+                  <h6>Corona virus report</h6>
+                </div>
+                <div class="report">
+                  <img src="../assets/Image/dashboard-page-img-05.svg" alt="" />
+                  <h6>Corona virus report</h6>
+                </div>
+                <div class="report">
+                  <img src="../assets/Image/dashboard-page-img-05.svg" alt="" />
+                  <h6>Corona virus report</h6>
+                </div>
+                <div class="report">
+                  <img src="../assets/Image/dashboard-page-img-05.svg" alt="" />
+                  <h6>Corona virus report</h6>
+                </div>
+              </div>
+              <div class="files file">
+                <div class="habit">
+                  <div class="heading">
+                    <h6 class="heading__head">habit</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img04.svg"
+                      alt=""
+                    />
+                  </div>
+                  <h6 class="color__change">Smoking</h6>
+                  <h6 class="color__change">Smoking</h6>
+                </div>
+
+                <div class="allergies">
+                  <div class="heading">
+                    <h6 class="heading__head">Allergies</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img04.svg"
+                      alt=""
+                    />
+                  </div>
+                  <h6 class="color__change">Shellfish</h6>
+                  <h6 class="color__change">Wheat</h6>
+                </div>
+              </div>
+              <div class="files file">
+                <div class="history">
+                  <div class="heading">
+                    <h6 class="heading__head">History</h6>
+                  </div>
+                  <div class="lorem">
+                    <h6 class="color__change">Lorem Ipsum</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img03.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="lorem">
+                    <h6 class="color__change">Lorem Ipsum</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img03.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="lorem">
+                    <h6 class="color__change">Lorem Ipsum</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img03.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="appointments">
+                  <div class="heading">
+                    <h6 class="heading__head">Appointments</h6>
+                  </div>
+                  <div class="lorem">
+                    <h6 class="color__change">Lorem Ipsum</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img03.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="lorem">
+                    <h6 class="color__change">Lorem Ipsum</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img03.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="lorem">
+                    <h6 class="color__change">Lorem Ipsum</h6>
+                    <img
+                      src="../assets/Image/record-dashboard-img03.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
