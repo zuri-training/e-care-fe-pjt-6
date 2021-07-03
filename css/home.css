@@ -137,7 +137,7 @@
 
 .feature__figure svg {
   width: 24px;
-  /* height: auto; */
+  height: auto;
 }
 
 .feature__title {

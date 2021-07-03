@@ -192,7 +192,7 @@ The footer structure for pages. as more pages are built their corresponding link
     </div>
     <div class="footer__menu">
       <h5 class="footer__menu-header">E-Care</h5>
-      <a href="./about.html" class="footer__menu-link">About Us</a>
+      <a href="./pages/about.html" class="footer__menu-link">About Us</a>
       <a href="#" class="footer__menu-link">Contact Us</a>
       <a href="#" class="footer__menu-link">Blog</a>
       <a href="#" class="footer__menu-link">FAQS</a>
