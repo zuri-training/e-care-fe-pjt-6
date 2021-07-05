@@ -1,0 +1,26 @@
+{
+  "name": "e-care-fe-pjt-6",
+  "version": "1.0.0",
+  "description": "E-care is centered towards achieving SDGs goal number three (good health and well being). This would be achieved through the two key features of the app namely; Health record management which provide solution to hospital record mismanagement which has in turn led to loss of several lives and rural-connect focuses on extending good health care to rural dwellers by connecting the rural community health care providers with their senior counterparts at urban health centers closest to them, so as to receive guidance in handling emergencies and other critical conditions.",
+  "scripts": {
+    "clean": "rimraf ./dist && rimraf ./.parcel-cache",
+    "dev": "npm run clean && npm run clean && parcel serve ./src/*.html --open -p 8000",
+    "build": "rimraf ./dist && parcel build ./src/*.html --dist-dir dist --public-url ./ --no-source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eniolajayi/e-care-fe-pjt-6.git"
+  },
+  "keywords": [],
+  "author": "eniolajayi, coder.ibrahim, C33jay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eniolajayi/e-care-fe-pjt-6/issues"
+  },
+  "homepage": "https://github.com/eniolajayi/e-care-fe-pjt-6#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "parcel": "^2.0.0-beta.3.1",
+    "rimraf": "^3.0.2"
+  }
+}
