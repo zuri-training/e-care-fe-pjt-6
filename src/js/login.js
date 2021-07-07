@@ -46,7 +46,7 @@ export function Login() {
   }
   // on form submit
   loginForm.addEventListener("submit", (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     loginBtn.textContent = "Sending...";
     loginUser(loginName, loginPassword)
       .then(function (response) {
