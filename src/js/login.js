@@ -46,8 +46,8 @@ export function Login() {
   }
   // on form submit
   loginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    // loginBtn.setAttribute("disabled");
+    // e.preventDefault();
+    loginBtn.textContent = "Sending...";
     loginUser(loginName, loginPassword)
       .then(function (response) {
         displayMessage(response, "success");
@@ -60,6 +60,7 @@ export function Login() {
         console.log(error);
         console.log(error.response);
         displayMessage("An Error Occured - Please try again", "error");
+        loginBtn.textContent = "Login";
       });
     // Send userCredentials to DB
     // grab user details
