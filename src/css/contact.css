@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .contact-main::after {
   content: "";

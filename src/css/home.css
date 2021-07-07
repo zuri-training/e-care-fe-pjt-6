@@ -135,9 +135,8 @@
   padding: 2rem;
 }
 
-.feature__figure svg {
-  width: 24px;
-  /* height: auto; */
+.feature__figure img {
+  width: 100%;
 }
 
 .feature__title {
