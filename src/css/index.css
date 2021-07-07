@@ -354,8 +354,9 @@ button {
   background-color: #c4c4c44b;
 }
 .menu-btn {
-  flex: 0 0 1.125rem;
-  width: 1.125rem;
+  /* flex: 0 0 30px; */
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   display: none;
 }
@@ -367,10 +368,12 @@ button {
 }
 
 .header--transparent .menu-btn__icon {
-  fill: var(--color-light);
+  background-color: #ffffff;
 }
 .menu-btn__icon {
-  fill: var(--color-dark);
+  width: 30px;
+  height: 30px;
+  padding: 3px;
 }
 
 .menu-btn__icon.close {
