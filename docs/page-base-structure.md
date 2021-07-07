@@ -103,7 +103,6 @@ _The header and side-nav are both contained inside the `<div class="site-navigat
           y="0"
           enable-background="new 0 0 64 64"
           version="1.1"
-          viewBox="0 0 64 64"
           xml:space="preserve"
           class="menu-btn__icon open"
         >
@@ -117,7 +116,6 @@ _The header and side-nav are both contained inside the `<div class="site-navigat
           y="0"
           enable-background="new 0 0 64 64"
           version="1.1"
-          viewBox="0 0 64 64"
           xml:space="preserve"
           class="menu-btn__icon close"
         >
