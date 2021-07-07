@@ -95,12 +95,30 @@
           </div>
         </div>
 
-        <form action="" class="form">
+        <form id="" action="#" class="form createAccountForm">
           <h4>Enter your email to get things started:</h4>
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="password" />
-          <input type="password" placeholder="confirm password" />
-          <button>Send Link</button>
+          <label for="createAccountEmail" class="a11y-hidden"
+            >Enter your email</label
+          >
+          <input
+            class="createAccountEmail"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="createAccountPassword"
+            type="password"
+            placeholder="password"
+            required
+          />
+          <input
+            class="createAccountConfirmPassword"
+            type="password"
+            placeholder="confirm password"
+            required
+          />
+          <button type="submit">Send Link</button>
         </form>
       </div>
     </main>

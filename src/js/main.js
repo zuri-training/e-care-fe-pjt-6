@@ -1,3 +1,4 @@
+import { CreateAccount } from "./libs/createAccount";
 function toggleMobileNav() {
   const menuBtn = document.getElementById("menuBtn");
   const sideNav = document.getElementById("sideNav");
@@ -11,5 +12,6 @@ function toggleMobileNav() {
 // main point
 export default () => {
   console.log("We Live!");
+  CreateAccount();
   toggleMobileNav();
 };
