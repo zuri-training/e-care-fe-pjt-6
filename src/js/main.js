@@ -1,3 +1,4 @@
+import { Login } from "./login";
 function toggleMobileNav() {
   const menuBtn = document.getElementById("menuBtn");
   const sideNav = document.getElementById("sideNav");
@@ -12,4 +13,5 @@ function toggleMobileNav() {
 export default () => {
   console.log("We Live!");
   toggleMobileNav();
+  Login();
 };
