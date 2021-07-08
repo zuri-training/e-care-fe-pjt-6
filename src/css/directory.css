@@ -1,0 +1,109 @@
+.dir__main {
+  width: 100%;
+  height: 100vh;
+  max-height: 800px;
+  display: grid;
+  grid-template-columns: minmax(150px, 20%) 1fr;
+  grid-template-rows: auto;
+  letter-spacing: 0.03em;
+}
+.dir__sidebar {
+  background-color: var(--color-brand-blue);
+  display: flex;
+  flex-direction: column;
+}
+.dir__sidebar-header {
+  width: 100%;
+  min-height: 200px;
+  flex: 0 1 200px;
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+  flex-direction: column;
+  padding: 1.625rem 0 1.625rem 4rem;
+  justify-content: space-between;
+}
+
+.dir__logo {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 70px;
+  max-height: 70px;
+}
+.dir__logo .dir__logo-img {
+  width: 100%;
+}
+.dir__index {
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.dir__sidebar-body {
+  flex: 1 1 auto;
+  width: 100%;
+  height: calc(200px - 100vh);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  font-weight: 500;
+}
+
+.dir__sidebar-body::-webkit-scrollbar {
+  display: none;
+}
+
+.dir__sidebar-item {
+  margin: 1rem 0;
+  padding: 0.75rem 4rem;
+  transition: all 0.3s ease;
+  border-radius: 1.25rem;
+  text-align: left;
+}
+.dir__sidebar-item:hover {
+  background-color: var(--color-brand-yellow);
+}
+.sidebar-item__link {
+  color: var(--color-light);
+  text-transform: capitalize;
+  font-size: 1.125rem; /*18px*/
+}
+.dir__sidebar-item:hover .sidebar-item__link {
+  color: var(--color-brand-blue);
+}
+.dir__sidebar-next {
+  width: 100%;
+  padding: 2rem 4rem;
+  text-align: right;
+}
+.sidebar-next__link {
+  color: var(--color-light);
+  font-size: 1.125rem;
+}
+.sidebar-next__link:hover,
+.sidebar-next__link:focus {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  .dir__sidebar-header {
+    min-height: 150px;
+    flex: 0 1 150px;
+    padding: 1rem 0 1rem 1.875rem;
+  }
+  .dir__sidebar-item {
+    padding: 0.75rem 1.875rem;
+  }
+  .sidebar-next__link,
+  .sidebar-item__link {
+    font-size: 1rem;
+  }
+}
+/**/
+.dir__body {
+}
+.dir__body-header {
+}
+.dir__body-functions {
+}
+.dir__body-content {
+}
