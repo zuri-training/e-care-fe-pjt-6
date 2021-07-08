@@ -14,7 +14,7 @@ let email = "",
   confirmPassword = "";
 
 const REGISTER_USER_URL =
-  "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
+  "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register";
 
 const responseTemplate = (type = "success") => {
   return `
