@@ -1,0 +1,43 @@
+.details__header__wrapper__right {
+  position: relative;
+}
+
+.notification__sign {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 6.5rem;
+  top: 1rem;
+  background: #4bd37b;
+  border-radius: 10px;
+}
+
+.card__first {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.newly {
+  margin-top: 32px;
+  margin-left: 72px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #9f9f9f;
+}
+
+.personal__doctor {
+  width: 100%;
+  height: 486px;
+  margin-bottom: 63px;
+  margin-top: 30px;
+}
+
+.name p {
+  width: 301px;
+  height: 20px;
+}
+
+.name__second {
+  width: 186px;
+  height: 24px;
+}

@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --color-brand-blue: #0067a0;
+  --color-brand-yellow: #fed810;
+  --color-dark: #1a1919;
+  --color-light: #ffffff;
+  --color-neutral-gray: #716f6f;
+  --color-neutral-light-gray: #afacac;
+  --color-bg-blue: rgba(0, 103, 160, 0.59);
+  --color-text: #000000;
+  --color-bg-grey: #fbfbfb;
+  --color-input: #9f9f9f;
+  --color-signUp: rgba(254, 216, 16, 0.3);
+  --color-dasboardText: #242424;
+  --color-dashboard-links: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: baseline;
+  line-height: 1.6;
+  color: var(--color-neutral-gray);
+  background-color: var(--color-bg-grey);
+}
+
+p {
+  color: var(--color-dasboardText);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-light);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-light);
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-dasboardText);
+}
+
+.main {
+  display: flex;
+}
+
+/* the left side start here, the profile styling */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--color-brand-blue);
+  width: 20%;
+}
+
+.logo {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.profile__links {
+  margin-left: 3rem;
+  width: 100%;
+}
+
+.about {
+  margin-top: 256px;
+  margin-bottom: 283px;
+}
+
+.profile__links h6 {
+  margin-bottom: 1.5rem;
+}
+
+.profile__links a {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-dashboard-links);
+}
+
+.profile__links__dash {
+  width: 100%;
+  height: 40px;
+  background-color: var(--color-brand-yellow);
+  padding-left: 3rem;
+  padding-top: 0.4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 30px;
+}
+
+.profile__links__dash a {
+  color: var(--color-brand-blue);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.broken__border {
+  border: 3px;
+  border-style: dotted;
+  width: 50%;
+  padding-left: 1rem;
+  margin-left: -1rem;
+}
+
+.logout {
+  display: flex;
+  color: var(--color-light);
+}
+
+.logout img {
+  margin-right: 1rem;
+  margin-left: -1.5rem;
+}
+
+/* the right side start here, details styling */
+
+.details {
+  width: 100%;
+}
+
+.details__header {
+  width: 100%;
+  background-color: var(--color-bg-grey);
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.details__header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.details__header__wrapper__left {
+  display: flex;
+  margin-left: 6rem;
+}
+.details__header__wrapper__left h6 {
+  font-weight: 600;
+}
+.details__header__wrapper__left a,
+img {
+  color: var(--color-brand-blue);
+  padding-left: 1.5rem;
+}
+.details__header__wrapper__left a {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.details__header__wrapper__right {
+  display: flex;
+  margin-right: 4rem;
+}
+
+.details__header__wrapper__right h6,
+img {
+  padding-left: 1.5rem;
+}
+.details__header__wrapper__right h6 {
+  margin-top: 1rem;
+  padding-right: 1.5rem;
+}
+
+.settings {
+  border-left: 2px solid var(--color-neutral-light-gray);
+  margin-left: 1.5rem;
+}
+
+/*  The actual detail of the user after the header stying*/
+
+.details__detail {
+  display: flex;
+  flex-direction: column;
+}
+.details__detail h4 {
+  color: var(--color-neutral-gray);
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.color__blue {
+  color: var(--color-brand-blue);
+}
+
+/* everything about the user stying */
+
+.details__detail {
+  width: 100%;
+}
+
+.details__detail__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-light);
+  width: 1056px;
+  height: 295px;
+}
+
+.overview__details {
+  display: flex;
+  width: 100%;
+}
+
+.email__name__edit {
+  display: flex;
+  border-bottom: 2px solid var(--color-neutral-light-gray);
+  width: 823.02px;
+  margin-left: 2rem;
+  padding: 1rem;
+}
+
+.email__name {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.email {
+  display: flex;
+}
+
+.para {
+  padding-left: 2rem;
+}
+
+.email__name h4 {
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: var(--color-brand-blue);
+}
+
+.btn {
+  width: 165px;
+  height: 46px;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 30px;
+  color: var(--color-light);
+  background-color: var(--color-brand-blue);
+}
+
+/*  user information, address, city etc info stying */
+
+.info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-left: 7.5rem;
+  padding-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  padding-right: 7rem;
+}
+.info__second {
+  justify-content: flex-start;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.field {
+  margin-left: 10rem;
+}
+
+.rating {
+  margin-left: 5.5rem;
+}
+
+.rating h5 {
+  margin-top: -3.5rem;
+}
+
+.info h5 {
+  color: var(--color-input);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.section h5 {
+  color: var(--color-input);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section h5:first-child {
+  color: var(--color-brand-blue);
+}
+
+.user__usage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 26px;
+  padding: 1rem;
+}
+
+.requests {
+  display: flex;
+  width: 228px;
+  height: 117px;
+  background: var(--color-light);
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+
+.requests__first {
+  margin-left: 47px;
+}
+
+.requests span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding-right: 1.2rem;
+  margin-left: 25px;
+  margin-top: 33px;
+  margin-right: 12px;
+}
+
+.requests__first span {
+  background: rgba(4, 199, 164, 0.1);
+  border-radius: 10px;
+}
+
+.requests__second span {
+  background: rgba(153, 9, 203, 0.1);
+  border-radius: 10px;
+}
+
+.requests__third span {
+  background: rgba(0, 103, 160, 0.1);
+  border-radius: 10px;
+}
+
+.requests__fourth span {
+  background: rgba(239, 47, 47, 0.1);
+  border-radius: 10px;
+}
+
+.requests__request {
+  width: 50%;
+}
+
+.requests__request h4 {
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--color-text);
+  width: 101px;
+  height: 22px;
+  margin-right: 89px;
+  margin-bottom: 5rem;
+  margin-top: -1rem;
+  margin-left: 0;
+}
+
+.requests__request h6 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #717171;
+  margin-right: 52px;
+  margin-bottom: 28px;
+  margin-top: 21px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 2rem;
+  padding-left: 67px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 431px;
+  height: 350px;
+  background: var(--color-light);
+  border-radius: 20px;
+}
+
+.card__heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  width: 358px;
+  height: 33px;
+  background-color: var(--color-bg-grey);
+  color: var(--color-brand-blue);
+  margin-bottom: 1rem;
+  margin-top: 28px;
+  margin-left: 32px;
+  padding-top: 0.2rem;
+}
+
+.plans {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.plans img {
+  margin-right: 1rem;
+}
+
+.plan {
+  width: 100%;
+}
+
+.time {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.plan__name {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-brand-blue);
+}
+
+.plan__last {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 2rem;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-input);
+}
+
+.cancel {
+  font-size: 14px;
+  font-weight: normal;
+  color: #ef2f2f;
+}
+
+.accept {
+  font-size: 14px;
+  color: #4bd37b;
+}
