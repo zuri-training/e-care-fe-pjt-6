@@ -403,6 +403,11 @@ img {
   border-radius: 20px;
 }
 
+.card__requests {
+  width: 490px;
+  height: 472px;
+}
+
 .card__heading {
   text-align: center;
   font-weight: 600;
@@ -416,6 +421,16 @@ img {
   margin-top: 28px;
   margin-left: 32px;
   padding-top: 0.2rem;
+}
+
+.card__heading__requests {
+  width: 415px;
+  height: 33px;
+}
+
+.card__heading__next__patient {
+  width: 477px;
+  height: 33px;
 }
 
 .plans {
