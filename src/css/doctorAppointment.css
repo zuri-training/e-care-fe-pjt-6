@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --color-brand-blue: #0067a0;
+  --color-brand-yellow: #fed810;
+  --color-dark: #1a1919;
+  --color-light: #ffffff;
+  --color-neutral-gray: #716f6f;
+  --color-neutral-light-gray: #afacac;
+  --color-bg-blue: rgba(0, 103, 160, 0.59);
+  --color-text: #000000;
+  --color-bg-grey: #fbfbfb;
+  --color-input: #9f9f9f;
+  --color-signUp: rgba(254, 216, 16, 0.3);
+  --color-dasboardText: #242424;
+  --color-dashboard-links: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: baseline;
+  line-height: 1.6;
+  color: var(--color-neutral-gray);
+  background-color: var(--color-bg-grey);
+}
+
+p {
+  color: var(--color-dasboardText);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-light);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-light);
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-dasboardText);
+}
+
+.main {
+  display: flex;
+}
+
+/* the left side start here, the profile styling */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--color-brand-blue);
+  width: 20%;
+}
+
+.logo {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.profile__links {
+  margin-left: 3rem;
+  width: 100%;
+}
+
+.about {
+  margin-top: 256px;
+  margin-bottom: 283px;
+}
+
+.profile__links h6 {
+  margin-bottom: 1.5rem;
+}
+
+.profile__links a {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-dashboard-links);
+}
+
+.profile__links__dash {
+  width: 100%;
+  height: 40px;
+  background-color: var(--color-brand-yellow);
+  padding-left: 3rem;
+  padding-top: 0.4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 30px;
+}
+
+.profile__links__dash a {
+  color: var(--color-brand-blue);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.broken__border {
+  border: 3px;
+  border-style: dotted;
+  width: 50%;
+  padding-left: 1rem;
+  margin-left: -1rem;
+  margin-bottom: 1rem;
+}
+
+.logout {
+  display: flex;
+  color: var(--color-light);
+}
+
+.logout img {
+  margin-right: 1rem;
+  margin-left: -1.5rem;
+}
+
+/* the right side start here, details styling */
+
+.details {
+  width: 100%;
+}
+
+.details__header {
+  width: 100%;
+  background-color: var(--color-bg-grey);
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.details__header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.details__header__wrapper__left {
+  display: flex;
+  margin-left: 6rem;
+}
+.details__header__wrapper__left h6 {
+  font-weight: 600;
+}
+.details__header__wrapper__left a,
+img {
+  color: var(--color-brand-blue);
+  padding-left: 1.5rem;
+}
+.details__header__wrapper__left a {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.details__header__wrapper__right {
+  display: flex;
+  margin-right: 4rem;
+}
+
+.details__header__wrapper__right h6,
+img {
+  padding-left: 1.5rem;
+}
+.details__header__wrapper__right h6 {
+  margin-top: 1rem;
+  padding-right: 1.5rem;
+}
+
+.settings {
+  border-left: 2px solid var(--color-neutral-light-gray);
+  margin-left: 1.5rem;
+}
+
+/* everything about the user stying */
+
+.details__detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.details__detail h4 {
+  color: var(--color-neutral-gray);
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.color__blue {
+  color: var(--color-brand-blue);
+}
+
+.details__detail__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.overview__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--color-light);
+  width: 1056px;
+  height: 116px;
+}
+.overview__details img {
+  width: 200px;
+}
+
+.email__name__edit {
+  display: flex;
+  border-bottom: 2px solid var(--color-neutral-light-gray);
+  width: 823.02px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.email__name {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.email {
+  display: flex;
+}
+
+.para {
+  padding-left: 2rem;
+}
+
+.email__name h4 {
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.btn {
+  width: 165px;
+  height: 46px;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 30px;
+  color: var(--color-light);
+  background-color: var(--color-brand-blue);
+  cursor: pointer;
+}
+
+/* allocated time */
+
+.allocated__time {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1020px;
+  height: 130px;
+  background: var(--color-light);
+  border-radius: 20px;
+  margin-right: 48px;
+  margin-top: 36px;
+  padding-right: 113px;
+  padding-left: 113px;
+}
+
+.time__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.time__detail__first {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-brand-blue);
+}
+
+.time__detail img {
+  width: 70px;
+  height: 70px;
+  margin-left: -1.5rem;
+}
+
+.time__detail:last-child {
+  color: var(--color-text);
+}
+
+/* cards */
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 36px;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  margin-bottom: 33px;
+}
+
+.chart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 278px;
+  height: 321px;
+  background: var(--color-light);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.chart img {
+  margin-bottom: 63px;
+  margin-left: -1rem;
+}
+
+.paragraph {
+  position: absolute;
+  top: 4.2rem;
+  left: 7rem;
+  font-weight: 600;
+  font-size: 32px;
+  color: #000000;
+}
+
+/* points */
+
+.points {
+  display: flex;
+  flex-direction: column;
+  width: 344px;
+  height: 321px;
+  background: var(--color-light);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.point {
+  display: flex;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.point h6 {
+  color: var(--color-brand-blue);
+}
+
+.empty {
+  width: 20px;
+  height: 20.32px;
+  background: var(--color-brand-blue);
+  border-radius: 10px;
+  margin-right: 43px;
+}
+
+.empty__yellow {
+  background: #d2b100;
+}
+
+.empty__red {
+  background: #c04601;
+}
+
+.empty__green {
+  background: #00a0a0;
+}
+
+.empty__pink {
+  background: #ed7a7a;
+}
+
+/* upcoming */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 397px;
+  height: 385px;
+  background: var(--color-light);
+  border-radius: 20px;
+}
+
+.card__requests {
+  width: 490px;
+  height: 472px;
+}
+
+.card__heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  width: 358px;
+  height: 33px;
+  background-color: var(--color-bg-grey);
+  color: var(--color-brand-blue);
+  margin-bottom: 1rem;
+  margin-top: 28px;
+  margin-left: 32px;
+  padding-top: 0.2rem;
+}
+
+.card__heading__requests {
+  width: 415px;
+  height: 33px;
+}
+
+.card__heading__next__patient {
+  width: 477px;
+  height: 33px;
+}
+
+.plans {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.plans img {
+  margin-right: 1rem;
+}
+
+.plan {
+  width: 100%;
+}
+
+.time {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.plan__name {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-brand-blue);
+}
+
+.plan__last {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 2rem;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-input);
+}
+
+.next__patient {
+  width: 546px;
+  height: 472px;
+}
+
+.birth {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-left: 33px;
+}
+
+.birth__info {
+  width: 100%;
+}
+
+.birth__info h6 {
+  color: var(--color-input);
+}
+
+.illness {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: 33px;
+}
+
+.illness span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 114px;
+  height: 34px;
+}
+
+.fever {
+  background: rgba(0, 170, 139, 0.1);
+  color: #00a0a0;
+}
+
+.diabetes {
+  background: rgba(153, 9, 203, 0.1);
+  color: #9909cb;
+}
+
+.malaria {
+  background: rgba(239, 47, 47, 0.1);
+  color: #ef2f2f;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 21px;
+}
+
+.btn__next__patient {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 163px;
+  height: 40px;
+  background: var(--color-brand-blue);
+  border: none;
+  border-radius: 10px;
+  color: var(--color-light);
+}
+
+.btn__next__patient__02 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 148px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid var(--color-brand-blue);
+  color: var(--color-brand-blue);
+}
+
+.btn__next__patient__02 img {
+  margin-right: 1rem;
+}
