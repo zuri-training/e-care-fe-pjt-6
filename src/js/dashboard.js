@@ -39,8 +39,6 @@ function setFullName(){
     if(data.first_name && data.last_name && data.other_name && userFullNameEl){
         let fullname = `${data.first_name} ${data.other_name.charAt(0)}. ${data.last_name}`;
  userFullNameEl.textContent = fullname;
-    } else {
-        userFullNameEl.textContent = DEFAULT;
     }
 }
 
