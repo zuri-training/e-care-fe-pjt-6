@@ -1,25 +1,18 @@
-import axios from "axios";
+const axios = require("axios");
 // grab form elements
 const loginForm = document.querySelector(".loginForm");
 const messageContainer = document.querySelector(".loginFormMessage");
 const loginNameInput = document.querySelector(".loginName");
 const loginPasswordInput = document.querySelector(".loginPassword");
 const loginBtn = document.querySelector(".loginBtn");
-// variables
-const LOGIN_API_URL = "https://e-care-be-api.herokuapp.com/api/v1/user/login";
-const RETRIEVE_PATIENT_API_URL =
-  "https://e-care-be-api.herokuapp.com/api/v1/user/patient";
+const LOGIN_API_URL = "https://e-care-be-api.herokuapp.com/api/v1/user/login/";
 let loginName = "";
 let loginPassword = "";
-// intialize data
-/* 
-structure for login request
-{
-    "username": "austino_milano",
-    "password": "milano123"
-}
-*/
-// add data to variables
+const testData = JSON.stringify({
+    username: "austinoski",
+    password: "austinoski123"
+});
+
 export function Login() {
   loginNameInput.addEventListener("input", () => {
     loginName = loginNameInput.value;
@@ -27,13 +20,6 @@ export function Login() {
   loginPasswordInput.addEventListener("input", () => {
     loginPassword = loginPasswordInput.value;
   });
-
-  function loginUser(username, password) {
-    return axios.post(LOGIN_API_URL, {
-      username: username,
-      password: password,
-    });
-  }
 
   function displayMessage(message, type) {
     messageContainer.style.display = "block";
@@ -48,22 +34,30 @@ export function Login() {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     loginBtn.textContent = "Sending...";
-    loginUser(loginName, loginPassword)
-      .then(function (response) {
-        displayMessage(response, "success");
-        console.log(response);
+    axios({
+      method: 'post',
+      url: LOGIN_API_URL,
+      data: {
+        username: loginName,
+        password: loginPassword
+      },
+      headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+       },
+      validateStatus: (status) => {
+        // Idk know what this does 
+        return true; 
+      },
+    }).then(response => {
+        loginForm.reset();
+        displayMessage("Success!", "success");
+        console.log(response.data);
         window.location.pathname = "./dashboard.html";
-      })
-      .catch(function (error) {
-        // create settimout for error message
-        // loginForm.reset();
-        console.log(error);
-        console.log(error.response);
+    }).catch(error => {
+         console.log(error);
         displayMessage("An Error Occured - Please try again", "error");
         loginBtn.textContent = "Login";
-      });
-    // Send userCredentials to DB
-    // grab user details
-    // redirect user to dashboard
+    });
   });
 }
