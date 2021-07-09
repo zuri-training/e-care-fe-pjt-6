@@ -57,10 +57,9 @@ if(loginNameInput && loginPasswordInput){
         return true; 
       },
     }).then(response => {
-        loginForm.reset();
         displayMessage("Success!", "success");
-        console.log(response.data);
         window.location.pathname = "./dashboard.html";
+        loginForm.reset();
     }).catch(error => {
          console.log(error);
         displayMessage("An Error Occured - Please try again", "error");
