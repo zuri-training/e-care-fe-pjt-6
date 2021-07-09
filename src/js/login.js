@@ -14,14 +14,17 @@ const testData = JSON.stringify({
 });
 
 export function Login() {
+if(loginNameInput && loginPasswordInput){
   loginNameInput.addEventListener("input", () => {
     loginName = loginNameInput.value;
   });
   loginPasswordInput.addEventListener("input", () => {
     loginPassword = loginPasswordInput.value;
   });
+}
 
   function displayMessage(message, type) {
+    if(messageContainer){
     messageContainer.style.display = "block";
     messageContainer.textContent = message;
     messageContainer.classList.add(`loginFormMessage--${type}`);
@@ -29,8 +32,12 @@ export function Login() {
       messageContainer.style.display = "none";
       messageContainer.classList.remove(`loginFormMessage--${type}`);
     }, 5000);
+  } else{
+    return;
+  }
   }
   // on form submit
+  if(loginForm && loginBtn){
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     loginBtn.textContent = "Sending...";
@@ -60,4 +67,5 @@ export function Login() {
         loginBtn.textContent = "Login";
     });
   });
+}
 }
