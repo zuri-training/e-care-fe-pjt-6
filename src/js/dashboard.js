@@ -1,4 +1,4 @@
-const profileImgEl = document.querySelectorAll(".dsh-imgProfile");
+const profileImgEls = document.querySelectorAll(".dsh-imgProfile");
 const profileNameEls = document.querySelectorAll(".dsh-profileName");
 const userFullNameEl = document.querySelector(".dsh-fullName");
 const userEmailEl = document.querySelector(".dsh-userEmail");
@@ -8,6 +8,7 @@ const userAddressEl = document.querySelector(".dsh-address");
 const userCityEl = document.querySelector(".dsh-city");
 const userStateEl = document.querySelector(".dsh-state");
 const userNextOfKinEl = document.querySelector(".dsh-nextOfKin");
+import defaultImgUrl from "url:../assets/Image/user-filled-small.svg";
 
 
 const DEFAULT = "-----------";
@@ -74,6 +75,14 @@ function setUserInfo(){
         userDOBEl.textContent = formattedDate();
     }
 }
+
+function setProfileImage(){
+    if(profileImgEls){
+        profileImgEls.forEach((el)=>{
+            el.setAttribute("src",`${defaultImgUrl}`);
+        });
+    }
+}
 export function Dashboard(){
     profileNameEls.forEach((el)=>{
         el.textContent = data.user.username;
@@ -82,5 +91,6 @@ export function Dashboard(){
     setEmail();
     setPhoneNo();
     setUserInfo();
+    setProfileImage();
     
 }
