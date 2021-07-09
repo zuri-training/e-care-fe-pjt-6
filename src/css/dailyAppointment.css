@@ -1,0 +1,53 @@
+.details__header__wrapper__right {
+  position: relative;
+}
+
+.notification__sign {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 6.5rem;
+  top: 0.5rem;
+  background: #4bd37b;
+  border-radius: 10px;
+}
+
+.span {
+  margin-top: 67px;
+  color: #9f9f9f;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card__wrapper__h6 {
+  text-align: end;
+  margin-right: 4rem;
+  color: #717171;
+}
+
+.name__first {
+  width: 250px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fed810;
+  margin-bottom: 15px;
+}
+
+.name__second {
+  width: 186px;
+  height: 24px;
+}
+
+.name p {
+  width: 301px;
+  height: 20px;
+}
+
+.dark {
+  color: #717171;
+}
