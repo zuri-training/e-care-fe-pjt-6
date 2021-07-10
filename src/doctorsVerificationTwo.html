@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/signUp.css" />
+    <link rel="stylesheet" href="./css/doctorsCreateAccount.css" />
+    <link rel="stylesheet" href="./css/doctorsVerification.css" />
+    <link rel="stylesheet" href="./css/doctorsVerificationTwo.css" />
+    <title>E-Care - Complete SignUp</title>
+  </head>
+  <body>
+    <div class="site-navigation">
+      <header class="header">
+        <div class="wrapper">
+          <div class="logo">
+            <a href="./index.html"
+              ><img
+                src="./assets/Image/logo-colored-transparent-2x.png"
+                alt="ecare logo"
+              />
+            </a>
+          </div>
+          <nav class="nav">
+            <ul class="nav__item-wrapper">
+              <!-- TODO Add corresponding link to pages -->
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Directory</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Doctor</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Hospitals</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__btn-wrapper">
+            <a href="./login.html" class="btn btn-secondary">Login</a>
+          </div>
+          <div id="menuBtn" class="menu-btn">
+            <img
+              src="./assets/Image/hamburger.svg"
+              class="menu-btn__icon open"
+              alt="menu"
+            />
+            <img
+              src="./assets/Image/close.svg"
+              class="menu-btn__icon close"
+              alt="close"
+            />
+          </div>
+        </div>
+      </header>
+      <nav class="side-nav side-nav--absolute" id="sideNav">
+        <div class="side-nav__content">
+          <a href="./index.html" class="side-nav__link">Home</a
+          ><a href="#" class="side-nav__link">Directory</a
+          ><a href="#" class="side-nav__link">Doctors</a
+          ><a href="#" class="side-nav__link">Hospitals</a
+          ><a href="./createAccount.html" class="side-nav__link">Sign Up</a
+          ><a href="./login.html" class="side-nav__link">Login</a>
+        </div>
+      </nav>
+    </div>
+    <main class="main">
+      <div class="signup__wrapper">
+        <div class="progress">
+          <div class="progress__icon progress__icon__one">
+            <svg
+              width="54"
+              height="62"
+              viewBox="0 0 54 62"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M44.5 26.625C46.8206 26.625 49.0462 27.5469 50.6872 29.1878C52.3281 30.8288 53.25 33.0544 53.25 35.375V52.875C53.25 55.1956 52.3281 57.4212 50.6872 59.0622C49.0462 60.7031 46.8206 61.625 44.5 61.625H9.5C7.17936 61.625 4.95376 60.7031 3.31282 59.0622C1.67187 57.4212 0.75 55.1956 0.75 52.875V35.375C0.75 33.0544 1.67187 30.8288 3.31282 29.1878C4.95376 27.5469 7.17936 26.625 9.5 26.625V17.875C9.5 13.2337 11.3437 8.78252 14.6256 5.50063C17.9075 2.21874 22.3587 0.375 27 0.375C31.6413 0.375 36.0925 2.21874 39.3744 5.50063C42.6563 8.78252 44.5 13.2337 44.5 17.875V26.625ZM27 6.20833C30.0942 6.20833 33.0617 7.4375 35.2496 9.62542C37.4375 11.8133 38.6667 14.7808 38.6667 17.875V26.625H15.3333V17.875C15.3333 14.7808 16.5625 11.8133 18.7504 9.62542C20.9383 7.4375 23.9058 6.20833 27 6.20833ZM44.5 32.4583H9.5C8.72645 32.4583 7.98459 32.7656 7.43761 33.3126C6.89062 33.8596 6.58333 34.6015 6.58333 35.375V52.875C6.58333 53.6485 6.89062 54.3904 7.43761 54.9374C7.98459 55.4844 8.72645 55.7917 9.5 55.7917H44.5C45.2735 55.7917 46.0154 55.4844 46.5624 54.9374C47.1094 54.3904 47.4167 53.6485 47.4167 52.875V35.375C47.4167 34.6015 47.1094 33.8596 46.5624 33.3126C46.0154 32.7656 45.2735 32.4583 44.5 32.4583Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+
+          <div class="empty__line"></div>
+
+          <div class="progress__icon progress__icon__two">
+            <svg
+              width="60"
+              height="54"
+              viewBox="0 0 60 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.74967 3.66667V18.25H9.58301V6.58333H21.2497V0.75H6.66634C5.89279 0.75 5.15093 1.05729 4.60395 1.60427C4.05697 2.15125 3.74967 2.89312 3.74967 3.66667ZM56.2497 18.25V3.66667C56.2497 2.89312 55.9424 2.15125 55.3954 1.60427C54.8484 1.05729 54.1066 0.75 53.333 0.75H38.7497V6.58333H50.4163V18.25H56.2497ZM50.4163 47.4167H38.7497V53.25H53.333C54.1066 53.25 54.8484 52.9427 55.3954 52.3957C55.9424 51.8488 56.2497 51.1069 56.2497 50.3333V35.75H50.4163V47.4167ZM21.2497 53.25V47.4167H9.58301V35.75H3.74967V50.3333C3.74967 51.1069 4.05697 51.8488 4.60395 52.3957C5.15093 52.9427 5.89279 53.25 6.66634 53.25H21.2497ZM0.833008 24.0833H59.1663V29.9167H0.833008V24.0833Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+
+          <div class="empty__line"></div>
+
+          <div class="progress__icon progress__icon__two">
+            <svg
+              width="59"
+              height="45"
+              viewBox="0 0 59 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M54.1905 13.185L41.6488 25.7033L37.8805 21.935L33.7563 26.0591L41.6488 33.9458L58.3088 17.315L54.1905 13.185ZM6.66634 12.3333C6.66634 18.9833 11.683 24 18.333 24C24.983 24 29.9997 18.9833 29.9997 12.3333C29.9997 5.68329 24.983 0.666626 18.333 0.666626C11.683 0.666626 6.66634 5.68329 6.66634 12.3333ZM24.1663 12.3333C24.1663 15.7691 21.7688 18.1666 18.333 18.1666C14.8972 18.1666 12.4997 15.7691 12.4997 12.3333C12.4997 8.89746 14.8972 6.49996 18.333 6.49996C21.7688 6.49996 24.1663 8.89746 24.1663 12.3333ZM6.66634 41.5C6.66634 36.6758 10.5922 32.75 15.4163 32.75H21.2497C26.0738 32.75 29.9997 36.6758 29.9997 41.5V44.4166H35.833V41.5C35.833 33.4587 29.2909 26.9166 21.2497 26.9166H15.4163C7.37509 26.9166 0.833008 33.4587 0.833008 41.5V44.4166H6.66634V41.5Z"
+                fill="#0067A0"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="doctors__details">
+          <div class="scan">
+            <h1>Scan QR Code</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis
+              vitae mi id morbi vitae faucibus placerat. Enim tortor pulvinar
+              tincidunt ultricies. Magnis quisque in in amet diam. Pharetra
+              metus accumsan, faucibus posuere nibh sed tempor iaculis donec.
+            </p>
+          </div>
+          <img
+            src="../src/assets/Image/doctors--signUp--verification--02.svg"
+            alt="profile picture"
+          />
+        </div>
+
+        <button class="signup__btn">Complete Profile</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <form class="footer__subscription">
+          <input
+            type="text"
+            class="footer__input"
+            placeholder="Enter your email"
+          />
+          <input type="submit" class="footer__input-btn" value="Sign Up" />
+        </form>
+        <div class="footer__menu">
+          <h5 class="footer__menu-header">Patients</h5>
+          <a href="./login.html" class="footer__menu-link">Log In</a>
+          <a href="#" class="footer__menu-link">Medical Records</a>
+          <a href="#" class="footer__menu-link">Prescription</a>
+          <a href="#" class="footer__menu-link">Quality Report</a>
+        </div>
+        <div class="footer__menu">
+          <h5 class="footer__menu-header">Doctors</h5>
+          <a href="./login.html" class="footer__menu-link">Log In</a>
+          <a href="#" class="footer__menu-link">Promote your practice</a>
+          <a href="#" class="footer__menu-link">Patients</a>
+          <a href="#" class="footer__menu-link">Update Profile</a>
+          <a href="./contact.html" class="footer__menu-link">Help Center</a>
+        </div>
+        <div class="footer__menu">
+          <h5 class="footer__menu-header">Hospitals</h5>
+          <a href="./login.html" class="footer__menu-link">Log In</a>
+          <a href="#" class="footer__menu-link">Health System</a>
+          <a href="#" class="footer__menu-link">Doctors</a>
+          <a href="#" class="footer__menu-link">Patients</a>
+          <a href="./contact.html" class="footer__menu-link">Help Centre</a>
+        </div>
+        <div class="footer__menu">
+          <h5 class="footer__menu-header">E-Care</h5>
+          <a href="./about.html" class="footer__menu-link">About Us</a>
+          <a href="./contact.html" class="footer__menu-link">Contact Us</a>
+          <a href="#" class="footer__menu-link">Blog</a>
+          <a href="#" class="footer__menu-link">FAQS</a>
+        </div>
+        <div class="footer__social">
+          <div class="social-icon">
+            <a href=""
+              ><img src="./assets/icons/fe_youtube.png" alt="youtube"
+            /></a>
+          </div>
+          <div class="social-icon">
+            <a href=""
+              ><img src="./assets/icons/bx_bxl-facebook.png" alt="facebook"
+            /></a>
+          </div>
+          <div class="social-icon">
+            <a href=""
+              ><img src="./assets/icons/eva_twitter-fill.png" alt="twitter"
+            /></a>
+          </div>
+          <div class="social-icon">
+            <a href=""
+              ><img src="./assets/icons/bx_bxl-instagram.png" alt="instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

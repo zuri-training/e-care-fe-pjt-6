@@ -3,22 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="" />
-    <meta
-      name="description"
-      content="
-    E-care is a Health record management solution focused on handling hospital record mismanagement and extending good health to rural dwellers"
-    />
-    <meta name="Copyright" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
-    <title>E-care</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/createAccount.css" />
+    <link rel="stylesheet" href="./css/doctorsSignUp.css" />
+    <title>SignUp</title>
   </head>
   <body>
     <div class="site-navigation">
@@ -39,19 +32,18 @@
                 <a href="./index.html" class="nav__link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="./directory.html" class="nav__link">Directory</a>
+                <a href="#" class="nav__link">Directory</a>
               </li>
               <li class="nav__item">
-                <a href="./patientDoctor.html" class="nav__link">Doctor</a>
+                <a href="#" class="nav__link">Doctor</a>
               </li>
               <li class="nav__item">
-                <a href="./patientHospital.html" class="nav__link">Hospitals</a>
+                <a href="#" class="nav__link">Hospitals</a>
               </li>
             </ul>
           </nav>
           <div class="header__btn-wrapper">
-            <a href="./login.html" class="btn btn-primary">Login</a>
-            <a href="./signUp.html" class="btn btn-secondary">Sign Up</a>
+            <a href="./createAccount.html" class="btn btn-secondary">Sign Up</a>
           </div>
           <div id="menuBtn" class="menu-btn">
             <img
@@ -67,112 +59,49 @@
           </div>
         </div>
       </header>
-      <nav class="side-nav" id="sideNav">
+      <nav class="side-nav side-nav--absolute" id="sideNav">
         <div class="side-nav__content">
           <a href="./index.html" class="side-nav__link">Home</a
           ><a href="#" class="side-nav__link">Directory</a
           ><a href="#" class="side-nav__link">Doctors</a
           ><a href="#" class="side-nav__link">Hospitals</a
-          ><a href="./signUp.html" class="side-nav__link">Sign Up</a
+          ><a href="./createAccount.html" class="side-nav__link">Sign Up</a
           ><a href="./login.html" class="side-nav__link">Login</a>
         </div>
       </nav>
     </div>
-    <main class="hero">
-      <div class="wrapper">
-        <div class="hero__content">
-          <h1 class="hero__heading">
-            Find <span class="txt-blue">health professionals</span>,
-            <span class="txt-blue">hospitals</span> closest to you and save your
-            <span class="txt-blue">medical history</span>
-          </h1>
-          <p class="hero__lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
-            convallis mauris dui urna, est amet a lectus. In amet vitae quisque
-            aenean. In in phasellus nec mattis egestas
-          </p>
-          <a href="#" class="btn btn-secondary">Get Started</a>
+    <main>
+      <div class="acct__wrapper">
+        <div class="heading">
+          <h2>
+            Welcome to E-care for medical <br />
+            professionals and administrators
+          </h2>
+          <div class="check__name">
+            <div class="check">
+              <input type="radio" name="" id="" />
+              <h4>Patient</h4>
+            </div>
+            <div class="check">
+              <input type="radio" name="" id="" />
+              <h4>Doctor</h4>
+            </div>
+            <div class="check">
+              <input type="radio" name="" id="" />
+              <h4>Hospital</h4>
+            </div>
+          </div>
         </div>
-        <div class="hero__figure"></div>
+
+        <form action="" class="form">
+          <h4>Enter your email to get things started:</h4>
+          <input type="text" placeholder="Email" />
+          <input type="password" placeholder="password" />
+          <input type="password" placeholder="confirm password" />
+          <button>Send Link</button>
+        </form>
       </div>
     </main>
-    <section class="services">
-      <div class="wrapper">
-        <div class="services__header">
-          <h6 class="heading-6">WHAT WE OFFER</h6>
-          <h2 class="services__heading">5 features To Ensure Efficiency</h2>
-        </div>
-        <div class="services__body">
-          <div class="feature">
-            <div class="feature__figure">
-              <img src="./assets/Image/people.svg" alt="" />
-            </div>
-            <h5 class="feature__title">Doctors</h5>
-            <p class="feature__content">
-              Find thousands of specialist doctors around the country
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature__figure">
-              <img src="./assets/Image/health-plus.svg" alt="People" />
-            </div>
-            <h5 class="feature__title">Hospitals</h5>
-            <p class="feature__content">
-              Find thousands of specialist doctors around the country
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature__figure">
-              <img src="./assets/Image/patients.svg" alt="" />
-            </div>
-            <h5 class="feature__title">Patients</h5>
-            <p class="feature__content">
-              Find thousands of specialist doctors around the country
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature__figure">
-              <img src="./assets/Image/upload.svg" alt="" />
-            </div>
-            <h5 class="feature__title">Records</h5>
-            <p class="feature__content">
-              Update and save medical records in our cloud
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="cta">
-      <div class="wrapper">
-        <div class="cta__figure">
-          <img
-            class="cta__figure-img"
-            src="./assets/Image/landing-page-02-desktop.png"
-            alt=""
-          />
-        </div>
-        <div class="cta__content">
-          <h1 class="cta__heading">
-            Can’t access good medical care? Connect with
-            <span class="txt-blue">Specialists</span> who conduct
-            <span class="txt-blue">rural sensitization</span>
-          </h1>
-          <p class="cta__lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
-            convallis mauris dui urna, est amet a lectus. In amet vitae quisque
-            aenean. In in phasellus nec mattis egestas <br />
-          </p>
-          <p class="cta__lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
-            convallis mauris dui urna, est amet a lectus. In amet vitae quisque
-            aenean. In in phasellus nec mattis egestas <br />
-          </p>
-          <a href="./createAccount.html" class="btn btn-secondary"
-            >Join Us Now</a
-          >
-        </div>
-      </div>
-    </section>
     <footer class="footer">
       <div class="wrapper">
         <form class="footer__subscription">

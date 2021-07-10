@@ -224,6 +224,7 @@ img {
   width: 1056px;
   height: 116px;
 }
+
 .overview__details img {
   width: 200px;
 }
@@ -242,6 +243,7 @@ img {
   flex-direction: column;
   width: 100%;
 }
+
 .email {
   display: flex;
 }
@@ -550,4 +552,224 @@ img {
 
 .btn__next__patient__02 img {
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 1330px) {
+  .profile {
+    width: 21%;
+  }
+
+  .details {
+    align-items: center;
+    width: 80%;
+  }
+
+  .profile__links__dash {
+    padding-left: 2rem;
+  }
+
+  .broken__border {
+    padding-left: 0.5rem;
+  }
+
+  .overview__details {
+    width: 800px;
+    height: 116px;
+  }
+
+  .allocated__time {
+    width: 80%;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 2rem;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .cards__cards {
+    grid-template-columns: repeat(1, 0.5fr);
+    align-content: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 1044px) {
+  h4 {
+    margin-left: 2rem;
+  }
+
+  .profile__links {
+    margin-left: 2rem;
+    width: 100%;
+  }
+
+  .profile__links__dash {
+    padding-left: 1rem;
+  }
+
+  .broken__border {
+    padding: 0.5rem;
+    margin-left: 0rem;
+    width: 70%;
+  }
+
+  .details__header__wrapper {
+    flex-direction: column;
+  }
+
+  .details__header__wrapper__left {
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .img__profile,
+  .details__header__wrapper__right h6 {
+    display: none;
+  }
+
+  .overview__details {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+
+  .email__name__edit {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--color-neutral-light-gray);
+    width: 70%;
+  }
+
+  .email {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .allocated__time {
+    width: 80%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .time__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-right: 2rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr);
+    gap: 2rem;
+    align-content: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .profile {
+    width: 30%;
+  }
+
+  .details {
+    align-items: center;
+    width: 70%;
+  }
+
+  .allocated__time {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: 10rem;
+  }
+
+  .points {
+    width: 80%;
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  .card {
+    width: 80%;
+    height: auto;
+    margin-left: -5rem;
+  }
+
+  .card__heading {
+    width: 80%;
+  }
+
+  .plan__last {
+    flex-direction: column;
+  }
+
+  .time {
+    display: flex;
+  }
+
+  .cards__cards {
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    justify-items: center;
+  }
+
+  .card__requests {
+    width: 80%;
+    height: auto;
+  }
+
+  .card__heading__requests {
+    width: 80%;
+    height: 33px;
+
+    border: 1px solid;
+  }
+
+  .next__patient {
+    width: 80%;
+    height: auto;
+  }
+
+  .card__heading__next__patient {
+    width: 80%;
+    height: 33px;
+  }
+
+  .birth {
+    flex-direction: column;
+  }
+
+  .birth__info {
+    margin-bottom: 1rem;
+  }
+
+  .illness {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .illness span {
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+  }
+
+  .btn__next__patient {
+    margin-bottom: 1rem;
+  }
 }
