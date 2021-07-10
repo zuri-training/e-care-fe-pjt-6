@@ -17,7 +17,7 @@ let signUpData = {
     state: null,
 }
 
-export function signUpPatient(userData){
+export function signUpUser(userData){
     let data = JSON.stringify(userData);
     return axios({
         method: 'post',

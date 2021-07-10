@@ -1,4 +1,5 @@
 import axios from "axios";
+import { signUpUser } from "./signup";
 const mainContainer = document.querySelector(".acct__main");
 const createAcctForm = document.getElementsByClassName("createAccountForm")[0];
 const createAcctEmailInput =
@@ -9,12 +10,9 @@ const createAcctPasswordInput = document.getElementsByClassName(
 const createAcctPasswordInputCheck = document.getElementsByClassName(
   "createAccountConfirmPassword"
 )[0];
-let email = "",
-  password = "",
-  confirmPassword = "";
-
-const REGISTER_USER_URL =
-  "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register";
+let email = "";
+let password = "";
+let confirmPassword = "";
 
 const responseTemplate = (type = "success") => {
   return `
@@ -68,18 +66,17 @@ export function CreateAccount() {
         },
         phonenumber: "",
       });
-      axios
-        .post(REGISTER_USER_URL, data)
+     signUpUser(data)
         .then(function (response) {
           console.log(response);
           mainContainer.innerHTML = responseTemplate();
+          window.location.pathname = "/signUp.html";
         })
         .catch(function (error) {
           mainContainer.innerHTML = responseTemplate("error");
           console.log(error);
           console.log(error.response);
         });
-      // window.location.pathname = "/signUp.html";
     } else {
       alert("Passwords dont match");
     }
