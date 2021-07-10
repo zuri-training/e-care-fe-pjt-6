@@ -78,6 +78,7 @@ h5 {
   align-items: flex-start;
   background-color: var(--color-brand-blue);
   width: 20%;
+  /* flex: 1; */
 }
 
 .logo {

@@ -1,0 +1,24 @@
+.form3 {
+  display: grid;
+  grid-template-columns: repeat(2);
+}
+
+.finish {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+.name input {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.city {
+  margin-bottom: 3rem;
+}
+
+.signup__btn {
+  width: 500px;
+  height: 80px;
+  font-size: 30px;
+}

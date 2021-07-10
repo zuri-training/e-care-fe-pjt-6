@@ -1,0 +1,14 @@
+.check__name {
+  display: flex;
+  margin-top: 80px;
+}
+
+.heading h2 {
+  text-align: center;
+  width: 872px;
+  height: 118px;
+}
+
+.check {
+  margin-right: 3rem;
+}
