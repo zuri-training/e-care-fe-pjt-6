@@ -9,7 +9,7 @@ const createAcctPasswordInput = document.getElementsByClassName(
 const createAcctPasswordInputCheck = document.getElementsByClassName(
   "createAccountConfirmPassword"
 )[0];
-import { getEmailFragments } from "./libs/signup";
+import { getEmailFragments } from "../auth/auth-util";
 import { dataState } from "../../createAccount";
 
 let email = "";
