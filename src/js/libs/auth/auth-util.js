@@ -1,6 +1,13 @@
-const axios = require("axios");
+import axios from "axios";
 const REGISTER_PATIENT_URL =
   "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
+
+export const getEmailFragments = (emailString) =>
+  emailString.split(/@(?=[^@]*$)/);
+
+// AUTHENTICATION //
+
+// sign up user function
 export function signUpUser(userData, userType) {
   let data = JSON.stringify(userData);
   switch (userType) {
@@ -33,8 +40,6 @@ function signUpPatient(data) {
 'Content-Type': 'application/json'
 },
 */
-export const getEmailFragments = (emailString) =>
-  emailString.split(/@(?=[^@]*$)/);
 export const responseTemplate = (type = "success") => {
   return `
 <section class="acct__success">
