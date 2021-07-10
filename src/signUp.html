@@ -104,8 +104,9 @@
           <div class="dob">
             <input
               class="csu-dob"
-              type="text"
+              type="date"
               placeholder="Date of birth YYYY-MM-DD (e.g 2002-23-06)"
+              pattern="^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$"
             />
           </div>
 
@@ -116,6 +117,8 @@
               name="Phone Number"
               id=""
               placeholder="Phone number"
+              maxlength="11"
+              minlength="11"
               required
             />
           </div>

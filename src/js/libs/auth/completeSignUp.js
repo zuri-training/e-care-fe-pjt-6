@@ -8,7 +8,9 @@ const csuLGAEl = document.querySelector(".csu-lga");
 const csuDOBEl = document.querySelector(".csu-dob");
 const csuPhoneNoEl = document.querySelector(".csu-phoneno");
 const csuFormBtnEl = document.querySelector(".csu-form-button");
-const csuGenderEls = document.querySelector(".csu-gender");
+const csuGenderEl = document.querySelector(
+  ".csu-gender[name='gender']:checked"
+);
 import { dataState } from "../../createAccount";
 
 function csuElementAreAvailable() {
@@ -23,7 +25,7 @@ function csuElementAreAvailable() {
     csuDOBEl &&
     csuPhoneNoEl &&
     csuFormBtnEl &&
-    csuGenderEls
+    csuGenderEl
   );
 }
 
@@ -75,6 +77,11 @@ export default function initCompleteSignUp() {
     csuDOBEl.addEventListener("input", (e) => {
       let value = csuDOBEl.value;
       dataState.date_of_birth = value;
+    });
+
+    csuGenderEl.addEventListener("input", (e) => {
+      let value = csuGenderEl.value;
+      dataState.gender = value;
     });
 
     csuFormEl.addEventListener("submit", (e) => {
