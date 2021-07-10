@@ -9,7 +9,7 @@ const createAcctPasswordInput = document.getElementsByClassName(
 const createAcctPasswordInputCheck = document.getElementsByClassName(
   "createAccountConfirmPassword"
 )[0];
-import { getEmailFragments } from "../auth/auth-util";
+import { getEmailFragments } from "./auth-util";
 import { dataState } from "../../createAccount";
 
 let email = "";
@@ -27,7 +27,7 @@ function passwordIsValid() {
 }
 
 // Create Account Function
-export default function initialSignUp() {
+export default function initSignUp() {
   if (
     createAcctEmailInput &&
     createAcctPasswordInput &&
