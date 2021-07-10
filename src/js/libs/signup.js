@@ -1,8 +1,18 @@
 const axios = require("axios");
 const REGISTER_PATIENT_URL =
   "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
-export function signUpUser(userData) {
+export function signUpUser(userData, userType) {
   let data = JSON.stringify(userData);
+  switch (userType) {
+    // TODO create enum for patient && officer && hospital
+    case "patient":
+      return signUpPatient(data);
+    default:
+      return new Error("user type is not specified");
+  }
+}
+
+function signUpPatient(data) {
   return axios({
     method: "post",
     url: REGISTER_PATIENT_URL,

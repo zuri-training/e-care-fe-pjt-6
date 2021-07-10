@@ -1,5 +1,5 @@
 import axios from "axios";
-import { signUpUser, responseTemplate, getEmailFragments } from "./signup";
+import { signUpUser, responseTemplate, getEmailFragments } from "./libs/signup";
 // get elments from DOM ------------------------------------------------
 
 const mainContainer = document.querySelector(".acct__main");
@@ -118,6 +118,10 @@ export function CreateAccount() {
   }
 
   if (csuElementAreAvailable()) {
+    /* 
+    TODO: Validate Date of birth passed in 
+    
+    */
     assignValueFromInput(csuFirstNameEl, dataState.first_name);
     assignValueFromInput(csuLastNameEl, dataState.last_name);
     assignValueFromInput(csuAddressEl, dataState.address);
@@ -138,7 +142,7 @@ export function CreateAccount() {
 }
 
 function signUp() {
-  signUpUser(data)
+  signUpUser(data, "patient")
     .then(function (response) {
       console.log(response);
       mainContainer.innerHTML = responseTemplate();
