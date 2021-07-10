@@ -45,12 +45,7 @@ export default function initSignUp() {
     });
     createAcctForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (
-        passwordIsValid() &&
-        email != " " &&
-        password != " " &&
-        mainContainer
-      ) {
+      if (passwordIsValid() && email != " " && password != " ") {
         setUserDetails(email, password, dataState);
         console.table(dataState);
         window.location.pathname = "./signUp.html";
