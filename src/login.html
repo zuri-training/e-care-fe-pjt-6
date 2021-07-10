@@ -31,7 +31,7 @@
                 <a href="./index.html" class="nav__link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Directory</a>
+                <a href="./directory.html" class="nav__link">Directory</a>
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link">Doctor</a>
@@ -78,10 +78,21 @@
         />
         <h1 class="head">Welcome back</h1>
 
-        <form action="" class="form2">
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="password" />
-          <button>Login</button>
+        <form class="form2 loginForm">
+          <div class="loginFormMessage"></div>
+          <input
+            class="loginName"
+            type="text"
+            placeholder="Username"
+            required
+          />
+          <input
+            class="loginPassword"
+            type="password"
+            placeholder="password"
+            required
+          />
+          <button class="loginBtn" type="submit">Login</button>
         </form>
       </div>
     </div>

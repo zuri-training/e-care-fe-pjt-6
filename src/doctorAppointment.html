@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/doctorAppointment.css" />
+    <title>dashboard</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- The right side of the dashbord with all the links and the logo -->
+
+      <div class="profile">
+        <div class="logo">
+          <img src="./assets/Image/dashboard-page-img-10.svg" alt="logo" />
+        </div>
+
+        <h4>PROFILE</h4>
+
+        <div class="profile__links">
+          <h6><a href="#">Dashboard</a></h6>
+          <div class="broken__border">
+            <h6><a href="#">Patients</a></h6>
+            <h6><a href="#">Hospital</a></h6>
+          </div>
+        </div>
+
+        <h6 class="profile__links__dash"><a href="#">Appointments</a></h6>
+        <div class="profile__links">
+          <h6><a href="#">Directory</a></h6>
+        </div>
+
+        <div class="profile__links about">
+          <h6><a href="#">About</a></h6>
+          <h6><a href="#">Report</a></h6>
+          <h6><a href="./contact.html">Contact</a></h6>
+        </div>
+        <div class="profile__links profile__links__logout">
+          <h6 class="logout">
+            <img src="./assets/Image/doctor--img.svg" alt="" />Logout
+          </h6>
+        </div>
+      </div>
+
+      <!-- The left side div which contaim the user details -->
+
+      <div class="details">
+        <!-- The header with the name of the logged in user and notification with settings -->
+
+        <div class="details__header">
+          <div class="details__header__wrapper">
+            <div class="details__header__wrapper__left">
+              <h6>Your profile</h6>
+              <img src="./assets/Image/dashboard-page-img-08.svg" alt="arrow" />
+              <h6><a href="#">Dashboard</a></h6>
+            </div>
+            <div class="details__header__wrapper__right">
+              <img
+                src="./assets/Image/patient-img--01.svg"
+                alt="picture"
+                class="img__profile"
+              />
+              <h6>Tolofari C.</h6>
+              <img
+                src="./assets/Image/dashboard-page-img-09.svg"
+                alt="notification"
+                class="notification"
+              />
+              <img
+                src="./assets/Image/dashboard-page-img-06.svg"
+                alt="setting"
+                class="settings"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- The actual detail of the user after the header -->
+
+        <div class="details__detail">
+          <!-- everything about the user -->
+
+          <div class="details__detail__wrapper">
+            <div class="overview__details">
+              <img
+                src="./assets/Image/patient-img--01.svg"
+                alt="profile picture"
+              />
+
+              <!-- user email name age etc -->
+              <div class="email__name__edit">
+                <div class="email__name">
+                  <h4>DIMIPRE V. OKON</h4>
+                  <div class="email">
+                    <p>Dimiprevokon@gmail.com</p>
+                    <p class="para">917-569-5390</p>
+                    <p class="para">05/07/1986</p>
+                  </div>
+                </div>
+                <button class="btn">Edit</button>
+              </div>
+            </div>
+
+            <div class="allocated__time">
+              <div class="time__detail">
+                <img src="./assets/Image/doctor-img-04.svg" alt="" />
+                <h6 class="time__detail__first">Dimipre. V</h6>
+                <h6>10 AM</h6>
+              </div>
+              <div class="time__detail">
+                <img src="./assets/Image/doctor-img-01.svg" alt="" />
+                <h6 class="time__detail__first">Coker. T</h6>
+                <h6>10 AM</h6>
+              </div>
+              <div class="time__detail">
+                <img src="./assets/Image/doctor-img-02.svg" alt="" />
+                <h6 class="time__detail__first">Amaka. C</h6>
+                <h6>10 AM</h6>
+              </div>
+              <div class="time__detail">
+                <img src="./assets/Image/doctor-img-03.svg" alt="" />
+                <h6 class="time__detail__first">Bello. A</h6>
+                <h6>10 AM</h6>
+              </div>
+            </div>
+
+            <!-- card -->
+
+            <div class="cards">
+              <div class="chart">
+                <img src="./assets/icons/doctor-img-icon-05.svg" alt="" />
+                <h3 class="paragraph">72%</h3>
+                <img src="./assets/Image/doctor-img-09.svg" alt="" />
+              </div>
+
+              <div class="points">
+                <div class="point">
+                  <div class="empty"></div>
+                  <h6>Prescription</h6>
+                </div>
+                <div class="point">
+                  <div class="empty empty__yellow"></div>
+                  <h6>Total Consultation hrs</h6>
+                </div>
+                <div class="point">
+                  <div class="empty empty__red"></div>
+                  <h6>Notes</h6>
+                </div>
+                <div class="point">
+                  <div class="empty empty__green"></div>
+                  <h6>Consultation</h6>
+                </div>
+                <div class="point">
+                  <div class="empty empty__pink"></div>
+                  <h6>Patients Seen</h6>
+                </div>
+              </div>
+
+              <!-- upcoming -->
+
+              <div class="card">
+                <h6 class="card__heading">Upcoming</h6>
+                <div class="plans top">
+                  <img src="./assets/Image/doctor-img-01.svg" alt="checkbox" />
+                  <div class="plan">
+                    <h6 class="plan__name">Coker. T</h6>
+                    <h6 class="plan__last">
+                      Medical check up <span class="time"> 12:00 </span>
+                    </h6>
+                  </div>
+                </div>
+                <div class="plans top">
+                  <img src="./assets/Image/doctor-img-02.svg" alt="checkbox" />
+                  <div class="plan">
+                    <h6 class="plan__name">Amaka. C</h6>
+                    <h6 class="plan__last">
+                      Lorep Ipsum<span class="time"> 10:00 </span>
+                    </h6>
+                  </div>
+                </div>
+                <div class="plans">
+                  <img src="./assets/Image/doctor-img-03.svg" alt="checkbox" />
+                  <div class="plan">
+                    <h6 class="plan__name">Bello. A</h6>
+                    <h6 class="plan__last">
+                      Lorep Ipsum<span class="time"> 14:00 </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards cards__cards">
+              <!-- reuest -->
+
+              <div class="card card__requests">
+                <h6 class="card__heading card__heading__requests">Requests</h6>
+                <div class="plans top">
+                  <img src="./assets/Image/doctor-img-04.svg" alt="checkbox" />
+                  <div class="plan">
+                    <h6 class="plan__name">Okone.P</h6>
+                    <h6 class="plan__last">
+                      Medical check up
+                      <span class="time">
+                        <img src="./assets/Image/doctor-img-07.svg" alt="" />
+                        <img src="./assets/Image/doctor-img-08.svg" alt=""
+                      /></span>
+                    </h6>
+
+                    <p>15 July,<span> 08:00</span></p>
+                  </div>
+                </div>
+                <div class="plans top">
+                  <img src="./assets/Image/doctor-img-05.svg" alt="checkbox" />
+                  <div class="plan">
+                    <h6 class="plan__name">Dimipre.V</h6>
+                    <h6 class="plan__last">
+                      Lorep Ipsum
+                      <span class="time">
+                        <img src="./assets/Image/doctor-img-07.svg" alt="" />
+                        <img src="./assets/Image/doctor-img-08.svg" alt=""
+                      /></span>
+                    </h6>
+                    <p>15 July,<span> 08:00</span></p>
+                  </div>
+                </div>
+
+                <div class="plans top">
+                  <img src="./assets/Image/doctor-img-05.svg" alt="checkbox" />
+                  <div class="plan">
+                    <h6 class="plan__name">Dimipre.V</h6>
+                    <h6 class="plan__last">
+                      Lorep Ipsum
+                      <span class="time">
+                        <img src="./assets/Image/doctor-img-07.svg" alt="" />
+                        <img src="./assets/Image/doctor-img-08.svg" alt=""
+                      /></span>
+                    </h6>
+                    <p>15 July,<span> 08:00</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- next patient -->
+
+              <div class="card next__patient">
+                <h6 class="card__heading card__heading__next__patient">
+                  Next Patient
+                </h6>
+                <div class="plans top">
+                  <img src="./assets/Image/doctor-img-04.svg" alt="checkbox" />
+                  <div class="plan">
+                    <h6 class="plan__name">Dimipre.V</h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                  </div>
+                </div>
+                <div class="birth">
+                  <div class="birth__info">
+                    <h6>D.O.B</h6>
+                    <p>05/07/1986</p>
+                  </div>
+                  <div class="birth__info">
+                    <h6>Sex</h6>
+                    <p>Female</p>
+                  </div>
+                  <div class="birth__info">
+                    <h6>Weight</h6>
+                    <p>65kg</p>
+                  </div>
+                </div>
+
+                <div class="birth">
+                  <div class="birth__info">
+                    <h6>Height</h6>
+                    <p>186cm</p>
+                  </div>
+                  <div class="birth__info">
+                    <h6>Last Seen.</h6>
+                    <p>25 June, 2021</p>
+                  </div>
+                  <div class="birth__info">
+                    <h6>Date of Register</h6>
+                    <p>18 Feb. 2015</p>
+                  </div>
+                </div>
+
+                <div class="illness">
+                  <span class="fever">Fever</span>
+                  <span class="diabetes">Diabetes</span>
+                  <span class="malaria">Malaria</span>
+                </div>
+
+                <div class="buttons">
+                  <button class="btn__next__patient">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="white"
+                      /></svg
+                    >917-569-5390
+                  </button>
+                  <button class="btn__next__patient btn__next__patient__02">
+                    <img
+                      src="./assets/icons/doctor-img-icon-06.svg"
+                      alt=""
+                    />Record
+                  </button>
+                  <button class="btn__next__patient btn__next__patient__02">
+                    <img
+                      src="./assets/icons/doctor-img-icon-06.svg"
+                      alt=""
+                    />Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

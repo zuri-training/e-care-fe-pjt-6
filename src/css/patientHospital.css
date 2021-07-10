@@ -1,0 +1,14 @@
+.name__first {
+  width: 264px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fed810;
+  margin-bottom: 15px;
+}
+.name__first__hospital {
+  width: 329px;
+}
+.image {
+  margin-left: -3rem;
+}

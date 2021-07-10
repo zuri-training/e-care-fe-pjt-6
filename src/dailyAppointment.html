@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/patientDoctor.css" />
+    <link rel="stylesheet" href="./css/dailyAppointment.css" />
+    <title>dashboard</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- The right side of the dashbord with all the links and the logo -->
+
+      <div class="profile">
+        <div class="logo">
+          <img src="./assets/Image/dashboard-page-img-10.svg" alt="logo" />
+        </div>
+
+        <h4>PROFILE</h4>
+
+        <div class="profile__links">
+          <h6><a href="#">Record</a></h6>
+          <h6><a href="#">Dashboard</a></h6>
+        </div>
+
+        <h6 class="profile__links__dash"><a href="#">Appointment</a></h6>
+
+        <div class="profile__links">
+          <h6><a href="#">Hospital</a></h6>
+          <h6><a href="#">Directory</a></h6>
+        </div>
+
+        <h4>HELP</h4>
+
+        <div class="profile__links">
+          <h6><a href="./contact.html">Contact</a></h6>
+          <h6><a href="#">About</a></h6>
+          <h6><a href="#">Report</a></h6>
+        </div>
+      </div>
+
+      <!-- The left side div which contaim the user details -->
+
+      <div class="details">
+        <!-- The header with the name of the logged in user and notification with settings -->
+
+        <div class="details__header">
+          <div class="details__header__wrapper">
+            <div class="details__header__wrapper__left">
+              <h6>Your profile</h6>
+              <img src="./assets/Image/dashboard-page-img-08.svg" alt="arrow" />
+              <h6><a href="#">Dashboard</a></h6>
+            </div>
+            <div class="details__header__wrapper__right">
+              <img
+                src="./assets/Image/dashboard-page-img-01.svg"
+                alt="picture"
+                class="img__profile"
+              />
+              <h6>Dimipre v.</h6>
+              <img
+                src="./assets/Image/dashboard-page-img-09.svg"
+                alt="notification"
+                class="notification"
+              />
+              <img
+                src="./assets/Image/dashboard-page-img-06.svg"
+                alt="setting"
+                class="settings"
+              />
+
+              <div class="notification__sign"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The actual detail of the user after the header -->
+
+        <div class="details__detail">
+          <h6 class="span">You have the following appointments today</h6>
+
+          <div class="cards second">
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      TOLOFARI C. JAY, <span class="dark"> 46</span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                    <h6 class="name__second">Fever</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--01.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      />
+                    </svg>
+                    Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      />
+                    </svg>
+                    Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      TAMBARI M. DEE, <span class="dark"> 32 </span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                    <h6 class="name__second">diabetes</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--02.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      FUNKE E. LADIPO, <span class="dark"> 34</span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                    <h6 class="name__second">Asthma</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--03.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      TADA V. INGRID, <span class="dark"> 42 </span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                    <h6 class="name__second">Pregnancy result</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--04.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      DAVID T. JOHNSON, <span class="dark"> 46</span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                    <h6 class="name__second">Blood test result</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--05.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      FOLARIN N. BASS, <span class="dark"> 33 </span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                    <h6 class="name__second">Flu</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--06.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      HARRY M. FREEMAN, <span class="dark"> 28</span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abujal</p>
+                    <h6 class="name__second">headache</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--07.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <h6 class="card__wrapper__h6">10:00</h6>
+              <div class="card card__second">
+                <div class="name__img">
+                  <div class="name">
+                    <h6 class="name__first">
+                      GABRIEL M. MUSA, <span class="dark"> 38</span>
+                    </h6>
+                    <p>1001 Allen Ave, West Chicago, Abuja</p>
+                    <h6 class="name__second">Gastric ulcer</h6>
+                  </div>
+                  <img src="./assets/Image/patient-img--08.svg" alt="" />
+                </div>
+                <div class="call__mail">
+                  <button class="call__mail__btn call call__mail__btn__second">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.4085 12.5967C16.4474 17.6341 17.5905 11.8064 20.7987 15.0124C23.8917 18.1045 25.6694 18.724 21.7506 22.6418C21.2597 23.0362 18.141 27.7822 7.18055 16.8248C-3.78124 5.86611 0.962002 2.74414 1.35659 2.25341C5.28488 -1.67514 5.89372 0.112905 8.98672 3.20505C12.195 6.41242 6.36967 7.55926 11.4085 12.5967Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Call
+                  </button>
+                  <button class="call__mail__btn call__mail__btn__second">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 4.488V12.875C19.5 14.325 18.325 15.5 16.875 15.5H3.125C2.42881 15.5 1.76113 15.2234 1.26884 14.7312C0.776562 14.2389 0.5 13.5712 0.5 12.875V4.488L9.699 9.548C9.8865 9.651 10.114 9.651 10.301 9.548L19.5 4.4875V4.488ZM16.875 0.5C17.5602 0.500064 18.2183 0.768076 18.7086 1.24679C19.1989 1.7255 19.4826 2.37696 19.499 3.062L10 8.287L0.501 3.0615L0.502 3.0165C0.530001 2.33963 0.818603 1.69979 1.30745 1.23079C1.79631 0.761786 2.44755 0.499937 3.125 0.5H16.875Z"
+                        fill="#0067A0"
+                      /></svg
+                    >Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
