@@ -35,7 +35,7 @@ function csuElementAreAvailable() {
 //   });
 // }
 
-export function initCompleteSignUp() {
+export default function initCompleteSignUp() {
   if (csuElementAreAvailable()) {
     csuFirstNameEl.addEventListener("input", (e) => {
       let value = csuFirstNameEl.value;

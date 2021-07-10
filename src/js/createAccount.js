@@ -1,4 +1,6 @@
 import { signUpUser, responseTemplate } from "./libs/auth/auth-util";
+import initialSignUp from "./libs/auth/initialSignUp";
+import initCompleteSignUp from "./libs/auth/completeSignUp";
 // const mainContainer = document.querySelector(".acct__main");
 export let dataState = {
   user: {
@@ -31,4 +33,7 @@ function signUp() {
       console.log(error.response);
     });
 }
-export function CreateAccount() {}
+export function CreateAccount() {
+  initialSignUp();
+  initCompleteSignUp();
+}

@@ -27,7 +27,7 @@ function passwordIsValid() {
 }
 
 // Create Account Function
-export function initialSignUp() {
+export default function initialSignUp() {
   if (
     createAcctEmailInput &&
     createAcctPasswordInput &&
