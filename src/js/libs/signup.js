@@ -1,5 +1,5 @@
 const axios = require('axios');
-const SIGN_UP_PATIENT_URL = "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
+const REGISTER_PATIENT_URL = "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
 let signUpData = {
     user:{
         username:null,
@@ -21,7 +21,7 @@ export function signUpPatient(userData){
     let data = JSON.stringify(userData);
     return axios({
         method: 'post',
-        url: SIGN_UP_PATIENT_URL,
+        url: REGISTER_PATIENT_URL,
         data: data,
         headers: { 
             'Accept': 'application/json',
