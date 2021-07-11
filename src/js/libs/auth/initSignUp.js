@@ -23,7 +23,7 @@ function setUserDetails(email, password, num, dataObj) {
   dataObj.user.username = name;
   dataObj.user.email = email;
   dataObj.user.password = password;
-  dataObj.phone_no = num;
+  dataObj.phone_number = num;
 }
 
 function passwordIsValid() {
