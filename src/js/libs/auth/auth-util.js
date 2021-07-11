@@ -1,6 +1,7 @@
 import axios from "axios";
 const REGISTER_PATIENT_URL =
   "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
+const LOGIN_API_URL = "https://e-care-be-api.herokuapp.com/api/v1/user/login/";
 const requestHeader = {
   Accept: "application/json",
   "Content-Type": "application/json",
@@ -11,6 +12,17 @@ export const getEmailFragments = (emailString) =>
 
 // AUTHENTICATION //
 
+export function loginUser(data) {
+  return axios({
+    method: "post",
+    url: LOGIN_API_URL,
+    data: data,
+    headers: requestHeader,
+    validateStatus: (status) => {
+      return true;
+    },
+  });
+}
 // sign up user function
 export function signUpUser(userData, userType) {
   let data = JSON.stringify(userData);
