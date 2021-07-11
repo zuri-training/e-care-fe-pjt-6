@@ -8,10 +8,8 @@ const csuLGAEl = document.querySelector(".csu-lga");
 const csuDOBEl = document.querySelector(".csu-dob");
 const csuPhoneNoEl = document.querySelector(".csu-phoneno");
 const csuFormBtnEl = document.querySelector(".csu-form-button");
-const csuGenderEl = document.querySelector(
-  ".csu-gender[name='gender']:checked"
-);
-import { dataState } from "../../createAccount";
+const csuGenderEls = document.querySelectorAll(".csu-gender");
+import { userDataOther } from "../../createAccount";
 
 function csuElementAreAvailable() {
   return (
@@ -25,7 +23,7 @@ function csuElementAreAvailable() {
     csuDOBEl &&
     csuPhoneNoEl &&
     csuFormBtnEl &&
-    csuGenderEl
+    csuGenderEls
   );
 }
 
@@ -37,57 +35,70 @@ function csuElementAreAvailable() {
 //   });
 // }
 
+function getRadioVal(form, name) {
+  let val;
+  let radios = form.elements[name];
+  for (var i = 0, len = radios.length; i < len; i++) {
+    if (radios[i].checked) {
+      val = radios[i].value;
+      break;
+    }
+  }
+  console.log(val);
+  return val;
+}
+
 export default function initCompleteSignUp() {
   if (csuElementAreAvailable()) {
     csuFirstNameEl.addEventListener("input", (e) => {
       let value = csuFirstNameEl.value;
-      dataState.first_name = value;
+      userDataOther.first_name = value;
     });
 
     csuLastNameEl.addEventListener("input", (e) => {
       let value = csuLastNameEl.value;
-      dataState.last_name = value;
+      userDataOther.last_name = value;
     });
 
     csuAddressEl.addEventListener("input", (e) => {
       let value = csuAddressEl.value;
-      dataState.address = value;
+      userDataOther.address = value;
     });
 
     csuCityEl.addEventListener("input", (e) => {
       let value = csuCityEl.value;
-      dataState.city = value;
+      userDataOther.city = value;
     });
 
     csuPhoneNoEl.addEventListener("input", (e) => {
       let value = csuPhoneNoEl.value;
-      dataState.phone_number = value;
+      userDataOther.phone_number = value;
     });
 
     csuStateEl.addEventListener("input", (e) => {
       let value = csuStateEl.value;
-      dataState.state = value;
+      userDataOther.state = value;
     });
 
     csuLGAEl.addEventListener("input", (e) => {
       let value = csuLGAEl.value;
-      dataState.lga = value;
+      userDataOther.lga = value;
     });
 
     csuDOBEl.addEventListener("input", (e) => {
       let value = csuDOBEl.value;
-      dataState.date_of_birth = value;
+      userDataOther.date_of_birth = value;
     });
 
-    csuGenderEl.addEventListener("input", (e) => {
-      let value = csuGenderEl.value;
-      dataState.gender = value;
+    csuGenderEls.forEach((el) => {
+      el.addEventListener("click", () => {
+        userDataOther.gender = getRadioVal(csuFormEl, "gender");
+      });
     });
-
     csuFormEl.addEventListener("submit", (e) => {
       e.preventDefault();
       csuFormBtnEl.textContent = "Creating...";
-      console.table(dataState);
+      console.table(userDataOther);
       // send data to backend
       // redirect if need be
     });

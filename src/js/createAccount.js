@@ -2,12 +2,15 @@ import { signUpUser, responseTemplate } from "./libs/auth/auth-util";
 import initSignUp from "./libs/auth/initSignUp";
 import initCompleteSignUp from "./libs/auth/completeSignUp";
 // const mainContainer = document.querySelector(".acct__main");
-export let dataState = {
+export let userDataMain = {
   user: {
     username: null,
     email: null,
     password: null,
   },
+};
+
+let userDataOther = {
   phone_number: null,
   first_name: null,
   last_name: null,

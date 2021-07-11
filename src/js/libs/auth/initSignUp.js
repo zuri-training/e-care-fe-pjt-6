@@ -10,7 +10,7 @@ const createAcctPasswordInputCheck = document.getElementsByClassName(
   "createAccountConfirmPassword"
 )[0];
 import { getEmailFragments } from "./auth-util";
-import { dataState } from "../../createAccount";
+import { userDataMain } from "../../createAccount";
 
 let email = "";
 let password = "";
@@ -46,8 +46,7 @@ export default function initSignUp() {
     createAcctForm.addEventListener("submit", (e) => {
       e.preventDefault();
       if (passwordIsValid() && email != " " && password != " ") {
-        setUserDetails(email, password, dataState);
-        console.table(dataState);
+        setUserDetails(email, password, userDataMain);
         window.location.pathname = "./signUp.html";
       } else {
         alert("Sorry Passwords don't match");
