@@ -11,7 +11,14 @@ const createAcctPasswordInputCheck = document.getElementsByClassName(
 )[0];
 const createAcctFormBtn = document.querySelector(".cracct-formBtn");
 const createAcctPhoneNoEl = document.querySelector(".createAccountPhoneNo");
-import { getEmailFragments, signUpUser } from "./auth-util";
+import {
+  getEmailFragments,
+  getUserID,
+  removeUserID,
+  setCookie,
+  signUpUser,
+  storeUserID,
+} from "./auth-util";
 import { userDataMain } from "../../createAccount";
 
 let email = "";
@@ -19,16 +26,41 @@ let password = "";
 let phoneNo = "";
 let confirmPassword = "";
 let userId = "";
-function setUserDetails(email, password, num, dataObj) {
+const getUserDetails = (email, password, num) => {
+  let userDataMain = {
+    user: {
+      username: null,
+      email: null,
+      password: null,
+    },
+    phone_number: null,
+  };
   const [name, domain] = getEmailFragments(email);
-  dataObj.user.username = name;
-  dataObj.user.email = email;
-  dataObj.user.password = password;
-  dataObj.phone_number = num;
-}
+  userDataMain.user.username = name;
+  userDataMain.user.email = email;
+  userDataMain.user.password = password;
+  userDataMain.phone_number = num;
+  return userDataMain;
+};
 
 function passwordIsValid() {
   return password === confirmPassword;
+}
+
+function renderBtn(state) {
+  if (state === "success") {
+    createAcctFormBtn.textContent = "Success!";
+    createAcctFormBtn.style.background = "rgb(63, 138, 19)";
+  } else if (state === "error") {
+    createAcctFormBtn.style.background = "rgb(138, 19, 19)";
+    createAcctFormBtn.textContent = "Sorry! Try Again";
+    setTimeout(() => {
+      createAcctFormBtn.style.background = "var(--color-brand-blue)";
+      createAcctFormBtn.textContent = "Sign Up";
+    }, 2000);
+  } else {
+    return;
+  }
 }
 
 // Create Account Function
@@ -56,25 +88,28 @@ export default function initSignUp() {
     });
     createAcctForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      createAcctFormBtn.textContent = "Sending...";
       if (
         passwordIsValid() &&
         email != " " &&
         password != " " &&
         phoneNo != " "
       ) {
-        setUserDetails(email, password, phoneNo, userDataMain);
+        createAcctFormBtn.textContent = "Processing...";
         // TODO Write function to detect existing username and existing number
-        signUpUser(userDataMain, "patient")
+        signUpUser(getUserDetails(email, password, phoneNo), "patient")
           .then(function (response) {
             userId = response.data.uuid;
-            createAcctFormBtn.textContent = "Success!";
-            createAcctFormBtn.style.background = "rgb(63, 138, 19)";
-            window.location.pathname = `./dashboard.html?${userId}`;
+            if (getUserID()) {
+              removeUserID();
+            }
+            storeUserID(userId);
+            renderBtn("success");
+            window.location.pathname = "./login.html";
           })
           .catch(function (error) {
             // TODO Add proper error handling
-            console.log(error.response);
+            renderBtn("error");
+            console.log(error);
           });
       } else {
         alert("Sorry Passwords don't match");

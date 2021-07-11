@@ -6,22 +6,10 @@ const csuCityEl = document.querySelector(".csu-city");
 const csuStateEl = document.querySelector(".csu-state");
 const csuLGAEl = document.querySelector(".csu-lga");
 const csuDOBEl = document.querySelector(".csu-dob");
-// const csuPhoneNoEl = document.querySelector(".csu-phoneno");
 const csuFormBtnEl = document.querySelector(".csu-form-button");
 const csuGenderEls = document.querySelectorAll(".csu-gender");
-import { userDataOther } from "../../createAccount";
+import { getCookie, getUserID, updateUserProfile } from "./auth-util";
 
-// let userId = "";
-// function getUserId() {
-//   let id;
-//   const parsedUrl = new URL(window.location.href);
-//   id = parsedUrl.searchParams.get("id");
-//   return id;
-// }
-
-// function onPageLoad() {
-//   userId = getUserId();
-// }
 function csuElementAreAvailable() {
   return (
     csuFormEl &&
@@ -37,13 +25,18 @@ function csuElementAreAvailable() {
   );
 }
 
-// function assignValueFromInput(el, storage, validation) {
-//   el.addEventListener("input", (e) => {
-//     let value = el.value;
-//     storage = value;
-//     console.log(storage);
-//   });
-// }
+let userDataOther = {
+  first_name: null,
+  last_name: null,
+  other_name: null,
+  address: null,
+  gender: null,
+  date_of_birth: null,
+  city: null,
+  lga: null,
+  state: null,
+  address: null,
+};
 
 function getRadioVal(form, name) {
   let val;
@@ -102,14 +95,38 @@ export default function initCompleteSignUp() {
 
     csuGenderEls.forEach((el) => {
       el.addEventListener("click", () => {
-        userDataOther.gender = getRadioVal(csuFormEl, "gender");
+        userDataOther = {
+          ...userDataOther,
+          gender: getRadioVal(csuFormEl, "gender"),
+        };
       });
     });
+
     csuFormEl.addEventListener("submit", (e) => {
+      let id = getCookie("userid");
+      let token = getCookie("access");
       e.preventDefault();
-      csuFormBtnEl.textContent = "Creating...";
+      csuFormBtnEl.textContent = "Updating...";
       console.table(userDataOther);
       // send data to backend
+      updateUserProfile(id, "patient", userDataOther, token)
+        .then((res) => {
+          if (res.status === 202) {
+            csuFormBtnEl.textContent = "Updated Succesfully!";
+            csuFormBtnEl.style.background = "rgb(63, 138, 19)";
+            window.location.pathname = "./dashboard.html";
+          } else {
+            csuFormBtnEl.style.background = "rgb(138, 19, 19)";
+            csuFormBtnEl.textContent = "Sorry! Try Again";
+            setTimeout(() => {
+              csuFormBtnEl.style.background = "var(--color-brand-blue)";
+              csuFormBtnEl.textContent = "Update";
+            }, 2000);
+          }
+        })
+        .catch((err) => {
+          alert(err);
+        });
       // redirect if need be
     });
   }

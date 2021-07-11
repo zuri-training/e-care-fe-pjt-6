@@ -1,12 +1,28 @@
 import axios from "axios";
 const REGISTER_PATIENT_URL =
   "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
+const LOGIN_API_URL = "https://e-care-be-api.herokuapp.com/api/v1/user/login/";
+const requestHeader = {
+  Accept: "application/json",
+  "Content-Type": "application/json",
+};
 
 export const getEmailFragments = (emailString) =>
   emailString.split(/@(?=[^@]*$)/);
 
 // AUTHENTICATION //
 
+export function loginUser(data) {
+  return axios({
+    method: "post",
+    url: LOGIN_API_URL,
+    data: data,
+    headers: requestHeader,
+    validateStatus: (status) => {
+      return true;
+    },
+  });
+}
 // sign up user function
 export function signUpUser(userData, userType) {
   let data = JSON.stringify(userData);
@@ -24,16 +40,68 @@ function signUpPatient(data) {
     method: "post",
     url: REGISTER_PATIENT_URL,
     data: data,
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
+    headers: requestHeader,
     validateStatus: (status) => {
       return true;
     },
   });
 }
 
+export function fetchUser(id, type, token) {
+  return axios({
+    method: "get",
+    url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}`,
+    data: "",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+export function updateUserProfile(id, type, data = {}, accessToken) {
+  return axios({
+    method: "put",
+    url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
+    data: data,
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+}
+
+// Cookies and Session Storage
+export function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+export function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+export function storeUserID(id) {
+  sessionStorage.setItem("userid", id);
+}
+export function getUserID() {
+  return sessionStorage.getItem("userid");
+}
+
+export function removeUserID() {
+  sessionStorage.removeItem("userid");
+}
 /* 
 { 
 'Accept': 'application/json',

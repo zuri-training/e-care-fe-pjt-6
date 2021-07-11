@@ -1,53 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/dashboard.css" />
-    <title>dashboard</title>
-  </head>
-  <body class="dashboard-body">
+function PatientDashboard() {
+  return `
     <main class="main">
-      <!-- The right side of the dashbord with all the links and the logo -->
-
       <div class="profile">
         <div class="logo">
           <img src="./assets/Image/dashboard-page-img-10.svg" alt="logo" />
         </div>
-
         <h4>PROFILE</h4>
-
         <div class="profile__links">
           <h6><a href="#">Record</a></h6>
         </div>
-
         <h6 class="profile__links__dash"><a href="#">Dashboard</a></h6>
-
         <div class="profile__links">
           <h6><a href="#">Doctors</a></h6>
           <h6><a href="#">Hospital</a></h6>
           <h6><a href="#">Directory</a></h6>
         </div>
-
         <h4>HELP</h4>
-
         <div class="profile__links">
           <h6><a href="./contact.html">Contact</a></h6>
           <h6><a href="#">About</a></h6>
           <h6><a href="#">Report</a></h6>
         </div>
       </div>
-
-      <!-- The left side div which contaim the user details -->
-
       <div class="details">
-        <!-- The header with the name of the logged in user and notification with settings -->
-
         <div class="details__header">
           <div class="details__header__wrapper">
             <div class="details__header__wrapper__left">
@@ -56,7 +31,11 @@
               <h6><a href="#">Dashboard</a></h6>
             </div>
             <div class="details__header__wrapper__right">
-              <img src="" alt="picture" class="img__profile dsh-imgProfile" />
+              <img
+                src=""
+                alt="picture"
+                class="img__profile dsh-imgProfile"
+              />
               <h6 class="dsh-profileName"></h6>
               <img
                 src="./assets/Image/dashboard-page-img-09.svg"
@@ -71,25 +50,19 @@
             </div>
           </div>
         </div>
-
-        <!-- The actual detail of the user after the header -->
-
         <div class="details__detail">
           <h4>
-            <span class="color__blue">
-              Hi <span class="dsh-profileName"></span>,
-            </span>
-            your dashboard is all set
+            <span class="color__blue"> Hi <span class="dsh-profileName"></span>, </span> your dashboard is all
+            set
           </h4>
-
-          <!-- everything about the user -->
-
           <div class="details__detail__wrapper">
             <div class="overview">
               <div class="overview__details">
-                <img src="" alt="profile picture" class="dsh-imgProfile" />
-
-                <!-- user email name age etc -->
+                <img
+                  src=""
+                  alt="profile picture"
+                  class="dsh-imgProfile"
+                />
                 <div class="email__name__edit">
                   <div class="email__name">
                     <h4 class="dsh-fullName"></h4>
@@ -99,11 +72,9 @@
                       <p class="para dsh-DOB"></p>
                     </div>
                   </div>
-                  <a href="./signUp.html" class="btn">Edit</a>
+                  <button class="btn">Edit</button>
                 </div>
               </div>
-
-              <!-- user information, address, city etc -->
               <div class="info">
                 <div class="address">
                   <h5>ADDRESS</h5>
@@ -230,6 +201,5 @@
         </div>
       </div>
     </main>
-    <script src="./js/index.js"></script>
-  </body>
-</html>
+    `;
+}
