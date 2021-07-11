@@ -116,6 +116,7 @@ export default function initCompleteSignUp() {
     csuGenderEls.forEach((el) => {
       el.addEventListener("click", () => {
         userDataOther.gender = getRadioVal(csuFormEl, "gender");
+        console.log(getRadioVal(csuFormEl, "gender"));
       });
     });
 
@@ -123,7 +124,7 @@ export default function initCompleteSignUp() {
       console.alert(message);
     }
     csuFormEl.addEventListener("submit", (e) => {
-      let id = getUserID();
+      let id = getCookie("userid");
       let token = getCookie("access");
       e.preventDefault();
       csuFormBtnEl.textContent = "Updating...";

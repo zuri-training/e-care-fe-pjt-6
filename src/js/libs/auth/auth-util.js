@@ -47,15 +47,14 @@ function signUpPatient(data) {
   });
 }
 
-export function fetchUser(id, type) {
+export function fetchUser(id, type, token) {
   console.log(`${id} ${type}`);
   return axios({
     method: "get",
     url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
     data: "",
     headers: {
-      Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3MjM4OTMwLCJqdGkiOiIxNzg4Y2YwOTFmM2Q0OWEzOWJjYTQ2NDcxMmEwMDcwOCIsInVzZXJfaWQiOjF9.Q4T0FGSuZgZsGQJnANKpOjI4PWFCFKFdYirourvl_R0",
+      Authorization: token,
     },
   });
 }
@@ -66,7 +65,7 @@ export function updateUserProfile(id, type, data = {}, accessToken) {
     url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
     data: data,
     headers: {
-      Authorization: accessToken,
+      Authorization: "Bearer " + accessToken,
     },
   });
 }

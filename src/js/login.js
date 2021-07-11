@@ -51,6 +51,7 @@ export function Login() {
           }
           storeUserID(response.data.user_id);
           setCookie("access", response.data.access, 365);
+          setCookie("userid", response.data.user_id, 365);
           displayMessage("Success!", "success");
           window.location.pathname = "./dashboard.html";
           loginForm.reset();

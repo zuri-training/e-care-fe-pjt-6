@@ -73,10 +73,9 @@ function renderUI() {
   let userData = {
     user: {},
   };
-  // let userId = getUserID();
-  let userId = "d3677995-2c5a-411d-895d-0bfacdd69149";
+  let userId = getCookie("userid");
   let token = getCookie("access");
-  fetchUser(userId, "patient")
+  fetchUser(userId, "patient", token)
     .then((response) => {
       if (response.status === 200) {
         userData = response.data;
