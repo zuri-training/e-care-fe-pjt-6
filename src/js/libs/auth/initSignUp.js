@@ -9,17 +9,21 @@ const createAcctPasswordInput = document.getElementsByClassName(
 const createAcctPasswordInputCheck = document.getElementsByClassName(
   "createAccountConfirmPassword"
 )[0];
-import { getEmailFragments } from "./auth-util";
+const createAcctFormBtn = document.querySelector(".cracct-formBtn");
+const createAcctPhoneNoEl = document.querySelector(".createAccountPhoneNo");
+import { getEmailFragments, signUpUser } from "./auth-util";
 import { userDataMain } from "../../createAccount";
 
 let email = "";
 let password = "";
+let phoneNo = "";
 let confirmPassword = "";
-function setUserDetails(email, password, dataObj) {
+function setUserDetails(email, password, num, dataObj) {
   const [name, domain] = getEmailFragments(email);
   dataObj.user.username = name;
   dataObj.user.email = email;
   dataObj.user.password = password;
+  dataObj.phone_no = num;
 }
 
 function passwordIsValid() {
@@ -32,10 +36,16 @@ export default function initSignUp() {
     createAcctEmailInput &&
     createAcctPasswordInput &&
     createAcctPasswordInputCheck &&
-    createAcctForm
+    createAcctForm &&
+    createAcctFormBtn &&
+    createAcctPhoneNoEl
   ) {
     createAcctEmailInput.addEventListener("input", (e) => {
       email = createAcctEmailInput.value;
+    });
+
+    createAcctPhoneNoEl.addEventListener("input", (e) => {
+      phoneNo = createAcctPhoneNoEl.value;
     });
     createAcctPasswordInput.addEventListener("input", (e) => {
       password = createAcctPasswordInput.value;
@@ -45,9 +55,28 @@ export default function initSignUp() {
     });
     createAcctForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (passwordIsValid() && email != " " && password != " ") {
-        setUserDetails(email, password, userDataMain);
-        window.location.pathname = "./signUp.html";
+      createAcctFormBtn.textContent = "Sending...";
+
+      if (
+        passwordIsValid() &&
+        email != " " &&
+        password != " " &&
+        phoneNo != " "
+      ) {
+        setUserDetails(email, password, phoneNo, userDataMain);
+        console.table(userDataMain);
+        signUpUser(userDataMain, "patient")
+          .then(function (response) {
+            console.log(response);
+            createAcctFormBtn.textContent = "Success!";
+            createAcctFormBtn.style.background = "rgb(63, 138, 19)";
+            // mainContainer.innerHTML = responseTemplate();
+          })
+          .catch(function (error) {
+            // mainContainer.innerHTML = responseTemplate("error");
+            console.log(error.response);
+          });
+        // window.location.pathname = "./signUp.html";
       } else {
         alert("Sorry Passwords don't match");
       }

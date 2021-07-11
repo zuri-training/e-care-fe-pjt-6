@@ -6,7 +6,7 @@ const csuCityEl = document.querySelector(".csu-city");
 const csuStateEl = document.querySelector(".csu-state");
 const csuLGAEl = document.querySelector(".csu-lga");
 const csuDOBEl = document.querySelector(".csu-dob");
-const csuPhoneNoEl = document.querySelector(".csu-phoneno");
+// const csuPhoneNoEl = document.querySelector(".csu-phoneno");
 const csuFormBtnEl = document.querySelector(".csu-form-button");
 const csuGenderEls = document.querySelectorAll(".csu-gender");
 import { userDataOther } from "../../createAccount";
@@ -21,7 +21,6 @@ function csuElementAreAvailable() {
     csuStateEl &&
     csuLGAEl &&
     csuDOBEl &&
-    csuPhoneNoEl &&
     csuFormBtnEl &&
     csuGenderEls
   );
@@ -70,10 +69,10 @@ export default function initCompleteSignUp() {
       userDataOther.city = value;
     });
 
-    csuPhoneNoEl.addEventListener("input", (e) => {
-      let value = csuPhoneNoEl.value;
-      userDataOther.phone_number = value;
-    });
+    // csuPhoneNoEl.addEventListener("input", (e) => {
+    //   let value = csuPhoneNoEl.value;
+    //   userDataOther.phone_number = value;
+    // });
 
     csuStateEl.addEventListener("input", (e) => {
       let value = csuStateEl.value;

@@ -8,10 +8,10 @@ export let userDataMain = {
     email: null,
     password: null,
   },
+  phone_number: null,
 };
 
 let userDataOther = {
-  phone_number: null,
   first_name: null,
   last_name: null,
   other_name: null,
