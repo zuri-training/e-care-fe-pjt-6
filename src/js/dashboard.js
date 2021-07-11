@@ -9,88 +9,100 @@ const userCityEl = document.querySelector(".dsh-city");
 const userStateEl = document.querySelector(".dsh-state");
 const userNextOfKinEl = document.querySelector(".dsh-nextOfKin");
 import defaultImgUrl from "url:../assets/Image/user-filled-small.svg";
+import { fetchUser, getUserID } from "./libs/auth/auth-util";
 
 const DEFAULT = "-----------";
 
-let data = {
-  id: 1,
-  user: {
-    id: 1,
-    username: "austinoski",
-    email: "austinoski@email.com",
-  },
-  url: "/api/v1/user/patient/d3677995-2c5a-411d-895d-0bfacdd69149/",
-  uuid: "d3677995-2c5a-411d-895d-0bfacdd69149",
-  first_name: "Josiah",
-  last_name: "Augustine",
-  other_name: "Onyema",
-  phone_number: "02012562567",
-  gender: null,
-  date_of_birth: null,
-  city: null,
-  lga: null,
-  state: null,
-  created: "2021-07-07T23:58:45.813440Z",
-  updated: null,
-};
+let userData;
 
-function setFullName() {
-  if (data.first_name && data.last_name && data.other_name && userFullNameEl) {
-    let fullname = `${data.first_name} ${data.other_name.charAt(0)}. ${
-      data.last_name
-    }`;
+function setUserName(data) {
+  if (profileNameEls) {
+    profileNameEls.forEach((el) => {
+      el.textContent = data.user.username;
+    });
+  }
+}
+function setFullName(data) {
+  if (data.first_name && data.last_name && userFullNameEl) {
+    let fullname = `${data.first_name} ${data.last_name}`;
     userFullNameEl.textContent = fullname;
   }
 }
 
-function setEmail() {
-  if (userEmailEl && data.user.email) {
+function setEmail(data) {
+  if (userEmailEl) {
     userEmailEl.textContent = data.user.email;
   }
 }
 
-function setPhoneNo() {
+function setPhoneNo(data) {
   if (userPhoneNoEl && data.phone_number) {
     userPhoneNoEl.textContent = data.phone_number;
   }
 }
 
-function setUserInfo() {
-  let elIsInDOM =
-    userAddressEl && userCityEl && userStateEl && userNextOfKinEl && userDOBEl;
-  let address = "";
-  const formattedDate = () => {
-    if (data.date_of_birth && data.date_of_birth != null) {
-      return date_of_birth;
-    } else {
-      return DEFAULT;
-    }
-  };
+function replaceWithSlash(str = "") {
+  return str.replace("-", "//");
+}
 
-  if (elIsInDOM) {
-    userAddressEl.textContent = address != "" ? address : DEFAULT;
-    userCityEl.textContent = data.city != null ? data.city : DEFAULT;
-    userStateEl.textContent = data.state != null ? data.state : DEFAULT;
-    userNextOfKinEl.textContent = data.nextofkin ? data.nextofkin : DEFAULT;
-    userDOBEl.textContent = formattedDate();
+function getFormattedDate(date) {
+  return replaceWithSlash(date);
+}
+function setUserInfo(data) {
+  let elAreInDOM =
+    userAddressEl && userCityEl && userStateEl && userNextOfKinEl && userDOBEl;
+  if (elAreInDOM) {
+    userAddressEl.textContent = data.address != null ? DEFAULT : data.address;
+    userCityEl.textContent = data.city != null ? DEFAULT : data.city;
+    userStateEl.textContent = data.state != null ? DEFAULT : data.state;
+    userNextOfKinEl.textContent = data.nextofkin ? DEFAULT : data.nextofkin;
+    userDOBEl.textContent =
+      data.date_of_birth != null ? DEFAULT : getFormattedDate();
   }
 }
 
+//TODO we should remove profile image for now
 function setProfileImage() {
   if (profileImgEls) {
     profileImgEls.forEach((el) => {
       el.setAttribute("src", `${defaultImgUrl}`);
+      //   el.style.display = "none";
     });
   }
 }
 
+function renderUI(data) {
+  setUserName(data);
+  setFullName(data);
+  setEmail(data);
+  setPhoneNo(data);
+  setUserInfo(data);
+  setProfileImage(data);
+}
+
+function setUserData(id, type) {
+  fetchUser(id, type)
+    .then((response) => {
+      if (response.status === 200) {
+        userData = response.data;
+      }
+    })
+    .catch((err) => {
+      console.alert(err);
+    });
+}
 export function Dashboard() {
-  profileNameEls.forEach((el) => {
-    el.textContent = data.user.username;
-  });
-  setFullName();
-  setEmail();
-  setPhoneNo();
-  setUserInfo();
-  setProfileImage();
+  function loadUserDetails() {
+    //   let id = getUserID();
+    let id = "d3677995-2c5a-411d-895d-0bfacdd69149";
+    if (id) {
+      setUserData(id, "patient");
+    } else {
+      console.alert("Cannot retrieve user details at the moment");
+    }
+  }
+  loadUserDetails();
+  window.onload = () => {
+    renderUI(userData);
+  };
 }

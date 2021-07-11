@@ -1,6 +1,10 @@
 import axios from "axios";
 const REGISTER_PATIENT_URL =
   "https://e-care-be-api.herokuapp.com/api/v1/user/patient/register/";
+const requestHeader = {
+  Accept: "application/json",
+  "Content-Type": "application/json",
+};
 
 export const getEmailFragments = (emailString) =>
   emailString.split(/@(?=[^@]*$)/);
@@ -24,16 +28,29 @@ function signUpPatient(data) {
     method: "post",
     url: REGISTER_PATIENT_URL,
     data: data,
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
+    headers: requestHeader,
     validateStatus: (status) => {
       return true;
     },
   });
 }
 
+export function fetchUser(id, type) {
+  return axios({
+    method: "get",
+    url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
+    headers: {
+      Authorization:
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3MjM4OTMwLCJqdGkiOiIxNzg4Y2YwOTFmM2Q0OWEzOWJjYTQ2NDcxMmEwMDcwOCIsInVzZXJfaWQiOjF9.Q4T0FGSuZgZsGQJnANKpOjI4PWFCFKFdYirourvl_R0",
+    },
+  });
+}
+export function storeUserID(id) {
+  sessionStorage.setItem("userid", id);
+}
+export function getUserID() {
+  return sessionStorage.getItem("userid");
+}
 /* 
 { 
 'Accept': 'application/json',
