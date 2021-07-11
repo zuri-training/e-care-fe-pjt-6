@@ -11,7 +11,7 @@ export let userDataMain = {
   phone_number: null,
 };
 
-let userDataOther = {
+export let userDataOther = {
   first_name: null,
   last_name: null,
   other_name: null,
