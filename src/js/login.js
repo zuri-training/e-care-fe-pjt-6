@@ -1,4 +1,3 @@
-import axios from "axios";
 import { loginUser, storeUserID } from "./libs/auth/auth-util";
 const loginForm = document.querySelector(".loginForm");
 const messageContainer = document.querySelector(".loginFormMessage");
