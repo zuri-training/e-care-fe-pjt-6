@@ -1,15 +1,15 @@
-import { loginUser, storeUserID } from "./libs/auth/auth-util";
+import { loginUser, storeUserID, getUserID } from "./libs/auth/auth-util";
 const loginForm = document.querySelector(".loginForm");
 const messageContainer = document.querySelector(".loginFormMessage");
-const loginNameInput = document.querySelector(".loginName");
+const loginEmailInput = document.querySelector(".loginEmail");
 const loginPasswordInput = document.querySelector(".loginPassword");
 const loginBtn = document.querySelector(".loginBtn");
-let loginName = "";
+let loginEmail = "";
 let loginPassword = "";
 
-if (loginNameInput && loginPasswordInput) {
-  loginNameInput.addEventListener("input", () => {
-    loginName = loginNameInput.value;
+if (loginEmailInput && loginPasswordInput) {
+  loginEmailInput.addEventListener("input", () => {
+    loginEmail = loginEmailInput.value;
   });
   loginPasswordInput.addEventListener("input", () => {
     loginPassword = loginPasswordInput.value;
@@ -35,10 +35,14 @@ export function Login() {
       e.preventDefault();
       loginBtn.textContent = "Sending...";
       loginUser({
-        username: loginName,
+        email: loginEmail,
         password: loginPassword,
       })
         .then((response) => {
+          console.log(response);
+          if (getUserID()) {
+            removeUserID();
+          }
           storeUserID(response.data.uuid);
           displayMessage("Success!", "success");
           window.location.pathname = "./dashboard.html";

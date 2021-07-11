@@ -11,7 +11,13 @@ const createAcctPasswordInputCheck = document.getElementsByClassName(
 )[0];
 const createAcctFormBtn = document.querySelector(".cracct-formBtn");
 const createAcctPhoneNoEl = document.querySelector(".createAccountPhoneNo");
-import { getEmailFragments, signUpUser, storeUserID } from "./auth-util";
+import {
+  getEmailFragments,
+  getUserID,
+  removeUserID,
+  signUpUser,
+  storeUserID,
+} from "./auth-util";
 import { userDataMain } from "../../createAccount";
 
 let email = "";
@@ -19,16 +25,22 @@ let password = "";
 let phoneNo = "";
 let confirmPassword = "";
 let userId = "";
-export let userDataMain = {
-  user: {},
-};
-function setUserDetails(email, password, num, dataObj) {
+const getUserDetails = (email, password, num) => {
+  let userDataMain = {
+    user: {
+      username: null,
+      email: null,
+      password: null,
+    },
+    phone_number: null,
+  };
   const [name, domain] = getEmailFragments(email);
-  dataObj.user.username = name;
-  dataObj.user.email = email;
-  dataObj.user.password = password;
-  dataObj.phone_number = num;
-}
+  userDataMain.user.username = name;
+  userDataMain.user.email = email;
+  userDataMain.user.password = password;
+  userDataMain.phone_number = num;
+  return userDataMain;
+};
 
 function passwordIsValid() {
   return password === confirmPassword;
@@ -75,18 +87,20 @@ export default function initSignUp() {
     });
     createAcctForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      createAcctFormBtn.textContent = "Processing...";
       if (
         passwordIsValid() &&
         email != " " &&
         password != " " &&
         phoneNo != " "
       ) {
-        setUserDetails(email, password, phoneNo, userDataMain);
+        createAcctFormBtn.textContent = "Processing...";
         // TODO Write function to detect existing username and existing number
-        signUpUser(userDataMain, "patient")
+        signUpUser(getUserDetails(email, password, phoneNo), "patient")
           .then(function (response) {
             userId = response.data.uuid;
+            if (getUserID()) {
+              removeUserID();
+            }
             storeUserID(userId);
             renderBtn("success");
             window.location.pathname = "./dashboard.html";

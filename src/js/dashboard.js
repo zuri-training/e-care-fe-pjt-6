@@ -89,6 +89,7 @@ function renderUI() {
   setPhoneNo(userData);
   setUserInfo(userData);
   setProfileImage();
+  userData = {};
 }
 
 export function Dashboard() {

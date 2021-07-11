@@ -45,7 +45,18 @@ function csuElementAreAvailable() {
 //   });
 // }
 
-let userDataOther = {};
+let userDataOther = {
+  first_name: null,
+  last_name: null,
+  other_name: null,
+  address: null,
+  gender: null,
+  date_of_birth: null,
+  city: null,
+  lga: null,
+  state: null,
+  address: null,
+};
 
 function getRadioVal(form, name) {
   let val;

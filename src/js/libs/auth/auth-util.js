@@ -48,6 +48,7 @@ function signUpPatient(data) {
 }
 
 export function fetchUser(id, type) {
+  console.log(`${id} ${type}`);
   return axios({
     method: "get",
     url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
