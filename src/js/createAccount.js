@@ -1,28 +1,5 @@
-import { signUpUser, responseTemplate } from "./libs/auth/auth-util";
 import initSignUp from "./libs/auth/initSignUp";
 import initCompleteSignUp from "./libs/auth/completeSignUp";
-// const mainContainer = document.querySelector(".acct__main");
-export let userDataMain = {
-  user: {
-    username: null,
-    email: null,
-    password: null,
-  },
-  phone_number: null,
-};
-
-function signUp() {
-  signUpUser(data, "patient")
-    .then(function (response) {
-      console.log(response);
-      // mainContainer.innerHTML = responseTemplate();
-    })
-    .catch(function (error) {
-      // mainContainer.innerHTML = responseTemplate("error");
-      console.log(error);
-      console.log(error.response);
-    });
-}
 export function CreateAccount() {
   initSignUp();
   initCompleteSignUp();
