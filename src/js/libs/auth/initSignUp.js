@@ -11,12 +11,7 @@ const createAcctPasswordInputCheck = document.getElementsByClassName(
 )[0];
 const createAcctFormBtn = document.querySelector(".cracct-formBtn");
 const createAcctPhoneNoEl = document.querySelector(".createAccountPhoneNo");
-import {
-  getEmailFragments,
-  signUpUser,
-  storeUserID,
-  getUserID,
-} from "./auth-util";
+import { getEmailFragments, signUpUser, storeUserID } from "./auth-util";
 import { userDataMain } from "../../createAccount";
 
 let email = "";
@@ -24,6 +19,9 @@ let password = "";
 let phoneNo = "";
 let confirmPassword = "";
 let userId = "";
+export let userDataMain = {
+  user: {},
+};
 function setUserDetails(email, password, num, dataObj) {
   const [name, domain] = getEmailFragments(email);
   dataObj.user.username = name;
@@ -91,7 +89,7 @@ export default function initSignUp() {
             userId = response.data.uuid;
             storeUserID(userId);
             renderBtn("success");
-            window.location.pathname = `url:./dashboard.html?${userId}`;
+            window.location.pathname = "./dashboard.html";
           })
           .catch(function (error) {
             // TODO Add proper error handling

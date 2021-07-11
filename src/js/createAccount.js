@@ -11,19 +11,6 @@ export let userDataMain = {
   phone_number: null,
 };
 
-export let userDataOther = {
-  first_name: null,
-  last_name: null,
-  other_name: null,
-  address: null,
-  gender: null,
-  date_of_birth: null,
-  city: null,
-  lga: null,
-  state: null,
-  address: null,
-};
-
 function signUp() {
   signUpUser(data, "patient")
     .then(function (response) {

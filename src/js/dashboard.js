@@ -8,13 +8,11 @@ const userAddressEl = document.querySelector(".dsh-address");
 const userCityEl = document.querySelector(".dsh-city");
 const userStateEl = document.querySelector(".dsh-state");
 const userNextOfKinEl = document.querySelector(".dsh-nextOfKin");
+const dashboardBody = document.querySelector(".dashboard-body");
 import defaultImgUrl from "url:../assets/Image/user-filled-small.svg";
 import { fetchUser, getUserID } from "./libs/auth/auth-util";
 
 const DEFAULT = "-----------";
-
-let userData;
-
 function setUserName(data) {
   if (profileNameEls) {
     profileNameEls.forEach((el) => {
@@ -71,38 +69,32 @@ function setProfileImage() {
   }
 }
 
-function renderUI(data) {
-  setUserName(data);
-  setFullName(data);
-  setEmail(data);
-  setPhoneNo(data);
-  setUserInfo(data);
-  setProfileImage(data);
-}
-
-function setUserData(id, type) {
-  fetchUser(id, type)
+function renderUI() {
+  let userData = {
+    user: {},
+  };
+  let userId = getUserID();
+  fetchUser(userId, "patient")
     .then((response) => {
       if (response.status === 200) {
         userData = response.data;
       }
     })
     .catch((err) => {
-      console.alert(err);
+      console.log(err);
     });
+  setUserName(userData);
+  setFullName(userData);
+  setEmail(userData);
+  setPhoneNo(userData);
+  setUserInfo(userData);
+  setProfileImage();
 }
+
 export function Dashboard() {
-  function loadUserDetails() {
-    //   let id = getUserID();
-    let id = "d3677995-2c5a-411d-895d-0bfacdd69149";
-    if (id) {
-      setUserData(id, "patient");
-    } else {
-      console.alert("Cannot retrieve user details at the moment");
-    }
+  if (dashboardBody) {
+    window.addEventListener("load", (e) => {
+      renderUI();
+    });
   }
-  loadUserDetails();
-  window.onload = () => {
-    renderUI(userData);
-  };
 }

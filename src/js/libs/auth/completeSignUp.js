@@ -9,7 +9,7 @@ const csuDOBEl = document.querySelector(".csu-dob");
 // const csuPhoneNoEl = document.querySelector(".csu-phoneno");
 const csuFormBtnEl = document.querySelector(".csu-form-button");
 const csuGenderEls = document.querySelectorAll(".csu-gender");
-import { userDataOther } from "../../createAccount";
+import { getUserID, updateUserProfile } from "./auth-util";
 
 // let userId = "";
 // function getUserId() {
@@ -44,6 +44,8 @@ function csuElementAreAvailable() {
 //     console.log(storage);
 //   });
 // }
+
+let userDataOther = {};
 
 function getRadioVal(form, name) {
   let val;
@@ -105,11 +107,34 @@ export default function initCompleteSignUp() {
         userDataOther.gender = getRadioVal(csuFormEl, "gender");
       });
     });
+
+    function alert(message) {
+      console.alert(message);
+    }
     csuFormEl.addEventListener("submit", (e) => {
+      let id = getUserID();
       e.preventDefault();
-      csuFormBtnEl.textContent = "Creating...";
+      csuFormBtnEl.textContent = "Updating...";
       console.table(userDataOther);
       // send data to backend
+      updateUserProfile(id, "patient", userDataOther)
+        .then((res) => {
+          if (res.status === 202) {
+            csuFormBtnEl.textContent = "Updated Succesfully!";
+            csuFormBtnEl.style.background = "rgb(63, 138, 19)";
+            window.location.pathname = "./dashboard.html";
+          } else {
+            csuFormBtnEl.style.background = "rgb(138, 19, 19)";
+            csuFormBtnEl.textContent = "Sorry! Try Again";
+            setTimeout(() => {
+              csuFormBtnEl.style.background = "var(--color-brand-blue)";
+              csuFormBtnEl.textContent = "Update";
+            }, 2000);
+          }
+        })
+        .catch((err) => {
+          alert(err);
+        });
       // redirect if need be
     });
   }

@@ -45,11 +45,27 @@ export function fetchUser(id, type) {
     },
   });
 }
+
+export function updateUserProfile(id, type, data = {}) {
+  return axios({
+    method: "put",
+    url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
+    data: data,
+    headers: {
+      Authorization:
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3MjM4OTMwLCJqdGkiOiIxNzg4Y2YwOTFmM2Q0OWEzOWJjYTQ2NDcxMmEwMDcwOCIsInVzZXJfaWQiOjF9.Q4T0FGSuZgZsGQJnANKpOjI4PWFCFKFdYirourvl_R0",
+    },
+  });
+}
 export function storeUserID(id) {
   sessionStorage.setItem("userid", id);
 }
 export function getUserID() {
   return sessionStorage.getItem("userid");
+}
+
+export function removeUserID() {
+  sessionStorage.removeItem("userid");
 }
 /* 
 { 
