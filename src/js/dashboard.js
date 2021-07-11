@@ -10,7 +10,7 @@ const userStateEl = document.querySelector(".dsh-state");
 const userNextOfKinEl = document.querySelector(".dsh-nextOfKin");
 const dashboardBody = document.querySelector(".dashboard-body");
 import defaultImgUrl from "url:../assets/Image/user-filled-small.svg";
-import { fetchUser, getUserID } from "./libs/auth/auth-util";
+import { fetchUser, getCookie, getUserID } from "./libs/auth/auth-util";
 
 const DEFAULT = "-----------";
 function setUserName(data) {
@@ -73,11 +73,14 @@ function renderUI() {
   let userData = {
     user: {},
   };
-  let userId = getUserID();
+  // let userId = getUserID();
+  let userId = "d3677995-2c5a-411d-895d-0bfacdd69149";
+  let token = getCookie("access");
   fetchUser(userId, "patient")
     .then((response) => {
       if (response.status === 200) {
         userData = response.data;
+        console.log(response.data);
       }
     })
     .catch((err) => {

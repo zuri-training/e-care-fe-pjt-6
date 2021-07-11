@@ -1,4 +1,10 @@
-import { loginUser, storeUserID, getUserID } from "./libs/auth/auth-util";
+import {
+  loginUser,
+  storeUserID,
+  removeUserID,
+  getUserID,
+  setCookie,
+} from "./libs/auth/auth-util";
 const loginForm = document.querySelector(".loginForm");
 const messageContainer = document.querySelector(".loginFormMessage");
 const loginEmailInput = document.querySelector(".loginEmail");
@@ -43,7 +49,8 @@ export function Login() {
           if (getUserID()) {
             removeUserID();
           }
-          storeUserID(response.data.uuid);
+          storeUserID(response.data.user_id);
+          setCookie("access", response.data.access, 365);
           displayMessage("Success!", "success");
           window.location.pathname = "./dashboard.html";
           loginForm.reset();

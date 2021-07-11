@@ -15,6 +15,7 @@ import {
   getEmailFragments,
   getUserID,
   removeUserID,
+  setCookie,
   signUpUser,
   storeUserID,
 } from "./auth-util";
@@ -103,7 +104,7 @@ export default function initSignUp() {
             }
             storeUserID(userId);
             renderBtn("success");
-            window.location.pathname = "./dashboard.html";
+            window.location.pathname = "./login.html";
           })
           .catch(function (error) {
             // TODO Add proper error handling

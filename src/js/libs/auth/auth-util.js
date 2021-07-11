@@ -52,6 +52,7 @@ export function fetchUser(id, type) {
   return axios({
     method: "get",
     url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
+    data: "",
     headers: {
       Authorization:
         "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3MjM4OTMwLCJqdGkiOiIxNzg4Y2YwOTFmM2Q0OWEzOWJjYTQ2NDcxMmEwMDcwOCIsInVzZXJfaWQiOjF9.Q4T0FGSuZgZsGQJnANKpOjI4PWFCFKFdYirourvl_R0",
@@ -59,16 +60,39 @@ export function fetchUser(id, type) {
   });
 }
 
-export function updateUserProfile(id, type, data = {}) {
+export function updateUserProfile(id, type, data = {}, accessToken) {
   return axios({
     method: "put",
     url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
     data: data,
     headers: {
-      Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3MjM4OTMwLCJqdGkiOiIxNzg4Y2YwOTFmM2Q0OWEzOWJjYTQ2NDcxMmEwMDcwOCIsInVzZXJfaWQiOjF9.Q4T0FGSuZgZsGQJnANKpOjI4PWFCFKFdYirourvl_R0",
+      Authorization: accessToken,
     },
   });
+}
+
+// Cookies and Session Storage
+export function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+export function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 export function storeUserID(id) {
   sessionStorage.setItem("userid", id);

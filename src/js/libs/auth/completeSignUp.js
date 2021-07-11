@@ -9,7 +9,7 @@ const csuDOBEl = document.querySelector(".csu-dob");
 // const csuPhoneNoEl = document.querySelector(".csu-phoneno");
 const csuFormBtnEl = document.querySelector(".csu-form-button");
 const csuGenderEls = document.querySelectorAll(".csu-gender");
-import { getUserID, updateUserProfile } from "./auth-util";
+import { getCookie, getUserID, updateUserProfile } from "./auth-util";
 
 // let userId = "";
 // function getUserId() {
@@ -124,11 +124,12 @@ export default function initCompleteSignUp() {
     }
     csuFormEl.addEventListener("submit", (e) => {
       let id = getUserID();
+      let token = getCookie("access");
       e.preventDefault();
       csuFormBtnEl.textContent = "Updating...";
       console.table(userDataOther);
       // send data to backend
-      updateUserProfile(id, "patient", userDataOther)
+      updateUserProfile(id, "patient", userDataOther, token)
         .then((res) => {
           if (res.status === 202) {
             csuFormBtnEl.textContent = "Updated Succesfully!";
