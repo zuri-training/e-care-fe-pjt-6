@@ -48,13 +48,12 @@ function signUpPatient(data) {
 }
 
 export function fetchUser(id, type, token) {
-  console.log(`${id} ${type}`);
   return axios({
     method: "get",
-    url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
+    url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}`,
     data: "",
     headers: {
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
     },
   });
 }
@@ -65,7 +64,7 @@ export function updateUserProfile(id, type, data = {}, accessToken) {
     url: `https://e-care-be-api.herokuapp.com/api/v1/user/${type}/${id}/`,
     data: data,
     headers: {
-      Authorization: "Bearer " + accessToken,
+      Authorization: `Bearer ${accessToken}`,
     },
   });
 }

@@ -40,7 +40,7 @@ function setPhoneNo(data) {
 }
 
 function replaceWithSlash(str = "") {
-  return str.replace("-", "//");
+  return str.replace(/-/g, "/");
 }
 
 function getFormattedDate(date) {
@@ -50,12 +50,14 @@ function setUserInfo(data) {
   let elAreInDOM =
     userAddressEl && userCityEl && userStateEl && userNextOfKinEl && userDOBEl;
   if (elAreInDOM) {
-    userAddressEl.textContent = data.address != null ? DEFAULT : data.address;
-    userCityEl.textContent = data.city != null ? DEFAULT : data.city;
-    userStateEl.textContent = data.state != null ? DEFAULT : data.state;
-    userNextOfKinEl.textContent = data.nextofkin ? DEFAULT : data.nextofkin;
+    userAddressEl.textContent = data.address != null ? data.address : DEFAULT;
+    userCityEl.textContent = data.city != null ? data.city : DEFAULT;
+    userStateEl.textContent = data.state != null ? data.state : DEFAULT;
+    userNextOfKinEl.textContent = data.nextofkin ? data.nextofkin : DEFAULT;
     userDOBEl.textContent =
-      data.date_of_birth != null ? DEFAULT : getFormattedDate();
+      data.date_of_birth != null
+        ? getFormattedDate(data.date_of_birth)
+        : DEFAULT;
   }
 }
 
@@ -68,30 +70,25 @@ function setProfileImage() {
     });
   }
 }
-
 function renderUI() {
-  let userData = {
-    user: {},
-  };
   let userId = getCookie("userid");
   let token = getCookie("access");
   fetchUser(userId, "patient", token)
     .then((response) => {
       if (response.status === 200) {
-        userData = response.data;
         console.log(response.data);
+        setUserName(response.data);
+        setFullName(response.data);
+        setEmail(response.data);
+        setPhoneNo(response.data);
+        setUserInfo(response.data);
+        setProfileImage();
       }
     })
     .catch((err) => {
       console.log(err);
+      alert(err);
     });
-  setUserName(userData);
-  setFullName(userData);
-  setEmail(userData);
-  setPhoneNo(userData);
-  setUserInfo(userData);
-  setProfileImage();
-  userData = {};
 }
 
 export function Dashboard() {

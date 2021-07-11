@@ -6,22 +6,10 @@ const csuCityEl = document.querySelector(".csu-city");
 const csuStateEl = document.querySelector(".csu-state");
 const csuLGAEl = document.querySelector(".csu-lga");
 const csuDOBEl = document.querySelector(".csu-dob");
-// const csuPhoneNoEl = document.querySelector(".csu-phoneno");
 const csuFormBtnEl = document.querySelector(".csu-form-button");
 const csuGenderEls = document.querySelectorAll(".csu-gender");
 import { getCookie, getUserID, updateUserProfile } from "./auth-util";
 
-// let userId = "";
-// function getUserId() {
-//   let id;
-//   const parsedUrl = new URL(window.location.href);
-//   id = parsedUrl.searchParams.get("id");
-//   return id;
-// }
-
-// function onPageLoad() {
-//   userId = getUserId();
-// }
 function csuElementAreAvailable() {
   return (
     csuFormEl &&
@@ -36,14 +24,6 @@ function csuElementAreAvailable() {
     csuGenderEls
   );
 }
-
-// function assignValueFromInput(el, storage, validation) {
-//   el.addEventListener("input", (e) => {
-//     let value = el.value;
-//     storage = value;
-//     console.log(storage);
-//   });
-// }
 
 let userDataOther = {
   first_name: null,
@@ -115,14 +95,13 @@ export default function initCompleteSignUp() {
 
     csuGenderEls.forEach((el) => {
       el.addEventListener("click", () => {
-        userDataOther.gender = getRadioVal(csuFormEl, "gender");
-        console.log(getRadioVal(csuFormEl, "gender"));
+        userDataOther = {
+          ...userDataOther,
+          gender: getRadioVal(csuFormEl, "gender"),
+        };
       });
     });
 
-    function alert(message) {
-      console.alert(message);
-    }
     csuFormEl.addEventListener("submit", (e) => {
       let id = getCookie("userid");
       let token = getCookie("access");
