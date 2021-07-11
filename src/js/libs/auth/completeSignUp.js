@@ -11,6 +11,17 @@ const csuFormBtnEl = document.querySelector(".csu-form-button");
 const csuGenderEls = document.querySelectorAll(".csu-gender");
 import { userDataOther } from "../../createAccount";
 
+// let userId = "";
+// function getUserId() {
+//   let id;
+//   const parsedUrl = new URL(window.location.href);
+//   id = parsedUrl.searchParams.get("id");
+//   return id;
+// }
+
+// function onPageLoad() {
+//   userId = getUserId();
+// }
 function csuElementAreAvailable() {
   return (
     csuFormEl &&

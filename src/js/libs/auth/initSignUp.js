@@ -18,6 +18,7 @@ let email = "";
 let password = "";
 let phoneNo = "";
 let confirmPassword = "";
+let userId = "";
 function setUserDetails(email, password, num, dataObj) {
   const [name, domain] = getEmailFragments(email);
   dataObj.user.username = name;
@@ -56,7 +57,6 @@ export default function initSignUp() {
     createAcctForm.addEventListener("submit", (e) => {
       e.preventDefault();
       createAcctFormBtn.textContent = "Sending...";
-
       if (
         passwordIsValid() &&
         email != " " &&
@@ -64,19 +64,18 @@ export default function initSignUp() {
         phoneNo != " "
       ) {
         setUserDetails(email, password, phoneNo, userDataMain);
-        console.table(userDataMain);
+        // TODO Write function to detect existing username and existing number
         signUpUser(userDataMain, "patient")
           .then(function (response) {
-            console.log(response);
+            userId = response.data.uuid;
             createAcctFormBtn.textContent = "Success!";
             createAcctFormBtn.style.background = "rgb(63, 138, 19)";
-            // mainContainer.innerHTML = responseTemplate();
+            window.location.pathname = `./dashboard.html?${userId}`;
           })
           .catch(function (error) {
-            // mainContainer.innerHTML = responseTemplate("error");
+            // TODO Add proper error handling
             console.log(error.response);
           });
-        // window.location.pathname = "./signUp.html";
       } else {
         alert("Sorry Passwords don't match");
       }
