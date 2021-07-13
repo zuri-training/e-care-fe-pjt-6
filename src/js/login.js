@@ -1,13 +1,18 @@
-const axios = require("axios");
-// grab form elements
+import {
+  loginUser,
+  storeUserID,
+  removeUserID,
+  getUserID,
+  setCookie,
+} from "./libs/auth/auth-util";
 const loginForm = document.querySelector(".loginForm");
 const messageContainer = document.querySelector(".loginFormMessage");
-const loginNameInput = document.querySelector(".loginName");
+const loginEmailInput = document.querySelector(".loginEmail");
 const loginPasswordInput = document.querySelector(".loginPassword");
 const loginBtn = document.querySelector(".loginBtn");
-const LOGIN_API_URL = "https://e-care-be-api.herokuapp.com/api/v1/user/login/";
-let loginName = "";
+let loginEmail = "";
 let loginPassword = "";
+<<<<<<< HEAD
 const testData = JSON.stringify({
   username: "austinoski",
   password: "austinoski123",
@@ -23,6 +28,18 @@ export function Login() {
     });
   }
 
+=======
+
+if (loginEmailInput && loginPasswordInput) {
+  loginEmailInput.addEventListener("input", () => {
+    loginEmail = loginEmailInput.value;
+  });
+  loginPasswordInput.addEventListener("input", () => {
+    loginPassword = loginPasswordInput.value;
+  });
+}
+export function Login() {
+>>>>>>> 0742a6b988cc6f95d48f2c1539fe29ffd717cc22
   function displayMessage(message, type) {
     if (messageContainer) {
       messageContainer.style.display = "block";
@@ -41,6 +58,7 @@ export function Login() {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
       loginBtn.textContent = "Sending...";
+<<<<<<< HEAD
       axios({
         method: "post",
         url: LOGIN_API_URL,
@@ -58,6 +76,20 @@ export function Login() {
         },
       })
         .then((response) => {
+=======
+      loginUser({
+        email: loginEmail,
+        password: loginPassword,
+      })
+        .then((response) => {
+          console.log(response);
+          if (getUserID()) {
+            removeUserID();
+          }
+          storeUserID(response.data.user_id);
+          setCookie("access", response.data.access, 365);
+          setCookie("userid", response.data.user_id, 365);
+>>>>>>> 0742a6b988cc6f95d48f2c1539fe29ffd717cc22
           displayMessage("Success!", "success");
           window.location.pathname = "./dashboard.html";
           loginForm.reset();

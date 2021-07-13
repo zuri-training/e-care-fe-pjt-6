@@ -1,3 +1,4 @@
+import { CreateAccount } from "./createAccount";
 import { Login } from "./login";
 import { Dashboard } from "./dashboard";
 function toggleMobileNav() {
@@ -14,6 +15,7 @@ function toggleMobileNav() {
 // main point
 export default () => {
   console.log("We Live!");
+  CreateAccount();
   Dashboard();
   toggleMobileNav();
   Login();

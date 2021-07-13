@@ -238,8 +238,11 @@ img {
 .btn {
   width: 165px;
   height: 46px;
+  line-height: 46px;
+  text-align: center;
   border: none;
   margin-top: 1rem;
+  font-size: 0.75rem;
   border-radius: 30px;
   color: var(--color-light);
   background-color: var(--color-brand-blue);

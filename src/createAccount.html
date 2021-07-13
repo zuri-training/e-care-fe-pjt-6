@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/createAccount.css" />
-    <title>SignUp</title>
+    <title>E-care - Create Account</title>
   </head>
   <body>
     <div class="site-navigation">
@@ -42,7 +42,7 @@
             </ul>
           </nav>
           <div class="header__btn-wrapper">
-            <a href="./createAccount.html" class="btn btn-secondary">Sign Up</a>
+            <a href="./login.html" class="btn btn-secondary">Login</a>
           </div>
           <div id="menuBtn" class="menu-btn">
             <img
@@ -69,22 +69,48 @@
         </div>
       </nav>
     </div>
-    <main>
+    <main class="acct__main">
       <div class="acct__wrapper">
         <div class="heading">
-          <h2>Create your account</h2>
-          <div class="check">
+          <h2>Create your account (Patient)</h2>
+          <!-- <div class="check">
             <input type="radio" name="" id="" />
             <h4>Patient</h4>
-          </div>
+          </div> -->
         </div>
 
-        <form action="" class="form">
+        <form id="" action="#" class="form createAccountForm">
           <h4>Enter your email to get things started:</h4>
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="password" />
-          <input type="password" placeholder="confirm password" />
-          <button>Send Link</button>
+          <label for="createAccountEmail" class="a11y-hidden"
+            >Enter your email</label
+          >
+          <input
+            class="createAccountEmail"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="createAccountPhoneNo"
+            type="tel"
+            placeholder="Phone No"
+            minlength="11"
+            maxlength="11"
+            required
+          />
+          <input
+            class="createAccountPassword"
+            type="password"
+            placeholder="password"
+            required
+          />
+          <input
+            class="createAccountConfirmPassword"
+            type="password"
+            placeholder="confirm password"
+            required
+          />
+          <button class="cracct-formBtn" type="submit">Continue</button>
         </form>
       </div>
     </main>
