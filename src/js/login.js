@@ -45,16 +45,22 @@ export function Login() {
         password: loginPassword,
       })
         .then((response) => {
-          console.log(response);
-          if (getUserID()) {
-            removeUserID();
+          if (response.status === 200 || response.status === 201) {
+            console.log(response);
+            if (getUserID()) {
+              removeUserID();
+            }
+            storeUserID(response.data.user_id);
+            setCookie("access", response.data.access, 365);
+            setCookie("userid", response.data.user_id, 365);
+            displayMessage("Success!", "success");
+            loginBtn.textContent = "Sent!";
+            window.location.pathname = "./dashboard.html";
+            loginForm.reset();
+          } else {
+            alert(response.statusText);
+            loginBtn.textContent = "Login";
           }
-          storeUserID(response.data.user_id);
-          setCookie("access", response.data.access, 365);
-          setCookie("userid", response.data.user_id, 365);
-          displayMessage("Success!", "success");
-          window.location.pathname = "./dashboard.html";
-          loginForm.reset();
         })
         .catch((error) => {
           console.log(error);
