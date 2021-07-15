@@ -13,6 +13,23 @@ const loginBtn = document.querySelector(".loginBtn");
 let loginEmail = "";
 let loginPassword = "";
 
+const testData = JSON.stringify({
+  username: "austinoski",
+  password: "austinoski123",
+});
+
+export function Login() {
+  if (loginNameInput && loginPasswordInput) {
+    loginNameInput.addEventListener("input", () => {
+      loginName = loginNameInput.value;
+    });
+    loginPasswordInput.addEventListener("input", () => {
+      loginPassword = loginPasswordInput.value;
+    });
+  }
+
+
+
 if (loginEmailInput && loginPasswordInput) {
   loginEmailInput.addEventListener("input", () => {
     loginEmail = loginEmailInput.value;
@@ -22,6 +39,7 @@ if (loginEmailInput && loginPasswordInput) {
   });
 }
 export function Login() {
+
   function displayMessage(message, type) {
     if (messageContainer) {
       messageContainer.style.display = "block";
@@ -40,6 +58,25 @@ export function Login() {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
       loginBtn.textContent = "Sending...";
+
+      axios({
+        method: "post",
+        url: LOGIN_API_URL,
+        data: {
+          username: loginName,
+          password: loginPassword,
+        },
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        validateStatus: (status) => {
+          // Idk know what this does
+          return true;
+        },
+      })
+        .then((response) => {
+
       loginUser({
         email: loginEmail,
         password: loginPassword,
@@ -61,6 +98,16 @@ export function Login() {
             alert(response.statusText);
             loginBtn.textContent = "Login";
           }
+
+          storeUserID(response.data.user_id);
+          setCookie("access", response.data.access, 365);
+          setCookie("userid", response.data.user_id, 365);
+
+          displayMessage("Success!", "success");
+          window.location.pathname = "./dashboard.html";
+          loginForm.reset();
+
+
         })
         .catch((error) => {
           console.log(error);
