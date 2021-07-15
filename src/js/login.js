@@ -12,7 +12,7 @@ const loginPasswordInput = document.querySelector(".loginPassword");
 const loginBtn = document.querySelector(".loginBtn");
 let loginEmail = "";
 let loginPassword = "";
-<<<<<<< HEAD
+
 const testData = JSON.stringify({
   username: "austinoski",
   password: "austinoski123",
@@ -28,7 +28,7 @@ export function Login() {
     });
   }
 
-=======
+
 
 if (loginEmailInput && loginPasswordInput) {
   loginEmailInput.addEventListener("input", () => {
@@ -39,7 +39,7 @@ if (loginEmailInput && loginPasswordInput) {
   });
 }
 export function Login() {
->>>>>>> 0742a6b988cc6f95d48f2c1539fe29ffd717cc22
+
   function displayMessage(message, type) {
     if (messageContainer) {
       messageContainer.style.display = "block";
@@ -58,7 +58,7 @@ export function Login() {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
       loginBtn.textContent = "Sending...";
-<<<<<<< HEAD
+
       axios({
         method: "post",
         url: LOGIN_API_URL,
@@ -76,23 +76,38 @@ export function Login() {
         },
       })
         .then((response) => {
-=======
+
       loginUser({
         email: loginEmail,
         password: loginPassword,
       })
         .then((response) => {
-          console.log(response);
-          if (getUserID()) {
-            removeUserID();
+          if (response.status === 200 || response.status === 201) {
+            console.log(response);
+            if (getUserID()) {
+              removeUserID();
+            }
+            storeUserID(response.data.user_id);
+            setCookie("access", response.data.access, 365);
+            setCookie("userid", response.data.user_id, 365);
+            displayMessage("Success!", "success");
+            loginBtn.textContent = "Sent!";
+            window.location.pathname = "./dashboard.html";
+            loginForm.reset();
+          } else {
+            alert(response.statusText);
+            loginBtn.textContent = "Login";
           }
+
           storeUserID(response.data.user_id);
           setCookie("access", response.data.access, 365);
           setCookie("userid", response.data.user_id, 365);
->>>>>>> 0742a6b988cc6f95d48f2c1539fe29ffd717cc22
+
           displayMessage("Success!", "success");
           window.location.pathname = "./dashboard.html";
           loginForm.reset();
+
+
         })
         .catch((error) => {
           console.log(error);
